@@ -7,214 +7,264 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="book-details-style.css">
+    <link rel="stylesheet" href="css/book-details-style.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container group-details">
         <div class="row" style="padding: 10px 20px;">
-            <div class="col-sm-4" style="padding: 10px 20px;"> 
-                book image
+            <div class="col-md-4" style="padding: 10px 20px;"> 
+                <div class="col-md-12">book image</div>
+                <div class="col-md-4" id="more-images"></div>
             </div>
 
-            <div class="col-sm-8" style="padding: 10px 20px;">
-                <h3>Phát Triển Web Cho Smartphone</h3>
-                <div class="BelowBookName">
-                    <label class="sku">SKU: 9552147738847</label>
-                    <label class="views" style="text-align: right;">(1.352 views)</label>
-                </div>
+            <div class="col-md-8 row" style="padding: 10px 20px;">
+                <h3 class="col-md-12">Phát Triển Web Cho Smartphone</h3>
+                <label class="col-md-6 sku">SKU: 9552147738847</label>
+                <label class="views col-md-6" style="text-align: right;">(1.352 views)</label>
                 
-                <label class="instock">In Stock</label>
+                <div class="col-md-12"> <label class="instock">In Stock</label></div>
     
-                <p style="margin: 20px 0px;">
-                    Author:     Gail Rahn Frederick & Rajash Lai<br>
-                    Publisher:  Bách khoa Hà Nội<br>
-                    Pages:      350<br>
-                    Language:   Vietnamese<br>
-                    Type:       Paperback
-                </p>
-    
-                <div class="group0">
-                    <label id="avaibility">Availability: <b>10</b></label>
-                    <div id="borrow">Place hold</div>
-                    <div id="borrow">Borrow</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-4 more-images">
                 
-            </div>
-            <div class="col-sm-8">
-                <div class="col" style="display: flex;">
-                    <div id="Tag">Tag:</div>
-                    <div id="TagName">lập trình</div>
-                    <div id="TagName">lập trình web</div>
-                    <div id="TagName">smartphone</div>
+                <label class="col-md-12">Author:     Gail Rahn Frederick & Rajash Lai</label>
+                <label class="col-md-12">Publisher:  Bách khoa Hà Nội</label>
+                <label class="col-md-12">Pages:      350</label>
+                <label class="col-md-12">Language:   Vietnamese</label>
+                <label class="col-md-12">Type:       Paperback</label>
+
+                <label class="col-md-3" id="avaibility">Availability: <b>10</b></label>
+                <div class="col-md-2" id="borrow">Place hold</div>
+                <div class="col-md-2" id="borrow">Borrow</div>
+
+                <div class="col-md-12 mb-2 row">
+                    <div class="col-md-1 mr-5" id="Tag">Tag:</div>
+                    <div class="col-2 mr-2" id="TagName">lập trình</div>
+                    <div class="col-2 mr-2" id="TagName">lập trình web</div>
+                    <div class="col-2 mr-2" id="TagName">smartphone</div>
                 </div>
 
-                <div class="col">
-                    <div id="Rate">Rate:</div>
+                <div class="col-md-12 row">
+                    <div class="col-md-1 mt-1 mr-5" id="Rate">Rate:</div>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span>
+                    <div class="col-md-2 mt-1 ml-5">10 Ratings</div>
                 </div>
             </div>
         </div>
     </div>
     <label class="container" id="label-intro">Introduction</label>
     <div class="container group-intro">
-        <div style="background-color: white;">
+        <div>
             <p id="book-name"><b>Phát Triển Web Cho Smartphone</b></p>
-            <p id="intro" style="font-size: 10px;">Khi ngày càng nhiều người truy cập Web từ điện thoại và các thiết bị di động khác, các nhà phát triển Web cần biết cách xây dựng trang Web có khả năng đáp ứng tốt cho các thiết bị này. Muốn vây, họ cần học những kỹ thuật, nghiên cứu những vấn đề mang tính đặ thù liên quan tới việc phân phối nội dung Web cho thiết bị di động. Nếu bạn là nhà phát triển và thiết kế Web đang bắt đầu tìm hiểu về Web trên di động thì đây chính là cuốn sách dành cho bạn....</p>
+            <p id="intro" style="font-size: 16px;">Khi ngày càng nhiều người truy cập Web từ điện thoại và các thiết bị di động khác, các nhà phát triển Web cần biết cách xây dựng trang Web có khả năng đáp ứng tốt cho các thiết bị này. Muốn vây, họ cần học những kỹ thuật, nghiên cứu những vấn đề mang tính đặ thù liên quan tới việc phân phối nội dung Web cho thiết bị di động. Nếu bạn là nhà phát triển và thiết kế Web đang bắt đầu tìm hiểu về Web trên di động thì đây chính là cuốn sách dành cho bạn....</p>
             <button id="see-more">...SEE MORE</button>
         </div>
     </div>
 
-    <div class="container same-category">
-        <div class="row row-cols-5 row-same-category">
-            <div class="col">
-                <p id="label-same-category">Same Category</p>
-            </div>
-            <div class="col">
-                <img id="same-category-image" src="Image/Tu-Hoc-Lap-Trinh-Python.png">
-                <label style="font-size: 12px;">Tự Học Lập Trình</label>
-            </div>
-            <div class="col">
-                <img id="same-category-image" src="Image/Giao-Trinh-C++.png">
-                <label style="font-size: 12px;">Giáo trình C++</label>
-            </div>
-            <div class="col">
-                <img id="same-category-image" src="Image/Ky_Thuat_Lap_Trinh_C.png">
-                <label style="font-size: 12px;">Kỹ Thuật Lập Trình C</label>
-            </div>
-            <div class="col">
-                <img id="same-category-image" src="Image/Lap_Trinh_Voi_Csharp.png">
-                <label style="font-size: 12px;">Lập Trình với C#</label>
-            </div>
+    <div class="container same-category row">
+        <div class="col-md-2 ml-5" style="text-align: right; padding-right: 25px;">
+           <label id="label-same-category">Same Category</label>
         </div>
-        <button id="see-more" style="margin-top: 10px;">...SEE MORE</button>
+        <div class="col-md-2" style="text-align: center;">
+            <img id="same-category-image" src="">
+            <label id="book-name-category">Tự Học Lập Trình</label>
+        </div>
+        <div class="col-md-2" style="text-align: center;">
+            <img id="same-category-image" src="">
+            <label id="book-name-category">Giáo trình C++</label>
+        </div>
+        <div class="col-md-2" style="text-align: center;">
+            <img id="same-category-image" src="">
+            <label id="book-name-category"">Kỹ Thuật Lập Trình C</label>
+        </div>
+        <div class="col-md-2" style="text-align: center;">
+            <img id="same-category-image" src="">
+            <label id="book-name-category">Lập Trình với C#</label>
+        </div>
+        <div class="col-md-12"><button id="see-more">...SEE MORE</button></div>
     </div>
 
-    <div class="container same-category">
-        <div class="row row-cols-5 row-same-category">
-            <div class="col">
-                <label id="label-same-category">Recommend for you</label>
-            </div>
-            <div class="col">
-                <img id="same-category-image" src="Image/Tu-Hoc-Lap-Trinh-Python.png">
-                <label style="font-size: 12px;">Tự Học Lập Trình</label>
-            </div>
-            <div class="col">
-                <img id="same-category-image" src="Image/Giao-Trinh-C++.png">
-                <label style="font-size: 12px;">Giáo trình C++</label>
-            </div>
-            <div class="col">
-                <img id="same-category-image" src="Image/Ky_Thuat_Lap_Trinh_C.png">
-                <label style="font-size: 12px;">Kỹ Thuật Lập Trình C</label>
-            </div>
-            <div class="col">
-                <img id="same-category-image" src="Image/Lap_Trinh_Voi_Csharp.png">
-                <label style="font-size: 12px;">Lập Trình với C#</label>
-            </div>
+    <div class="container same-category row">
+        <div class="col-md-2 ml-5" style="text-align: right; padding-right: 25px;">
+           <label id="label-same-category">Recommend for you</label>
         </div>
-        <button id="see-more" style="margin-top: 10px;">...SEE MORE</button>
+        <div class="col-md-2" style="text-align: center;">
+            <img id="same-category-image" src="">
+            <label id="book-name-category">Tự Học Lập Trình</label>
+        </div>
+        <div class="col-md-2" style="text-align: center;">
+            <img id="same-category-image" src="">
+            <label id="book-name-category">Giáo trình C++</label>
+        </div>
+        <div class="col-md-2" style="text-align: center;">
+            <img id="same-category-image" src="">
+            <label id="book-name-category"">Kỹ Thuật Lập Trình C</label>
+        </div>
+        <div class="col-md-2" style="text-align: center;">
+            <img id="same-category-image" src="">
+            <label id="book-name-category">Lập Trình với C#</label>
+        </div>
+        <div class="col-md-12"><button id="see-more">...SEE MORE</button></div>
     </div>
 
     <label class="container" id="label-comments">Comments 12</label>
     <div class="container" style="padding: 20px 60px;">
-        <div class="row row-comments">
-            <div class="col-sm-2">
-                <div class="row cmt-avatar">
+        <div class="row mt-3 mb-4">
+            <div class="col-md-2" style="padding-right: 0px; border-right: 2px solid #1429D7">
+                <div style="text-align: center;">
                     <svg class="bi bi-person-circle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
                         <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                         <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
                     </svg>
                 </div>
-                <p class="row cmt-username">hodtien</p>
+                <p style="text-align: center; color: #1429D7">hodtien</p>
             </div>
-            <div class="col-sm-10">
-                <div class="row">
+            <div class="col-md-9 ml-4 row" style="border: 1px solid #1429D7">
+                <label class="col-md-1 mt-1 row"><b>Rate:</b></label>
+                <div class="col-md-3">
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span>
                 </div>
-
-                <div class="row" style="font-size: 12px;">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, maxime. Veniam magni atque autem, harum beatae ad sint quibusdam? Quod est consequatur atque quis cupiditate ipsum quos fugiat dolore impedit?
+                <div class="col-md-3 mt-1">
+                    (About content)
                 </div>
-                <div class="row heart-cmt">
-                    <div>
-                        <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                        </svg>
-                    </div>
-                    <p>10</p>
-                    <p>4 replies</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row row-comments">
-            <div class="col-sm-2">
-                <svg class="bi bi-person-circle cmt-avatar" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
-                    <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                    <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
-                </svg>
-                <p class="cmt-username">ntmthuy</p>
-            </div>
-            <div class="col-sm-10">
-                <div class="row">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
+                <div class="col-md-3 mt-1">
+                    (3 days ago)
                 </div>
 
-                <div class="row" style="font-size: 12px;">
+                <div class="mb-3">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, maxime. Veniam magni atque autem, harum beatae ad sint quibusdam? Quod est consequatur atque quis cupiditate ipsum quos fugiat dolore impedit?
                 </div>
-
-                <div class="row heart-cmt">
-                    <div>
+                <div class="col-md-12 row" style="color: #1429D7;">
+                    <div class="col-md-2">
                         <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+
                         </svg>
+                        <b>10</b>
                     </div>
-                    <p>10</p>
-                    <p>4 replies</p>
+                    <p class="col-md-3"><b>4 replies</b></p>
                 </div>
             </div>
         </div>
+
+        <div class="row mt-2 mb-4">
+            <div class="col-md-2" style="padding-right: 0px; border-right: 2px solid #1429D7">
+                <div style="text-align: center;">
+                    <svg class="bi bi-person-circle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                    </svg>
+                </div>
+                <p style="text-align: center; color: #1429D7">ntmtuy</p>
+            </div>
+            <div class="col-md-9 ml-4 row" style="border: 1px solid #1429D7">
+                <label class="col-md-1 mt-1 row"><b>Rate:</b></label>
+                <div class="col-md-3">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <div class="col-md-3 mt-1">
+                    (About content)
+                </div>
+                <div class="col-md-3 mt-1">
+                    (3 days ago)
+                </div>
+
+                <div class="mb-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, maxime. Veniam magni atque autem, harum beatae ad sint quibusdam? Quod est consequatur atque quis cupiditate ipsum quos fugiat dolore impedit?
+                </div>
+                <div class="col-md-12 row" style="color: #1429D7;">
+                    <div class="col-md-2">
+                        <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+
+                        </svg>
+                        <b>10</b>
+                    </div>
+                    <p class="col-md-3"><b>4 replies</b></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2 mb-4">
+            <div class="col-md-2" style="padding-right: 0px; border-right: 2px solid #1429D7">
+                <div style="text-align: center;">
+                    <svg class="bi bi-person-circle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                    </svg>
+                </div>
+                <p style="text-align: center; color: #1429D7">ngtoan</p>
+            </div>
+            <div class="col-md-9 ml-4 row" style="border: 1px solid #1429D7">
+                <label class="col-md-1 mt-1 row"><b>Rate:</b></label>
+                <div class="col-md-3">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <div class="col-md-3 mt-1">
+                    (About content)
+                </div>
+                <div class="col-md-3 mt-1">
+                    (3 days ago)
+                </div>
+
+                <div class="mb-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, maxime. Veniam magni atque autem, harum beatae ad sint quibusdam? Quod est consequatur atque quis cupiditate ipsum quos fugiat dolore impedit?
+                </div>
+                <div class="col-md-12 row" style="color: #1429D7;">
+                    <div class="col-md-2">
+                        <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+
+                        </svg>
+                        <b>10</b>
+                    </div>
+                    <p class="col-md-3"><b>4 replies</b></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12"><button id="see-more">...SEE MORE</button></div>
     </div>
     
     <label class="container" id="label-add-comment">Your comment</label>
     <div class="container" style="padding: 20px 60px;">
-        <div class="row">
-            <div class="col-sm-2">
-                <div class="cmt-avatar">
+        <div class="row" aria-readonly="true">
+            <div class="col-sm-2" style="text-align: center;">
+                <div>
                     <svg class="bi bi-person-circle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
                         <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                         <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
                     </svg>
                 </div>
-                <p class="cmt-username">ntmthuy</p>
+                <p>username</p>
             </div>
             <form class="col-sm-5">
                 <label>Title:</label>
-                <input type="text" class="form-control" placeholder="Your title (optional)">
+                <div class="mb-3"><input type="text" class="form-control" placeholder="Your title (optional)" readonly></div>
                 <label>Comment:</label>
-                <input type="text" class="form-control" placeholder="Your comment about the book">
+                <div class="mb-3">
+                    <textarea type="text" class="form-control" placeholder="Your comment about the book" readonly style="height: 200px;"></textarea>
+                </div>
             </form>
             <form class="col-sm-5" style="padding-left: 50px;">
                 <label style="padding-right: 30px;">Rate:</label>
@@ -234,24 +284,24 @@
                     <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
                 </svg>
 
-                <label style="padding-right: 30px; padding-top: 20px;">Add image (optional)</label>
+                <div class="mb-3" style="padding-right: 30px; padding-top: 20px;">Add image (optional)</div>
                 <div class="form-group" style="padding-top: 5px;"">
-                    <svg class="bi bi-plus add-image" width="50px" height="50px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="bi bi-plus add-image" width="60px" height="60px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
                         <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
                     </svg>
-                    <svg class="bi bi-image-alt add-image" width="50px" height="50px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="bi bi-image-alt add-image" width="60px" height="60px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.648 6.646a.5.5 0 0 1 .577-.093l4.777 3.947V15a1 1 0 0 1-1 1h-14a1 1 0 0 1-1-1v-2l3.646-4.354a.5.5 0 0 1 .63-.062l2.66 2.773 3.71-4.71z"/>
                         <path fill-rule="evenodd" d="M4.5 5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
                     </svg>
-                    <svg class="bi bi-image-alt add-image" width="50px" height="50px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="bi bi-image-alt add-image" width="60px" height="60px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.648 6.646a.5.5 0 0 1 .577-.093l4.777 3.947V15a1 1 0 0 1-1 1h-14a1 1 0 0 1-1-1v-2l3.646-4.354a.5.5 0 0 1 .63-.062l2.66 2.773 3.71-4.71z"/>
                         <path fill-rule="evenodd" d="M4.5 5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
                     </svg>
                 </div>
             </form>
+            <button type="submit" class="btn-submit">SUBMIT</button>
         </div>
-        <button type="submit" class="btn-submit">SUBMIT</button>
     </div>
 </body>
 

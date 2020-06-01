@@ -4,14 +4,17 @@ a{
     font-size: 20px;
 }
 
-.height-basetab
-{
-    height: 55px;
+body{
+    font-family: 'Quicksand', sans-serif;
 }
 
-.bg-height
+.container, .container-lg, .container-md, .container-sm, .container-xl{
+    max-width: 1150px;
+}
+
+
+.bg
 {
-    height: 400px;
     background-image: url(/image/library.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -21,41 +24,14 @@ a{
     background-color: rgba(20, 41, 215, 0.68);
 }
 
-.row-height
-{
-    height: 280px;
-}
-
-.row-height-2
-{
-    height: 400px;
-}
-
-.row-height-3{
-    height: 200px;
-}
-
-.format-1{  
-    background: rgba(20, 41, 215, 0.68);
-    height: 230px;
-}
-
 .format-2{
-    font-size: 24px;
+    font-size: 35px;
     color: white;
+    text-align: right;
     font-weight: bold;
-    text-align: right;
+    padding: 15px 0px 15px 10px;
+    
 }
-
-.format-3{
-    height: 20px;
-}
-
-.format-4{
-    text-align: right;
-    color: white;
-}
-
 
 .btn-primary{
     background-color: #F15922;
@@ -65,7 +41,8 @@ a{
 .format-img{
     width: 90%;
     height: 90%;
-    
+   
+   
 }
 
 .format-text{
@@ -96,23 +73,41 @@ a{
     border-right: 1px solid #1429D7;
 }
 
-.col24{
-    flex: 0 0 20%;
-    max-width: 20%;
-}
-
 .format-color-bg
 {
     background-color: white;
-    height: 180px;
     border-radius: 8px;
+    padding: 10px;
 }
 
 .format-text-sm{
-    font-size: 8px;
+    font-size: 12px;
     text-align: center;
 }
 
 .set-topic{
     font-weight: bold;
+}
+
+.col-24{
+    flex: 0 0 18%;
+    max-width: 18%;
+}
+
+.format-form{
+    border: 2px solid #1429D7;
+    border-radius: 10px;
+  
+}
+
+.format-btn{
+    background-color: #1429D7;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.padding-for-all{
+    padding: 50px 0px;
 }

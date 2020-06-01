@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Library Website</title>
+</head>
+
+<body>
+  <!-- HEADER----------------------------->
+  <header>
+    <div class="jumbotron d-flex align-items-center"
+      style="height: 75px;margin: auto;background-color: #fff;border-bottom: 3px solid #1429D7;padding: auto;">
+      <a href="home-guest.html" style="margin: 0px 10px;">
+        <img class="img-fluid ml-auto d-none d-md-inline-block" data-toggle="tooltip" data-bs-tooltip=""
+          data-placement="bottom" src="/image/library-logo.png" title="University of Science FIT Library">
+        <img class="ml-auto img-fluid d-inline-block d-md-none" data-toggle="tooltip" data-bs-tooltip=""
+          data-placement="bottom" src="/image/library-logo-sm.png" title="University of Science FIT Library"
+          style="width: 75px;height: 75px;">
+      </a>
+      <form class="d-none d-lg-flex col-lg-6 border rounded" style="margin: 0px auto;height: 66px;">
+        <div class="form-group d-xl-flex my-auto d-none d-lg-inline-block col-xl-9 border-right" style="padding: 0px;">
+          <input class="border-0 rounded-0 form-control" type="search" placeholder="Search" required=""
+            style="height: 50px;width: fit;padding: 0px 12px;">
+        </div>
+        <div class="form-group my-auto d-none d-lg-inline-block" style="height: 38px;">
+          <div class="dropdown" style="height: 38px;">
+            <button class="btn btn-primary dropdown-toggle border-0 rounded-0" data-toggle="dropdown"
+              aria-expanded="false" type="button"
+              style="background-color: rgba(0,123,255,0);color: #000;height: auto;">Books&nbsp;</button>
+            <div class="dropdown-menu" role="menu">
+              <a class="dropdown-item" role="presentation" href="#">Books</a>
+            </div>
+          </div>
+        </div>
+        <div class="form-group my-auto d-none d-lg-inline-block">
+          <button class="btn btn-primary border-0 rounded" type="submit" style="background-color: #F15922;height: 40px;"
+            formaction="Searchs.html">Search
+          </button>
+        </div>
+      </form>
+      <i class="fa fa-search d-flex float-right justify-content-center align-items-center ml-auto d-inline-block d-lg-none"
+        style="width: auto;height: 25px;color: #1429D7;margin: 0px auto;margin-right: 10px;"></i>
+
+      <button class="btn btn-lg text-break text-center float-right" id="btn-signup" type="button"
+        onclick="Signup()"
+        style="color: #1429D7;filter: hue-rotate(0deg);border: 2px solid #1429D7;font-size: 15px;">Sign up</button>
+
+      <div id="user" class="row float-right align-items-center" style="visibility: hidden;">
+        
+        <i class="fa fa-bell" style="color: #1429D7;margin: 0px 10px;font-size: 25px;"></i>
+
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"
+            style="background-color: #1429D7;">
+            <i class="fa fa-user" style="font-size: 20px;"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right" role="menu">
+            <a class="dropdown-item" role="presentation" href="profile-user.html">Profile</a>
+            <a class="dropdown-item" role="presentation" href="yourbook.html">Your Books</a>
+            <a class="dropdown-item" role="presentation" href="home-guest.html">Log Out</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <!-- BASES TAB-------------------------->
+  <nav class="navbar navbar-light navbar-expand-md shadow d-xl-flex align-items-xl-center"
+    style="width: auto; background-color:rgb(245, 245, 240);">
+    <div class="container-fluid">
+      <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+        <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navcol-1">
+        <ul class="nav navbar-nav">
+          <li class="nav-item d-xl-flex justify-content-xl-center format-choice" role="presentation"
+            style="margin: 0px;">
+            <a class="nav-link active d-xl-flex" href="home-guest.html" style="margin: 0px 40px;">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" href="content-guest.html" style="margin: 0px 40px;">
+              Contents
+            </a>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" href="rules-guest.html" style="margin: 0px 40px;">
+              Rules
+            </a>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" href="contact-guest.html" style="margin: 0px 40px;">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN-->
+  <div class="container-fluid border container-fluid-sm">
+    <!-- EVENT BACKGROUND------------------->
+    <div class="row justify-content-center border bg align-items-center padding-for-all">
+      <div class="col-1" style="text-align: center;">
+        <button class="rounded-circle border-0 fa fa-angle-double-left shadow-lg"
+          style="height: 60px; width: 60px;"></button>
+      </div>
+
+      <div class="col-9">
+        <div class="container">
+          <div class="row bg-color">
+            <div class="col-5 format-2 rounded-left">
+              <div class="align-items-center">
+                <p style="font-size: 2.5vw;">Happy World Book Day <br>2020</p>
+
+                <p style="font-size: 1.7vw;">
+                  "The more that you READ the more things you will know</br>
+                  The more that you LEARN the more places you will go"</br>
+                  <button type="button" class="btn btn-lg btn-primary rounded-pill"
+                    style="margin-top: 10px; width:120px;">Join us</button>
+                </p>
+              </div>
+            </div>
+
+            <div class="col-6 rounded-right align-self-end">
+              <img src="/image/wbday.jpeg" style="width: 42vw; height: 24vw;">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-1" style="text-align: center;">
+        <button class="rounded-circle border-0 fa fa-angle-double-right shadow-lg"
+          style="width: 60px; height: 60px;"></button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Upcoming events---------------------->
+  <div class="row border align-items-center padding-for-all">
+    <div class="container">
+      <!-- row 1-->
+      <div class="row justify-content-around align-items-center">
+        <div class="col-3 border-x format-text align-self-start">
+          Upcoming Events <br>Announcements
+        </div>
+
+        <div class="col-9">
+          <div class="row align-items-center">
+            <div class="col-4">
+              <img src="/image/close.jpg" class="format-img">
+            </div>
+            <div class="col-4">
+              <img src="/image/howtoread.jpg" class="format-img">
+            </div>
+            <div class="col-4">
+              <img src="/image/newyear.jpg" class="format-img">
+            </div>
+          </div>
+
+          <div class="row justify-content-center align-items-center">
+            <div class="col-4">
+              <p>Library Closure Because of the Coronavirus (COVID-19)</p>
+            </div>
+            <div class="col-4">
+              <p>More Book More Fun Keeping Steak With Us</p>
+            </div>
+            <div class="col-4">
+              <p>Happy Lunar New Year 2020</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- row 2-->
+      <div class="row justify-content-center">
+        <button type="button" class="btn btn-primary rounded-pill border-0">SEE MORE ...</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP PICKS-->
+  <div class="row border align-items-center bg-color padding-for-all">
+    <div class="container">
+      <!-- row 1-->
+      <div class="row justify-content-around align-items-center" style="padding-bottom: 20px;">
+        <div class="col-3 border-x format-text align-self-start">
+          <p class="format-color-white">Top picks</p>
+        </div>
+
+        <div class="col-9">
+          <div class="row align-items-center justify-content-around">
+
+            <div class="col-5 align-items-center format-color-bg">
+              <div class="row align-items-center">
+                <div class="col-7 format-text-sm align-items-center">
+                  <p class="set-topic">Nhập môn lập trình<br>
+                    ------------------
+                    <br>
+                    Khởi đầu của giấc mơ lập trình viên trong tôi. Đây là cuốn sách đầu tiên khi tôi bước chân vào môi
+                    trường đại học nói chung và ngành Công nghệ Thông tin nói riêng.
+                    <br>------------------
+                    <br> by hdtien </p>
+                </div>
+                <div class="col-5">
+                  <img src="/image/nmlt.JPG" class="format-img">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-5 format-color-bg">
+              <div class="row align-items-center">
+                <div class="col-7 format-text-sm">
+                  <p class="set-topic"> CTDL & GT </br>
+                    ------------------ </br>
+                    Giấc mơ của tôi bắt đầu từ điều "phi thường". Đây là cuốn sách tôi tâm đắc nhất trong số sách mà
+                    tôi có. Dù như thế nào thì hành trang của tôi không thể thiếu cuốn sách này.
+                    </br>------------------
+                    </br> by ntmthuy </p>
+                </div>
+
+                <div class="col-5">
+                  <img src="/image/ctdl.jpg" class="format-img">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- row 2-->
+      <div class="row justify-content-center">
+        <button type="button" class="btn btn-primary rounded-pill border-0">SEE MORE ...</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEW & NOTEWORTHY -->
+  <div class="row border align-items-center padding-for-all" style="background-color: rgba(20, 41, 215, 0.85);">
+    <div class="container">
+      <!-- row 1-->
+      <div class="row justify-content-center align-items-center">
+        <div class="col-3 border-x format-text align-self-start">
+          <p class="format-color-white"> New & <br>Noteworthy</p>
+        </div>
+
+        <div class="col-9">
+          <div class="row align-items-center">
+            <div class="col-3">
+              <img src="/image/chay-dua-voi-robot.jpg" class="format-img">
+            </div>
+            <div class="col-3">
+              <img src="/image/thoidai.jpg" class="format-img">
+            </div>
+            <div class="col-3">
+              <img src="/image/AI.jpg" class="format-img">
+            </div>
+            <div class="col-3">
+              <img src="/image/artificial.jpg" class="format-img">
+            </div>
+          </div>
+
+          <div class="row justify-content-center align-items-center format-color-white">
+            <div class="col-3">
+              <p>Chạy đua với robot</p>
+            </div>
+            <div class="col-3">
+              <p>Thời đại của trí thông minh nhân tạo</p>
+            </div>
+            <div class="col-3">
+              <p>Kỷ nguyên trí tuệ nhân tạo</p>
+            </div>
+            <div class="col-3">
+              <p>Artificial Intelligence Problems & their Solutions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- row 2-->
+      <div class="row justify-content-center">
+        <button type="button" class="btn btn-primary rounded-pill border-0">SEE MORE ...</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- UPDATES-->
+  <div class="row border align-items-center padding-for-all">
+    <div class="container">
+      <!-- row 1-->
+      <div class="row justify-content-center align-items-center" style="padding-bottom: 10px;">
+        <div class="col-2 border-x format-text align-self-start">
+          Updates
+        </div>
+
+        <div class="col-9">
+          <div class="row">
+            <div class="col-3">
+              <img src="/image/Coronavirus-600x400.jpeg" class="format-img">
+            </div>
+            <div class="col-3">
+              <p>Coronavirus (COVID-19) Information</p>
+            </div>
+            <div class="col-3">
+              <img src="/image/librarycard.jpeg" class="format-img">
+            </div>
+            <div class="col-3">
+              <p>Library Card Updated</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- row 2-->
+
+      <div class="row justify-content-center">
+        <button type="button" class="btn btn-primary rounded-pill border-0">SEE MORE ...</button>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <footer style="background-color: #000080;">
+    <div class="container">
+      <form class="col-12">
+        <div class="row col-12" style="margin: 0px;"><img class="d-none d-lg-inline-block col-2"
+            src="/image/library-logo-sm.png" style="height: 125px;margin: 30px auto;">
+          <form class="col-12 col-sm-6 col-lg-3" style="margin: 30px auto;">
+            <div class="form-group col-12 col-sm-6 col-lg-3" style="margin: 30px auto;">
+              <h4 style="color: #fff;">Your Library</h4>
+              <ul class="list-group">
+                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
+                  <a href="rules-guest.html" style="color: #fff;">About</a>
+                </li>
+                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
+                  <a href="rules-guest.html" style="color: #fff;">History</a>
+                </li>
+                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
+                  <a href="rules-guest.html" style="color: #fff;">Staff</a>
+                </li>
+                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
+                  <a href="rules-guest.html" style="color: #fff;">Employment Opportunities&nbsp;</a>
+                </li>
+              </ul>
+            </div>
+          </form>
+          <form class="col-12 col-sm-6 col-lg-3" style="margin: 30px auto;">
+            <div class="form-group">
+              <h4 style="color: #fff;">How Do I?</h4>
+              <ul class="list-group">
+                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
+                  <a href="#" style="color: #fff;">Get A Card</a>
+                </li>
+                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
+                  <a href="#" style="color: #fff;">Manage My Account</a>
+                </li>
+                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
+                  <a href="#" style="color: #fff;">Print From Anywhere</a>
+                </li>
+                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
+                  <a href="#" style="color: #fff;">Get Help</a>
+                </li>
+              </ul>
+            </div>
+          </form>
+          <form class="col-12 col-lg-4" style="margin: 30px auto;">
+            <div class="form-group">
+              <h4 style="color: #fff;">Visit</h4>
+              <p style="color: #fff;">Monday - Friday: 7a.m - 5p.m<br>Saturday: 7a.m - 11a.m<br>Sunday: closed</p>
+            </div>
+            <div class="form-group">
+              <h4 style="color: #fff;">Phone</h4>
+              <p style="color: #fff;">028 6288 4499</p>
+            </div>
+            <div class="form-group">
+              <h4 style="color: #fff;">Address</h4>
+              <p style="margin: 0px;color: #fff;">227 Nguyen Van Cu Street, Ward 4, District 5, HCMC</p><a href="#"
+                style="color: #fff;">Get Direction</a>
+            </div>
+          </form>
+        </div>
+        <div class="row col-12" style="padding: 0px;margin: 10px 0px;">
+          <form class="col-12 col-lg-5" style="margin: auto;width: auto;">
+            <h1 class="text-center" style="color: #fff;font-size: 22px;">Connect us</h1>
+            <div class="row col-12" style="margin: 0px;padding: 0px;"><i
+                class="fa fa-facebook-square d-sm-flex d-md-flex d-xl-flex justify-content-sm-center justify-content-md-center justify-content-xl-center"
+                style="width: auto;height: auto;color: #fff;font-size: 35px;margin-left: auto;margin-right: 10px;"></i>
+              <i class="fa fa-google-plus-square d-sm-flex d-md-flex d-xl-flex justify-content-sm-center justify-content-md-center justify-content-xl-center"
+                style="width: auto;height: auto;color: #fff;font-size: 35px;margin: 0px 10px;"></i>
+              <i class="fa fa-twitter-square d-sm-flex d-md-flex d-xl-flex justify-content-sm-center justify-content-md-center justify-content-xl-center"
+                style="width: auto;height: auto;color: #fff;font-size: 35px;margin: 0px 10px;"></i>
+              <i class="fa fa-instagram d-sm-flex d-md-flex d-xl-flex justify-content-sm-center justify-content-md-center justify-content-xl-center"
+                style="color: #fff;font-size: 35px;width: auto;height: auto;margin-left: 10px;margin-right: auto;"></i>
+            </div>
+          </form>
+          <form class="d-none d-lg-block col-7" style="margin: auto;width: auto;">
+            <h1 style="font-size: 22px;color: #fff;">Sign up for news</h1>
+            <div class="form-group">
+              <input class="form-control form-control-lg" type="text" placeholder="Enter email here"
+                pattern="*@example.com" style="width: 438px;">
+            </div>
+          </form>
+        </div>
+      </form>
+    </div>
+    <div class="row col-12" style="background-color: #f2f2f2;height: 50px;width: auto;margin: 0px;"><i
+        class="fa fa-copyright d-xl-flex justify-content-xl-center align-items-xl-center"
+        style="width: auto;height: auto;font-size: 30px;margin: auto 5px auto auto;"></i>
+      <p class="d-xl-flex justify-content-xl-center align-items-xl-center"
+        style="font-size: 16px;margin: auto auto auto 5px;">Copyright 2020 by PTUDW-Nhom05</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="/js/app.js"></script>
+</body>
+
+</html>

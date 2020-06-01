@@ -1,7 +1,11 @@
-body {
-    /* add font */
-    background-color: lightgray;
+body{
+    background-color:rgb(245, 245, 240);
 }
+.btn-primary{
+    background-color: #F15922;
+    
+}
+
 .container {
     background-color: snow;
 }
@@ -24,12 +28,13 @@ body {
 #avaibility {
     color: #1429D7;
     margin: 10px 0px;
+    font-size: 1.2vw;
 }
 
 #borrow {
     background-color: #1429D7;
     color: white;
-    /* font-size: 16px; */
+    font-size: 1.2vw;
     text-align: center;
     padding: 4px;
     margin: 10px;
@@ -40,7 +45,7 @@ body {
     display: flex;
     background-color: #F15922;
     color: white;
-    /* font-size: 16px; */
+    font-size: 1.2vw; 
     text-align: center;
     justify-content: center;
     align-items: center;

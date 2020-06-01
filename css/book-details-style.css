@@ -3,7 +3,6 @@ body {
     background-color: lightgray;
 }
 .container {
-    width: 50%;
     background-color: snow;
 }
 
@@ -13,20 +12,13 @@ body {
 }
 
 .sku, .views {
-    font-size: xx-small;
-    padding: 2px;
+    font-size: 16px;
 }
 
 .instock {
     background-color: #F15922;
     color: white;
     padding: 5px 15px;
-}
-
-.group0 {
-    width: 60%;
-    display: grid;
-    grid-template-columns: 40% auto auto;
 }
 
 #avaibility {
@@ -37,28 +29,22 @@ body {
 #borrow {
     background-color: #1429D7;
     color: white;
-    font-size: 10px;
+    /* font-size: 16px; */
     text-align: center;
     padding: 4px;
     margin: 10px;
     border-radius: 19px;
 }
 
-#Tag, #Rate {
-    width: 100px;
-    padding: 5px 0px;
-    float: left;
-}
-
 #TagName {
-    float: left;
+    display: flex;
     background-color: #F15922;
-    max-width: inherit;
     color: white;
-    font-size: 10px;
+    /* font-size: 16px; */
     text-align: center;
-    margin: 5px 5px;
-    padding: 8px 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
 }
 
 .checked {
@@ -66,7 +52,6 @@ body {
 }
 
 .fa-star {
-    float: left;
     margin: 4px 0;
     padding: 5px 2px;
 }
@@ -74,14 +59,13 @@ body {
 #label-intro, #label-comments, #label-add-comment {
     display: flex;
     background-color: lightgray;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
     padding-top: 10px;
     padding-left: 80px;
 }
 
 .group-intro {
-    background-color: snow;
     text-align: center;
     padding: 15px;
 }
@@ -97,33 +81,30 @@ body {
     border: none;
     border-radius: 10px;
     color: snow;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     text-align: center;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
     padding: 5px 30px;
 }
 
 .same-category {
     background-color: #1429D7;
-    width: 50%;
-    min-height: 50px;
     color: white;
-    margin-top: 10px;
-    padding: 25px 0;
-}
-
-.row-same-category {
-    width: 90%;
-    margin-left: 30px;
-    text-align: center;
+    margin: 10px auto;
+    padding: 40px 0;
 }
 
 #label-same-category {
-    font-size: 15px;
-    text-align: right;
+    font-size: 20px;
     padding-right: 5px;
     border-right: 3px solid white;
+}
+
+#book-name-category {
+    font-size: 16px;
 }
 
 img, svg, .cmt-username {
@@ -138,35 +119,6 @@ img, svg, .cmt-username {
     fill: #1429D7;
 }
 
-.row-comments {
-    width: 80%;
-    margin: 10px auto;
-}
-
-.cmt-username {
-    display: block;
-    padding-left: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.cmt-avatar {
-    display: block;
-    padding-left: 20%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.heart-cmt {
-    margin-top: 15px;
-    color: #1429D7;
-}
-
-.heart-cmt > p {
-    margin-left: 10px;
-    margin-right: 40px;
-}
 
 .add-image {
     color: #1429D7;
@@ -182,11 +134,9 @@ img, svg, .cmt-username {
     border-radius: 19px;
     color: white;
     display: block;
-    margin: 10px auto;
-    margin-bottom: 0;
+    margin: 0px auto;
     padding: 5px 20px;
     font-weight: bold;
-    font-size: 12px;
 }
 
 .search-result {

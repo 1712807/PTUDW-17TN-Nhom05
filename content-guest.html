@@ -50,12 +50,11 @@
       <i class="fa fa-search d-flex float-right justify-content-center align-items-center ml-auto d-inline-block d-lg-none"
         style="width: auto;height: 25px;color: #1429D7;margin: 0px auto;margin-right: 10px;"></i>
 
-      <button class="btn btn-lg text-break text-center float-right" id="btn-signup" type="button"
-        onclick="Signup()"
+      <button class="btn btn-lg text-break text-center float-right" id="btn-signup" type="button" onclick="Signup()"
         style="color: #1429D7;filter: hue-rotate(0deg);border: 2px solid #1429D7;font-size: 15px;">Sign up</button>
 
       <div id="user" class="row float-right align-items-center" style="visibility: hidden;">
-        
+
         <i class="fa fa-bell" style="color: #1429D7;margin: 0px 10px;font-size: 25px;"></i>
 
         <div class="dropdown">
@@ -74,7 +73,8 @@
     </div>
   </header>
   <!-- BASES TAB-------------------------->
-  <nav class="navbar navbar-light navbar-expand-md shadow d-xl-flex align-items-xl-center" style="width: auto; background-color:rgb(245, 245, 240);">
+  <nav class="navbar navbar-light navbar-expand-md shadow d-xl-flex align-items-xl-center"
+    style="width: auto; background-color:rgb(245, 245, 240);">
     <div class="container-fluid">
       <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
         <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
@@ -112,306 +112,334 @@
   <!-- MAIN-->
   <div class="container-fluid border container-fluid-sm">
     <!-- EVENT BACKGROUND------------------->
-    <div class="row justify-content-center border bg align-items-center padding-for-all">
-      <div class="col-1" style="text-align: center;">
-        <button class="rounded-circle border-0 fa fa-angle-double-left shadow-lg"
-          style="height: 60px; width: 60px;"></button>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row justify-content-center border bg align-items-center padding-for-all">
+            <div class="container">
+              <div class="row bg-color">
+                <div class="col-5 format-2 rounded-left">
+                  <div class="align-items-center">
+                    <p style="font-size: 2.5vw;">Happy World Book Day <br>2020</p>
+
+                    <p style="font-size: 1.7vw;">
+                      "The more that you READ the more things you will know</br>
+                      The more that you LEARN the more places you will go"</br>
+                      <button type="button" class="btn btn-lg btn-primary rounded-pill"
+                        style="margin-top: 10px; width:120px;">Join us</button>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-6 rounded-right align-self-end">
+                  <img src="/image/wbday.jpeg" style="width: 42vw; height: 24vw;">
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row justify-content-center border bg align-items-center padding-for-all">
+            <div class="container">
+              <div class="row bg-color">
+                <div class="col-5 format-2 rounded-left align-items-center">
+                  <div class="align-items-center">
+                    <p style="font-size: 2.5vw;">LIBRARY CLOSED</p>
+                    <br style="font-size: 1.7vw;">
+                    "Library Closure Because of the Coronavirus (COVID-19)</br>
+                    "Please go back here later."</br>
+                    <button type="button" class="btn btn-lg btn-primary rounded-pill"
+                      style="margin-top: 10px; width:150px;">...See more</button>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-6 rounded-right align-self-end">
+                  <img src="/image/close.jpg" style="width: 42vw; height: 24vw;">
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <button class="rounded-circle border-0 fa fa-angle-left shadow-lg" aria-hidden="true"
+          style="height: 60px; width: 60px;"></button>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <button class="rounded-circle border-0 fa fa-angle-right shadow-lg" aria-hidden="true"
+          style="height: 60px; width: 60px;"></button>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
 
-      <div class="col-9">
-        <div class="container">
-          <div class="row bg-color">
-            <div class="col-5 format-2 rounded-left">
-              <div class="align-items-center">
-                <p style="font-size: 2.5vw;">Happy World Book Day <br>2020</p>
+    <!-- POPULAR BOOKS-->
+    <div class="row border align-items-center padding-for-all">
+      <div class="container">
+        <!-- row 1-->
+        <div class="row justify-content-around align-items-center">
+          <div class="col-2 border-x format-text align-self-start">
+            Polular Books
+          </div>
 
-                <p style="font-size: 1.7vw;">
-                  "The more that you READ the more things you will know</br>
-                  The more that you LEARN the more places you will go"</br>
-                  <button type="button" class="btn border-0 btn-lg btn-primary rounded-pill"
-                    style="margin-top: 10px; width:120px;">Join us</button>
-                </p>
+          <div class="col-9">
+            <div class="row align-items-center justify-content-around">
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/nhagiakim.jpg" class="format-img">
+                </a>
+
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/dacnhantam.jpg" class="format-img">
+                </a>
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/dungluachon.jpg" class="format-img">
+                </a>
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/chuyenconmeo.jpg" class="format-img">
+                </a>
+
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/bandatgia.jpg" class="format-img">
+                </a>
               </div>
             </div>
 
-            <div class="col-6 rounded-right align-self-end">
-              <img src="/image/wbday.jpeg" style="width: 42vw; height: 24vw;">
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="col-1" style="text-align: center;">
-        <button class="rounded-circle border-0 fa fa-angle-double-right shadow-lg"
-          style="width: 60px; height: 60px;"></button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- POPULAR BOOKS-->
-  <div class="row border align-items-center padding-for-all">
-    <div class="container">
-      <!-- row 1-->
-      <div class="row justify-content-around align-items-center">
-        <div class="col-2 border-x format-text align-self-start">
-          Polular Books
-        </div>
-
-        <div class="col-9">
-          <div class="row align-items-center justify-content-around">
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/nhagiakim.jpg" class="format-img">
-              </a>
-              
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/dacnhantam.jpg" class="format-img">
-              </a>
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/dungluachon.jpg" class="format-img">
-              </a>
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/chuyenconmeo.jpg" class="format-img">
-              </a>
-             
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/bandatgia.jpg" class="format-img">
-              </a>   
-            </div>
-          </div>
-
-          <div class="row align-items-center justify-content-around">
-            <div class="col-24">
-              <p>Nhà giả kim</p>
-            </div>
-            <div class="col-24">
-              <p>Đắc nhân tâm</p>
-            </div>
-            <div class="col-24">
-              <p>Đừng lựa chọn an nhàn khi còn trẻ </p>
-            </div>
-            <div class="col-24">
-              <p>Chuyện con mèo dạy hải âu bay</p>
-            </div>
-            <div class="col-24">
-              <p>Bạn đắt giá bao nhiêu</p>
+            <div class="row align-items-center justify-content-around">
+              <div class="col-24">
+                <p>Nhà giả kim</p>
+              </div>
+              <div class="col-24">
+                <p>Đắc nhân tâm</p>
+              </div>
+              <div class="col-24">
+                <p>Đừng lựa chọn an nhàn khi còn trẻ </p>
+              </div>
+              <div class="col-24">
+                <p>Chuyện con mèo dạy hải âu bay</p>
+              </div>
+              <div class="col-24">
+                <p>Bạn đắt giá bao nhiêu</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- row 2-->
-      <div class="row justify-content-center">
-        <button type="button" class="btn border-0 btn-primary rounded-pill">...SEE MORE</button>
+        <!-- row 2-->
+        <div class="row justify-content-center">
+          <button type="button" class="btn border-0 btn-primary rounded-pill">...SEE MORE</button>
+        </div>
       </div>
     </div>
-  </div>
 
 
-  <!-- BOOKS-1-->
-  <div class="row padding-for-all border align-items-center bg-color">
-    <div class="container">
-      <!-- row 1-->
-      <div class="row justify-content-around align-items-center">
-        <div class="col-2 border-x format-text align-self-start">
-          <p class="format-color-white"> Books</p>
-          <p class="format-search"> Lập trình</p>
-        </div>
-
-        <div class="col-9">
-          <div class="row align-items-center justify-content-around">
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/ltphp.png" class="format-img">
-              </a>
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/gtc.jpeg" class="format-img">
-              </a>
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/gtlaptrinhjava.jpg" class="format-img">
-              </a>
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/ktlt.jpg" class="format-img">
-              </a>
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/tohoclt.jpg" class="format-img">
-              </a>
-            </div>
+    <!-- BOOKS-1-->
+    <div class="row padding-for-all border align-items-center bg-color">
+      <div class="container">
+        <!-- row 1-->
+        <div class="row justify-content-around align-items-center">
+          <div class="col-2 border-x format-text align-self-start">
+            <p class="format-color-white"> Books</p>
+            <p class="format-search"> Lập trình</p>
           </div>
 
-          <div class="row align-items-center justify-content-around">
-            <div class="col-24">
-              <p>Lập trình cơ bản PHP & MySQL</p>
+          <div class="col-9">
+            <div class="row align-items-center justify-content-around">
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/ltphp.png" class="format-img">
+                </a>
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/gtc.jpeg" class="format-img">
+                </a>
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/gtlaptrinhjava.jpg" class="format-img">
+                </a>
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/ktlt.jpg" class="format-img">
+                </a>
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/tohoclt.jpg" class="format-img">
+                </a>
+              </div>
             </div>
-            <div class="col-24">
-              <p>Giáo trình C++</p>
-            </div>
-            <div class="col-24">
-              <p>Giáo trình lập trình Java</p>
-            </div>
-            <div class="col-24">
-              <p>Kỹ thuật lập trình</p>
-            </div>
-            <div class="col-24">
-              <p>Tớ học lập trình</p>
+
+            <div class="row align-items-center justify-content-around">
+              <div class="col-24">
+                <p>Lập trình cơ bản PHP & MySQL</p>
+              </div>
+              <div class="col-24">
+                <p>Giáo trình C++</p>
+              </div>
+              <div class="col-24">
+                <p>Giáo trình lập trình Java</p>
+              </div>
+              <div class="col-24">
+                <p>Kỹ thuật lập trình</p>
+              </div>
+              <div class="col-24">
+                <p>Tớ học lập trình</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- row 2-->
-      <div class="row justify-content-center">
-        <button type="button" class="btn border-0 btn-primary rounded-pill">...SEE MORE</button>
+        <!-- row 2-->
+        <div class="row justify-content-center">
+          <button type="button" class="btn border-0 btn-primary rounded-pill">...SEE MORE</button>
+        </div>
       </div>
     </div>
-  </div>
 
-
-  <!-- BOOKS-2-->
-  <div class="row padding-for-all border align-items-center" style="background-color: rgba(20, 41, 215, 0.85);">
-    <div class="container">
-      <!-- row 1-->
-      <div class="row justify-content-around align-items-center">
-        <div class="col-2 border-x format-text align-self-start">
-          <p class="format-color-white"> Books</p>
-          <p class="format-search"> Lược sử</p>
-        </div>
-
-        <div class="col-9">
-          <div class="row align-items-center justify-content-around">
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/luocsuloainguoi.jpg" class="format-img">
-              </a>
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/luocsutuonglai.jpg" class="format-img">
-              </a>
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/lichsuthuongde.jpg" class="format-img">
-              </a>
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/vnsuluoc.jpg" class="format-img">
-              </a>
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/daivietsuky.jpg" class="format-img">
-              </a>
-            </div>
+    <!-- BOOKS-2-->
+    <div class="row padding-for-all border align-items-center" style="background-color: rgba(20, 41, 215, 0.85);">
+      <div class="container">
+        <!-- row 1-->
+        <div class="row justify-content-around align-items-center">
+          <div class="col-2 border-x format-text align-self-start">
+            <p class="format-color-white"> Books</p>
+            <p class="format-search"> Lược sử</p>
           </div>
 
-          <div class="row align-items-center justify-content-around">
-            <div class="col-24">
-              <p>Lược sử loài người</p>
+          <div class="col-9">
+            <div class="row align-items-center justify-content-around">
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/luocsuloainguoi.jpg" class="format-img">
+                </a>
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/luocsutuonglai.jpg" class="format-img">
+                </a>
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/lichsuthuongde.jpg" class="format-img">
+                </a>
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/vnsuluoc.jpg" class="format-img">
+                </a>
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/daivietsuky.jpg" class="format-img">
+                </a>
+              </div>
             </div>
-            <div class="col-24">
-              <p>Lược sử tương lai</p>
-            </div>
-            <div class="col-24">
-              <p>Lịch sử thượng đế</p>
-            </div>
-            <div class="col-24">
-              <p>Việt Nam sử lược</p>
-            </div>
-            <div class="col-24">
-              <p>Đại việt Sử ký toàn thư</p>
+
+            <div class="row align-items-center justify-content-around">
+              <div class="col-24">
+                <p>Lược sử loài người</p>
+              </div>
+              <div class="col-24">
+                <p>Lược sử tương lai</p>
+              </div>
+              <div class="col-24">
+                <p>Lịch sử thượng đế</p>
+              </div>
+              <div class="col-24">
+                <p>Việt Nam sử lược</p>
+              </div>
+              <div class="col-24">
+                <p>Đại việt Sử ký toàn thư</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- row 2-->
-      <div class="row justify-content-center">
-        <button type="button" class="btn border-0 btn-primary rounded-pill">...SEE MORE</button>
+        <!-- row 2-->
+        <div class="row justify-content-center">
+          <button type="button" class="btn border-0 btn-primary rounded-pill">...SEE MORE</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- BOOKS-3-->
-  <div class="row padding-for-all border align-items-center">
-    <div class="container">
-      <!-- row 1-->
-      <div class="row justify-content-around align-items-center">
-        <div class="col-2 border-x format-text align-self-start">
-          <p class="format-text"> Books</p>
-          <p class="format-search">Tiếng anh</p>
-        </div>
-
-        <div class="col-9">
-          <div class="row align-items-center justify-content-around">
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/luyennoitienganh.jpg" class="format-img">
-              </a>
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/tuhocchude.jpg" class="format-img">
-              </a>
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/HocTAGTchitrong30ngay.jpg" class="format-img">
-              </a>
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/tienganhtren5daungontay.jpg" class="format-img">
-              </a>
-            </div>
-            <div class="col-24">
-              <a href="Book-details.html">
-                <img src="/image/gtnguphap.jpg" class="format-img">
-              </a>
-            </div>
+    <!-- BOOKS-3-->
+    <div class="row padding-for-all border align-items-center">
+      <div class="container">
+        <!-- row 1-->
+        <div class="row justify-content-around align-items-center">
+          <div class="col-2 border-x format-text align-self-start">
+            <p class="format-text"> Books</p>
+            <p class="format-search">Tiếng anh</p>
           </div>
 
-          <div class="row align-items-center justify-content-around">
-            <div class="col-24">
-              <p>Luyện nói tiếng anh như người bản ngữ</p>
+          <div class="col-9">
+            <div class="row align-items-center justify-content-around">
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/luyennoitienganh.jpg" class="format-img">
+                </a>
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/tuhocchude.jpg" class="format-img">
+                </a>
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/HocTAGTchitrong30ngay.jpg" class="format-img">
+                </a>
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/tienganhtren5daungontay.jpg" class="format-img">
+                </a>
+              </div>
+              <div class="col-24">
+                <a href="Book-details.html">
+                  <img src="/image/gtnguphap.jpg" class="format-img">
+                </a>
+              </div>
             </div>
-            <div class="col-24">
-              <p>Tự học 29 chủ đề giao tiếp tiếng anh thông dụng nhất</p>
-            </div>
-            <div class="col-24">
-              <p>Học tiếng anh giao tiếp chỉ trong 30 ngày</p>
-            </div>
-            <div class="col-24">
-              <p>Tiếng anh trên 5 đầu ngón tay</p>
-            </div>
-            <div class="col-24">
-              <p>Giải thích ngữ pháp tiếng anh</p>
+
+            <div class="row align-items-center justify-content-around">
+              <div class="col-24">
+                <p>Luyện nói tiếng anh như người bản ngữ</p>
+              </div>
+              <div class="col-24">
+                <p>Tự học 29 chủ đề giao tiếp tiếng anh thông dụng nhất</p>
+              </div>
+              <div class="col-24">
+                <p>Học tiếng anh giao tiếp chỉ trong 30 ngày</p>
+              </div>
+              <div class="col-24">
+                <p>Tiếng anh trên 5 đầu ngón tay</p>
+              </div>
+              <div class="col-24">
+                <p>Giải thích ngữ pháp tiếng anh</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- row 2-->
-      <div class="row justify-content-center">
-        <button type="button" class="btn border-0 btn-primary rounded-pill">...SEE MORE</button>
+        <!-- row 2-->
+        <div class="row justify-content-center">
+          <button type="button" class="btn border-0 btn-primary rounded-pill">...SEE MORE</button>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 
   <footer style="background-color: #000080;">

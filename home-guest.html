@@ -50,12 +50,11 @@
       <i class="fa fa-search d-flex float-right justify-content-center align-items-center ml-auto d-inline-block d-lg-none"
         style="width: auto;height: 25px;color: #1429D7;margin: 0px auto;margin-right: 10px;"></i>
 
-      <button class="btn btn-lg text-break text-center float-right" id="btn-signup" type="button"
-        onclick="Signup()"
+      <button class="btn btn-lg text-break text-center float-right" id="btn-signup" type="button" onclick="Signup()"
         style="color: #1429D7;filter: hue-rotate(0deg);border: 2px solid #1429D7;font-size: 15px;">Sign up</button>
 
       <div id="user" class="row float-right align-items-center" style="visibility: hidden;">
-        
+
         <i class="fa fa-bell" style="color: #1429D7;margin: 0px 10px;font-size: 25px;"></i>
 
         <div class="dropdown">
@@ -109,234 +108,262 @@
     </div>
   </nav>
 
-  <!-- MAIN-->
+  <!-- MAIN------------------------------------>
   <div class="container-fluid border container-fluid-sm">
     <!-- EVENT BACKGROUND------------------->
-    <div class="row justify-content-center border bg align-items-center padding-for-all">
-      <div class="col-1" style="text-align: center;">
-        <button class="rounded-circle border-0 fa fa-angle-double-left shadow-lg"
-          style="height: 60px; width: 60px;"></button>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row justify-content-center border bg align-items-center padding-for-all">
+              <div class="container">
+                <div class="row bg-color">
+                  <div class="col-5 format-2 rounded-left">
+                    <div class="align-items-center">
+                      <p style="font-size: 2.5vw;">Happy World Book Day <br>2020</p>
+      
+                      <p style="font-size: 1.7vw;">
+                        "The more that you READ the more things you will know</br>
+                        The more that you LEARN the more places you will go"</br>
+                        <button type="button" class="btn btn-lg btn-primary rounded-pill"
+                          style="margin-top: 10px; width:120px;">Join us</button>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-6 rounded-right align-self-end">
+                    <img src="/image/wbday.jpeg" style="width: 42vw; height: 24vw;">
+                  </div>
+      
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row justify-content-center border bg align-items-center padding-for-all">
+            <div class="container">
+              <div class="row bg-color">
+                <div class="col-5 format-2 rounded-left align-items-center">
+                  <div class="align-items-center">
+                    <p style="font-size: 2.5vw;">LIBRARY CLOSED</p>    
+                    <br style="font-size: 1.7vw;">
+                      "Library Closure Because of the Coronavirus (COVID-19)</br>
+                      "Please go back here later."</br>
+                      <button type="button" class="btn btn-lg btn-primary rounded-pill"
+                          style="margin-top: 10px; width:150px;">...See more</button>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-6 rounded-right align-self-end">
+                  <img src="/image/close.jpg" style="width: 42vw; height: 24vw;">
+                </div>
+    
+              </div>
+            </div>
+        </div>
+        </div>
       </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <button class="rounded-circle border-0 fa fa-angle-left shadow-lg" aria-hidden="true" style="height: 60px; width: 60px;"></button>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <button class="rounded-circle border-0 fa fa-angle-right shadow-lg" aria-hidden="true" style="height: 60px; width: 60px;"></button>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
 
-      <div class="col-9">
-        <div class="container">
-          <div class="row bg-color">
-            <div class="col-5 format-2 rounded-left">
-              <div class="align-items-center">
-                <p style="font-size: 2.5vw;">Happy World Book Day <br>2020</p>
 
-                <p style="font-size: 1.7vw;">
-                  "The more that you READ the more things you will know</br>
-                  The more that you LEARN the more places you will go"</br>
-                  <button type="button" class="btn btn-lg btn-primary rounded-pill"
-                    style="margin-top: 10px; width:120px;">Join us</button>
-                </p>
+    <!-- Upcoming events---------------------->
+    <div class="row border align-items-center padding-for-all">
+      <div class="container">
+        <!-- row 1-->
+        <div class="row justify-content-around align-items-center">
+          <div class="col-3 border-x format-text align-self-start">
+            Upcoming Events <br>Announcements
+          </div>
+
+          <div class="col-9">
+            <div class="row align-items-center">
+              <div class="col-4">
+                <img src="/image/close.jpg" class="format-img">
+              </div>
+              <div class="col-4">
+                <img src="/image/howtoread.jpg" class="format-img">
+              </div>
+              <div class="col-4">
+                <img src="/image/newyear.jpg" class="format-img">
               </div>
             </div>
 
-            <div class="col-6 rounded-right align-self-end">
-              <img src="/image/wbday.jpeg" style="width: 42vw; height: 24vw;">
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="col-1" style="text-align: center;">
-        <button class="rounded-circle border-0 fa fa-angle-double-right shadow-lg"
-          style="width: 60px; height: 60px;"></button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Upcoming events---------------------->
-  <div class="row border align-items-center padding-for-all">
-    <div class="container">
-      <!-- row 1-->
-      <div class="row justify-content-around align-items-center">
-        <div class="col-3 border-x format-text align-self-start">
-          Upcoming Events <br>Announcements
-        </div>
-
-        <div class="col-9">
-          <div class="row align-items-center">
-            <div class="col-4">
-              <img src="/image/close.jpg" class="format-img">
-            </div>
-            <div class="col-4">
-              <img src="/image/howtoread.jpg" class="format-img">
-            </div>
-            <div class="col-4">
-              <img src="/image/newyear.jpg" class="format-img">
-            </div>
-          </div>
-
-          <div class="row justify-content-center align-items-center">
-            <div class="col-4">
-              <p>Library Closure Because of the Coronavirus (COVID-19)</p>
-            </div>
-            <div class="col-4">
-              <p>More Book More Fun Keeping Steak With Us</p>
-            </div>
-            <div class="col-4">
-              <p>Happy Lunar New Year 2020</p>
+            <div class="row justify-content-center align-items-center">
+              <div class="col-4">
+                <p>Library Closure Because of the Coronavirus (COVID-19)</p>
+              </div>
+              <div class="col-4">
+                <p>More Book More Fun Keeping Steak With Us</p>
+              </div>
+              <div class="col-4">
+                <p>Happy Lunar New Year 2020</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- row 2-->
-      <div class="row justify-content-center">
-        <button type="button" class="btn btn-primary rounded-pill border-0">...SEE MORE</button>
+        <!-- row 2-->
+        <div class="row justify-content-center">
+          <button type="button" class="btn btn-primary rounded-pill border-0">...SEE MORE</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- TOP PICKS-->
-  <div class="row border align-items-center bg-color padding-for-all">
-    <div class="container">
-      <!-- row 1-->
-      <div class="row justify-content-around align-items-center" style="padding-bottom: 20px;">
-        <div class="col-3 border-x format-text align-self-start">
-          <p class="format-color-white">Top picks</p>
+    <!-- TOP PICKS-->
+    <div class="row border align-items-center bg-color padding-for-all">
+      <div class="container">
+        <!-- row 1-->
+        <div class="row justify-content-around align-items-center" style="padding-bottom: 20px;">
+          <div class="col-3 border-x format-text align-self-start">
+            <p class="format-color-white">Top picks</p>
+          </div>
+
+          <div class="col-9">
+            <div class="row align-items-center justify-content-around">
+
+              <div class="col-5 align-items-center format-color-bg">
+                <div class="row align-items-center">
+                  <div class="col-7 format-text-sm align-items-center">
+                    <p class="set-topic">Nhập môn lập trình<br>
+                      ------------------
+                      <br>
+                      Khởi đầu của giấc mơ lập trình viên trong tôi. Đây là cuốn sách đầu tiên khi tôi bước chân vào môi
+                      trường đại học nói chung và ngành Công nghệ Thông tin nói riêng.
+                      <br>------------------
+                      <br> by hdtien </p>
+                  </div>
+                  <div class="col-5">
+                    <img src="/image/nmlt.JPG" class="format-img">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-5 format-color-bg">
+                <div class="row align-items-center">
+                  <div class="col-7 format-text-sm">
+                    <p class="set-topic"> CTDL & GT </br>
+                      ------------------ </br>
+                      Giấc mơ của tôi bắt đầu từ điều "phi thường". Đây là cuốn sách tôi tâm đắc nhất trong số sách mà
+                      tôi có. Dù như thế nào thì hành trang của tôi không thể thiếu cuốn sách này.
+                      </br>------------------
+                      </br> by ntmthuy </p>
+                  </div>
+
+                  <div class="col-5">
+                    <img src="/image/ctdl.jpg" class="format-img">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
+        <!-- row 2-->
+        <div class="row justify-content-center">
+          <button type="button" class="btn btn-primary rounded-pill border-0">...SEE MORE</button>
+        </div>
+      </div>
+    </div>
 
-        <div class="col-9">
-          <div class="row align-items-center justify-content-around">
+    <!-- NEW & NOTEWORTHY -->
+    <div class="row border align-items-center padding-for-all" style="background-color: rgba(20, 41, 215, 0.85);">
+      <div class="container">
+        <!-- row 1-->
+        <div class="row justify-content-center align-items-center">
+          <div class="col-3 border-x format-text align-self-start">
+            <p class="format-color-white"> New & <br>Noteworthy</p>
+          </div>
 
-            <div class="col-5 align-items-center format-color-bg">
-              <div class="row align-items-center">
-                <div class="col-7 format-text-sm align-items-center">
-                  <p class="set-topic">Nhập môn lập trình<br>
-                    ------------------
-                    <br>
-                    Khởi đầu của giấc mơ lập trình viên trong tôi. Đây là cuốn sách đầu tiên khi tôi bước chân vào môi
-                    trường đại học nói chung và ngành Công nghệ Thông tin nói riêng.
-                    <br>------------------
-                    <br> by hdtien </p>
-                </div>
-                <div class="col-5">
-                  <img src="/image/nmlt.JPG" class="format-img">
-                </div>
+          <div class="col-9">
+            <div class="row align-items-center">
+              <div class="col-3">
+                <a href="Book-details.html">
+                  <img src="/image/chay-dua-voi-robot.jpg" class="format-img">
+                </a>
+              </div>
+              <div class="col-3">
+                <a href="Book-details.html">
+                  <img src="/image/thoidai.jpg" class="format-img">
+                </a>
+              </div>
+              <div class="col-3">
+                <a href="Book-details.html">
+                  <img src="/image/AI.jpg" class="format-img">
+                </a>
+              </div>
+              <div class="col-3">
+                <a href="Book-details.html">
+                  <img src="/image/artificial.jpg" class="format-img">
+                </a>
               </div>
             </div>
 
-            <div class="col-5 format-color-bg">
-              <div class="row align-items-center">
-                <div class="col-7 format-text-sm">
-                  <p class="set-topic"> CTDL & GT </br>
-                    ------------------ </br>
-                    Giấc mơ của tôi bắt đầu từ điều "phi thường". Đây là cuốn sách tôi tâm đắc nhất trong số sách mà
-                    tôi có. Dù như thế nào thì hành trang của tôi không thể thiếu cuốn sách này.
-                    </br>------------------
-                    </br> by ntmthuy </p>
-                </div>
-
-                <div class="col-5">
-                  <img src="/image/ctdl.jpg" class="format-img">
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <!-- row 2-->
-      <div class="row justify-content-center">
-        <button type="button" class="btn btn-primary rounded-pill border-0">...SEE MORE</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- NEW & NOTEWORTHY -->
-  <div class="row border align-items-center padding-for-all" style="background-color: rgba(20, 41, 215, 0.85);">
-    <div class="container">
-      <!-- row 1-->
-      <div class="row justify-content-center align-items-center">
-        <div class="col-3 border-x format-text align-self-start">
-          <p class="format-color-white"> New & <br>Noteworthy</p>
-        </div>
-
-        <div class="col-9">
-          <div class="row align-items-center">
-            <div class="col-3">
-              <a href="Book-details.html">
-                <img src="/image/chay-dua-voi-robot.jpg" class="format-img">
-              </a>    
-            </div>
-            <div class="col-3">
-              <a href="Book-details.html">
-                <img src="/image/thoidai.jpg" class="format-img">
-              </a>
-            </div>
-            <div class="col-3">
-              <a href="Book-details.html">
-                <img src="/image/AI.jpg" class="format-img">
-              </a>
-            </div>
-            <div class="col-3">
-              <a href="Book-details.html">
-                <img src="/image/artificial.jpg" class="format-img">
-              </a>
-            </div>
-          </div>
-
-          <div class="row justify-content-center align-items-center format-color-white">
-            <div class="col-3">
+            <div class="row justify-content-center align-items-center format-color-white">
+              <div class="col-3">
                 <p>Chạy đua với robot</p>
-            </div>
-            <div class="col-3">
-              <p>Thời đại của trí thông minh nhân tạo</p>
-            </div>
-            <div class="col-3">
-              <p>Kỷ nguyên trí tuệ nhân tạo</p>
-            </div>
-            <div class="col-3">
-              <p>Artificial Intelligence Problems & their Solutions</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- row 2-->
-      <div class="row justify-content-center">
-        <button type="button" class="btn btn-primary rounded-pill border-0">...SEE MORE</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- UPDATES-->
-  <div class="row border align-items-center padding-for-all">
-    <div class="container">
-      <!-- row 1-->
-      <div class="row justify-content-center align-items-center" style="padding-bottom: 10px;">
-        <div class="col-2 border-x format-text align-self-start">
-          Updates
-        </div>
-
-        <div class="col-9">
-          <div class="row">
-            <div class="col-3">
-              <img src="/image/Coronavirus-600x400.jpeg" class="format-img">
-            </div>
-            <div class="col-3">
-              <p>Coronavirus (COVID-19) Information</p>
-            </div>
-            <div class="col-3">
-              <img src="/image/librarycard.jpeg" class="format-img">
-            </div>
-            <div class="col-3">
-              <p>Library Card Updated</p>
+              </div>
+              <div class="col-3">
+                <p>Thời đại của trí thông minh nhân tạo</p>
+              </div>
+              <div class="col-3">
+                <p>Kỷ nguyên trí tuệ nhân tạo</p>
+              </div>
+              <div class="col-3">
+                <p>Artificial Intelligence Problems & their Solutions</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- row 2-->
-
-      <div class="row justify-content-center">
-        <button type="button" class="btn btn-primary rounded-pill border-0">...SEE MORE</button>
+        <!-- row 2-->
+        <div class="row justify-content-center">
+          <button type="button" class="btn btn-primary rounded-pill border-0">...SEE MORE</button>
+        </div>
       </div>
     </div>
-  </div>
+
+    <!-- UPDATES-->
+    <div class="row border align-items-center padding-for-all">
+      <div class="container">
+        <!-- row 1-->
+        <div class="row justify-content-center align-items-center" style="padding-bottom: 10px;">
+          <div class="col-2 border-x format-text align-self-start">
+            Updates
+          </div>
+
+          <div class="col-9">
+            <div class="row">
+              <div class="col-3">
+                <img src="/image/Coronavirus-600x400.jpeg" class="format-img">
+              </div>
+              <div class="col-3">
+                <p>Coronavirus (COVID-19) Information</p>
+              </div>
+              <div class="col-3">
+                <img src="/image/librarycard.jpeg" class="format-img">
+              </div>
+              <div class="col-3">
+                <p>Library Card Updated</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- row 2-->
+
+        <div class="row justify-content-center">
+          <button type="button" class="btn btn-primary rounded-pill border-0">...SEE MORE</button>
+        </div>
+      </div>
+    </div>
 
   </div>
 

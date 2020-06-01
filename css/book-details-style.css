@@ -10,6 +10,12 @@ body{
     background-color: snow;
 }
 
+#more-images {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px 10px;
+}
+
 .BelowBookName {
     display: grid;
     grid-template-columns: 50% auto;

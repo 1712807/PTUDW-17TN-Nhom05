@@ -1,12 +1,13 @@
 body{
     background-color:rgb(245, 245, 240);
 }
+
 .btn-primary{
     background-color: #F15922;
     
 }
 
-.container {
+.container-fluid {
     background-color: snow;
 }
 

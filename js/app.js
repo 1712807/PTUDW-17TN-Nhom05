@@ -10,3 +10,12 @@ function Signup()
 
     
 }
+
+function searchAvailableKey(id_ButtonCLicked)
+{
+    var btn_clicked = document.getElementById(id_ButtonCLicked);
+    var textInButton = btn_clicked.textContent;
+
+    var show_data_search = document.getElementById("keyWord");
+    show_data_search.innerHTML = textInButton;
+}

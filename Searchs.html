@@ -26,7 +26,7 @@
                     data-placement="bottom" src="/image/library-logo-sm.png" title="University of Science FIT Library"
                     style="width: 75px;height: 75px;">
             </a>
-            <form style ="margin: 0px auto;height: 66px; display: none;" class="d-lg-flex col-lg-6 border rounded">
+            <form style="margin: 0px auto;height: 66px; display: none;" class="d-lg-flex col-lg-6 border rounded">
                 <div class="form-group d-xl-flex my-auto d-none d-lg-inline-block col-xl-9 border-right"
                     style="padding: 0px;">
                     <input class="border-0 rounded-0 form-control" type="search" placeholder="Search" required=""
@@ -48,7 +48,8 @@
                     </button>
                 </div>
             </form>
-            <i id="btn-search" class="fa fa-search d-flex float-right justify-content-center align-items-center ml-auto d-inline-block d-lg-none"
+            <i id="btn-search"
+                class="fa fa-search d-flex float-right justify-content-center align-items-center ml-auto d-inline-block d-lg-none"
                 style="width: auto;height: 25px;color: #1429D7;margin: 0px auto;margin-right: 10px;"></i>
 
             <button class="btn btn-lg text-break text-center float-right" id="btn-signup" type="button"
@@ -78,7 +79,7 @@
     </header>
     <!-- BASES TAB-------------------------->
     <nav class="navbar navbar-light navbar-expand-md shadow d-xl-flex align-items-xl-center"
-        style="width: auto; background-color:rgb(245, 245, 240);">
+        style="width: auto;">
         <div class="container-fluid">
             <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
                 <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
@@ -115,22 +116,41 @@
     <div class="container" style="background-color:rgb(245, 245, 240);">
         <div class="row" style="margin: 10px 40px;">
             <label>You search for:</label>
-            <h6 style="margin: 2px 10px;">NHẬP MÔN LẬP TRÌNH</h6>
+            <h6 id="keyWord" style="margin: 2px 10px;">NHẬP MÔN LẬP TRÌNH</h6>
         </div>
 
         <div class="row" style="margin: 10px 40px;">
-            <label style="padding-top: 5px; border-bottom: 2px solid #1429D7;">Result by category:</label>
-            <div id="TagName" style="margin-left: 20px;">nhập môn</div>
-            <div id="TagName">lập trình</div>
-            <div id="TagName">C</div>
-            <div id="TagName">C++</div>
+            <div class="col-2">
+                <label style="padding-top: 5px; border-bottom: 2px solid #1429D7;">Result by category:</label>
+            </div>
+            <div class="col-9">
+                <div class="row row-cols-4" style="text-align: center;">
+                    <button id="key1" class="col-2 btn btn-primary border-0 rounded-0" style="margin-right: 10px;" onclick="searchAvailableKey(this.id)">
+                        nhập môn
+                    </button>
+                    <button id="key2" class="col-2 btn btn-primary border-0 rounded-0" style="margin-right: 10px;" onclick="searchAvailableKey(this.id)">
+                        lập trình
+                    </button>
+                    <button id="key3" class="col-2 btn btn-primary border-0 rounded-0" style="margin-right: 10px;" onclick="searchAvailableKey(this.id)">
+                        C
+                    </button>
+                    <button id="key4" class="col-2 btn btn-primary border-0 rounded-0" style="margin-right: 10px;" onclick="searchAvailableKey(this.id)">
+                        C++
+                    </button>
+                </div>
+                
+
+            </div>
+            
         </div>
     </div>
 
     <div class="container-fluid search-result">
         <div class="row col-10" style="padding: 20px 60px; margin: 0px auto;">
             <div class="col">
-                <img src="Image/nmlt.jpg">
+                <a href="Book-details.html">
+                    <img src="Image/nmlt.JPG">
+                </a>
             </div>
             <div class="col-9">
                 <p style="margin: 0px; padding: 0px"><b>Nhập Môn Lập Trình</b></p>
@@ -140,7 +160,7 @@
                     consequuntur sit ullam earum quia sunt.</p>
             </div>
             <div>
-                <p style="font-size: 10px; color: #027DB4; padding: 0px; margin: 0px">See detail</p>
+                <a href="Book-details.html" style="text-decoration: underline;">See detail</a>
             </div>
         </div>
     </div>
@@ -148,7 +168,9 @@
     <div class="container-fluid search-result">
         <div class="row col-10" style="padding: 20px 60px; margin: 0px auto;">
             <div class="col">
-                <img src="Image/ktlt.jpg">
+                <a href="Book-details.html">
+                    <img src="Image/ktlt.jpg">
+                </a>
             </div>
             <div class="col-9">
                 <p style="margin: 0px; padding: 0px"><b>Kỹ Thuật Lập Trình</b></p>
@@ -158,7 +180,7 @@
                     consequuntur sit ullam earum quia sunt.</p>
             </div>
             <div>
-                <p style="font-size: 10px; color: #027DB4; padding: 0px; margin: 0px">See detail</p>
+                <a href="Book-details.html" style="text-decoration: underline;">See detail</a>
             </div>
         </div>
     </div>
@@ -166,7 +188,9 @@
     <div class="container-fluid search-result">
         <div class="row col-10" style="padding: 20px 60px; margin: 0px auto;">
             <div class="col">
-                <img src="/image/ktltC.jpg">
+                <a href="Book-details.html">
+                    <img src="Image/ktltC.jpg">
+                </a>
             </div>
             <div class="col-9">
                 <p style="margin: 0px; padding: 0px"><b>Kỹ Thuật Lập Trình C</b></p>
@@ -176,7 +200,7 @@
                     consequuntur sit ullam earum quia sunt.</p>
             </div>
             <div>
-                <p style="font-size: 10px; color: #027DB4; padding: 0px; margin: 0px">See detail</p>
+                <a href="Book-details.html" style="text-decoration: underline;">See detail</a>
             </div>
         </div>
     </div>
@@ -184,7 +208,9 @@
     <div class="container-fluid search-result">
         <div class="row col-10" style="padding: 20px 60px; margin: 0px auto;">
             <div class="col">
-                <img src="/image/gtc.jpeg">
+                <a href="Book-details.html">
+                    <img src="Image/gtc.jpeg">
+                </a>
             </div>
             <div class="col-9">
                 <p style="margin: 0px; padding: 0px"><b>Giáo Trình C++</b></p>
@@ -194,7 +220,7 @@
                     consequuntur sit ullam earum quia sunt.</p>
             </div>
             <div>
-                <p style="font-size: 10px; color: #027DB4; padding: 0px; margin: 0px">See detail</p>
+                <a href="Book-details.html" style="text-decoration: underline;">See detail</a>
             </div>
         </div>
     </div>
@@ -202,7 +228,9 @@
     <div class="container-fluid search-result">
         <div class="row col-10" style="padding: 20px 60px; margin: 0px auto;">
             <div class="col">
-                <img src="/image/lthdt.jpg">
+                <a href="Book-details.html">
+                    <img src="Image/lthdt.jpg">
+                </a>
             </div>
             <div class="col-9">
                 <p style="margin: 0px; padding: 0px"><b>Lập Trình Hướng Đối Tượng</b></p>
@@ -212,13 +240,13 @@
                     consequuntur sit ullam earum quia sunt.</p>
             </div>
             <div>
-                <p style="font-size: 10px; color: #027DB4; padding: 0px; margin: 0px">See detail</p>
+                <a href="Book-details.html" style="text-decoration: underline;">See detail</a>
             </div>
         </div>
     </div>
 
     <div class="row justify-content-center" style="margin: 10px;">
-        <button type="button" class="btn border-0 btn-primary rounded-pill">SEE MORE ...</button>
+        <button type="button" class="btn border-0 btn-primary rounded-pill">...SEE MORE</button>
     </div>
 
     <footer style="background-color: #000080;">

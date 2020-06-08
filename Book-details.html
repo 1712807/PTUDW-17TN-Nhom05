@@ -2,556 +2,622 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link href="/css/book-details-style.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Book Details</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="/css/book-details-style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Book Details</title>
 </head>
 
 <body>
-  <!-- HEADER----------------------------->
-  <header>
-    <div class="jumbotron d-flex align-items-center"
-      style="height: 75px;margin: auto;background-color: #fff;border-bottom: 3px solid #1429D7;padding: auto;">
-      <a href="home-guest.html" style="margin: 0px 10px;">
-        <img class="img-fluid ml-auto d-none d-md-inline-block" data-toggle="tooltip" data-bs-tooltip=""
-          data-placement="bottom" src="/image/library-logo.png" title="University of Science FIT Library">
-        <img class="ml-auto img-fluid d-inline-block d-md-none" data-toggle="tooltip" data-bs-tooltip=""
-          data-placement="bottom" src="/image/library-logo-sm.png" title="University of Science FIT Library"
-          style="width: 75px;height: 75px;">
-      </a>
-      <form class="d-none d-lg-flex col-lg-6 border rounded" style="margin: 0px auto;height: 66px;">
-        <div class="form-group d-xl-flex my-auto d-none d-lg-inline-block col-xl-9 border-right" style="padding: 0px;">
-          <input class="border-0 rounded-0 form-control" type="search" placeholder="Search" required=""
-            style="height: 50px;width: fit;padding: 0px 12px;">
-        </div>
-        <div class="form-group my-auto d-none d-lg-inline-block" style="height: 38px;">
-          <div class="dropdown" style="height: 38px;">
-            <button class="btn btn-primary dropdown-toggle border-0 rounded-0" data-toggle="dropdown"
-              aria-expanded="false" type="button"
-              style="background-color: rgba(0,123,255,0);color: #000;height: auto;">Books&nbsp;</button>
-            <div class="dropdown-menu" role="menu">
-              <a class="dropdown-item" role="presentation" href="#">Books</a>
+    <!-- HEADER----------------------------->
+    <header>
+        <div class="jumbotron d-flex align-items-center"
+            style="height: 75px;margin: auto;background-color: #fff;border-bottom: 3px solid #1429D7;padding: auto;">
+            <a href="home-guest.html" style="margin: 0px 10px;">
+                <img class="img-fluid ml-auto d-none d-md-inline-block" data-toggle="tooltip" data-bs-tooltip=""
+                    data-placement="bottom" src="/image/library-logo.png" title="University of Science FIT Library">
+                <img class="ml-auto img-fluid d-inline-block d-md-none" data-toggle="tooltip" data-bs-tooltip=""
+                    data-placement="bottom" src="/image/library-logo-sm.png" title="University of Science FIT Library"
+                    style="width: 75px;height: 75px;">
+            </a>
+            <form class="d-none d-lg-flex col-lg-6 border rounded" style="margin: 0px auto;height: 66px;">
+                <div class="form-group d-xl-flex my-auto d-none d-lg-inline-block col-xl-9 border-right"
+                    style="padding: 0px;">
+                    <input class="border-0 rounded-0 form-control" type="search" placeholder="Search" required=""
+                        style="height: 50px;width: fit;padding: 0px 12px;">
+                </div>
+                <div class="form-group my-auto d-none d-lg-inline-block" style="height: 38px;">
+                    <div class="dropdown" style="height: 38px;">
+                        <button class="btn btn-primary dropdown-toggle border-0 rounded-0" data-toggle="dropdown"
+                            aria-expanded="false" type="button"
+                            style="background-color: rgba(0,123,255,0);color: #000;height: auto;">Books&nbsp;</button>
+                        <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" role="presentation" href="#">Books</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group my-auto d-none d-lg-inline-block">
+                    <button class="btn btn-primary border-0 rounded" type="submit"
+                        style="background-color: #F15922;height: 40px;" formaction="Searchs.html">Search
+                    </button>
+                </div>
+            </form>
+            <i class="fa fa-search d-flex float-right justify-content-center align-items-center ml-auto d-inline-block d-lg-none"
+                style="width: auto;height: 25px;color: #1429D7;margin: 0px auto;margin-right: 10px;"></i>
+
+            <button class="btn btn-lg text-break text-center float-right" id="btn-signup" type="button"
+                onclick="Signup()"
+                style="color: #1429D7;filter: hue-rotate(0deg);border: 2px solid #1429D7;font-size: 15px;">Sign
+                up</button>
+
+            <div id="user" class="row float-right align-items-center" style="visibility: hidden;">
+
+                <i class="fa fa-bell" style="color: #1429D7;margin: 0px 10px;font-size: 25px;"></i>
+
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false"
+                        type="button" style="background-color: #1429D7;">
+                        <i class="fa fa-user" style="font-size: 20px;"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                        <a class="dropdown-item" role="presentation" href="profile-user.html">Profile</a>
+                        <a class="dropdown-item" role="presentation" href="yourbook.html">Your Books</a>
+                        <a class="dropdown-item" role="presentation" href="home-guest.html">Log Out</a>
+                    </div>
+                </div>
             </div>
-          </div>
+
         </div>
-        <div class="form-group my-auto d-none d-lg-inline-block">
-          <button class="btn btn-primary border-0 rounded" type="submit" style="background-color: #F15922;height: 40px;"
-            formaction="Searchs.html">Search
-          </button>
+    </header>
+    <!-- BASES TAB-------------------------->
+    <nav class="navbar navbar-light navbar-expand-md shadow d-xl-flex align-items-xl-center"
+        style="width: auto; background-color:rgb(245, 245, 240);">
+        <div class="container-fluid">
+            <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav">
+
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="home-guest.html" style="margin: 0px 40px;">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item d-xl-flex justify-content-xl-center format-choice" role="presentation"
+                        style="margin: 0px;">
+                        <a class="nav-link active d-xl-flex" href="content-guest.html" style="margin: 0px 40px;">
+                            Contents
+                        </a>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="rules-guest.html" style="margin: 0px 40px;">
+                            Rules
+                        </a>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="contact-guest.html" style="margin: 0px 40px;">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </form>
-      <i class="fa fa-search d-flex float-right justify-content-center align-items-center ml-auto d-inline-block d-lg-none"
-        style="width: auto;height: 25px;color: #1429D7;margin: 0px auto;margin-right: 10px;"></i>
+    </nav>
+    <div class="container group-details mt-3" style="background-color: white;">
+        <div class="row" style="padding: 10px 20px;">
+            <div class="col-md-4" style="padding: 10px 20px;">
+                <img class="col-md-12 row" src="/image/ptWebChoSmartPhone.jpg">
+                </img>
+                <div class="col-md-12 row">
+                    <div class="col" id="more-images">
+                        <img src="/image/ptWebChoSmartPhone.jpg">
+                    </div>
+                    <div class="col" id="more-images">
+                        <img src="/image/ptWebChoSmartPhone.jpg">
+                    </div>
+                    <div class="col" id="more-images">
+                        <img src="/image/ptWebChoSmartPhone.jpg">
+                    </div>
+                </div>
+            </div>
 
-      <button class="btn btn-lg text-break text-center float-right" id="btn-signup" type="button" onclick="Signup()"
-        style="color: #1429D7;filter: hue-rotate(0deg);border: 2px solid #1429D7;font-size: 15px;">Sign up</button>
+            <div class="col-md-8 row" style="padding: 10px 20px;">
+                <h3 class="col-md-12">Phát Triển Web Cho Smartphone</h3>
+                <label class="col-md-6 sku">SKU: 9552147738847</label>
+                <label class="views col-md-6" style="text-align: right;">(1.352 views)</label>
 
-      <div id="user" class="row float-right align-items-center" style="visibility: hidden;">
-
-        <i class="fa fa-bell" style="color: #1429D7;margin: 0px 10px;font-size: 25px;"></i>
-
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"
-            style="background-color: #1429D7;">
-            <i class="fa fa-user" style="font-size: 20px;"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-right" role="menu">
-            <a class="dropdown-item" role="presentation" href="profile-user.html">Profile</a>
-            <a class="dropdown-item" role="presentation" href="yourbook.html">Your Books</a>
-            <a class="dropdown-item" role="presentation" href="home-guest.html">Log Out</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </header>
-  <!-- BASES TAB-------------------------->
-  <nav class="navbar navbar-light navbar-expand-md shadow d-xl-flex align-items-xl-center"
-    style="width: auto; background-color:rgb(245, 245, 240);">
-    <div class="container-fluid">
-      <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
-        <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navcol-1">
-        <ul class="nav navbar-nav">
-
-          <li class="nav-item" role="presentation">
-            <a class="nav-link" href="home-guest.html" style="margin: 0px 40px;">
-              Home
-            </a>
-          </li>
-
-          <li class="nav-item d-xl-flex justify-content-xl-center format-choice" role="presentation"
-            style="margin: 0px;">
-            <a class="nav-link active d-xl-flex" href="content-guest.html" style="margin: 0px 40px;">
-              Contents
-            </a>
-          </li>
-
-          <li class="nav-item" role="presentation">
-            <a class="nav-link" href="rules-guest.html" style="margin: 0px 40px;">
-              Rules
-            </a>
-          </li>
-
-          <li class="nav-item" role="presentation">
-            <a class="nav-link" href="contact-guest.html" style="margin: 0px 40px;">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="container group-details" style="font-size: 1.2vw;">
-    <div class="row" style="padding: 10px 20px;">
-      <div class="col-md-4" style="padding: 10px 20px;">
-        <img class="col-md-12 row" src="/image/ptWebChoSmartPhone.jpg">
-        </img>
-        <div class="col-md-12 row">
-          <div class="col" id="more-images">
-            <img src="/image/ptWebChoSmartPhone.jpg">
-          </div>
-          <div class="col" id="more-images">
-            <img src="/image/ptWebChoSmartPhone.jpg">
-          </div>
-          <div class="col" id="more-images">
-            <img src="/image/ptWebChoSmartPhone.jpg">
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-8 row" style="padding: 10px 20px;">
-        <h3 class="col-md-12">Phát Triển Web Cho Smartphone</h3>
-        <label class="col-md-6 sku">SKU: 9552147738847</label>
-        <label class="views col-md-6" style="text-align: right;">(1.352 views)</label>
-
-        <div class="col-md-12"> <label class="instock">In Stock</label></div>
+                <div class="col-md-12"> <label class="instock">In Stock</label></div>
 
 
-        <label class="col-md-12">Author: Gail Rahn Frederick & Rajash Lai</label>
-        <label class="col-md-12">Publisher: Bách khoa Hà Nội</label>
-        <label class="col-md-12">Pages: 350</label>
-        <label class="col-md-12">Language: Vietnamese</label>
-        <label class="col-md-12">Type: Paperback</label>
+                <label class="col-md-12 mb-0" style="padding-bottom: 0px;">Author: Gail Rahn Frederick & Rajash
+                    Lai</label>
+                <label class="col-md-12 mb-0" style="padding-bottom: 0px;">Publisher: Bách khoa Hà Nội</label>
+                <label class="col-md-12 mb-0" style="padding-bottom: 0px;">Pages: 350</label>
+                <label class="col-md-12 mb-0" style="padding-bottom: 0px;">Language: Vietnamese</label>
+                <label class="col-md-12 mb-0" style="padding-bottom: 0px;">Type: Paperback</label>
 
-        <label class="col-md-3" id="avaibility">Availability: <b>10</b></label>
-        <div class="col-md-2" id="borrow">Place hold</div>
-        <div class="col-md-2" id="borrow">Borrow</div>
+                <label class="col-md-3" id="avaibility">Availability: &nbsp;<b> 10</b></label>
+                <div class="col-md-2" id="borrow">Place hold</div>
+                <div class="col-md-2" id="borrow">Borrow</div>
 
-        <div class="col-md-12 mb-2 row">
-          <div class="col-md-1 mr-5" id="Tag">Tag:</div>
-          <div class="col-2 mr-2" id="TagName">lập trình</div>
-          <div class="col-2 mr-2" id="TagName">lập trình web</div>
-          <div class="col-2 mr-2" id="TagName">smartphone</div>
-        </div>
+                <div class="col-md-12 mb-2 row mt-3">
+                    <div class="col-md-1 mr-5" id="Label-tag">Tag:</div>
+                    <button class="btn-tag col-3">lập trình</button>
+                    <button class="btn-tag col-3">lập trình web</button>
+                    <button class="btn-tag col-3">smartphone</button>
+                </div>
 
-        <div class="col-md-12 row">
-          <div class="col-md-1 mt-1 mr-5" id="Rate">Rate:</div>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <div class="col-md-2 mt-1 ml-5">10 Ratings</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container" id="label-intro" style="font-weight: bold; padding: 10px auto;">Introduction</div>
-
-  <div class="container group-intro">
-    <div>
-      <p id="book-name"><b>Phát Triển Web Cho Smartphone</b></p>
-      <p id="intro" style="font-size: 16px;">Khi ngày càng nhiều người truy cập Web từ điện thoại và các thiết bị di
-        động khác, các nhà phát triển Web cần biết cách xây dựng trang Web có khả năng đáp ứng tốt cho các thiết bị này.
-        Muốn vây, họ cần học những kỹ thuật, nghiên cứu những vấn đề mang tính đặ thù liên quan tới việc phân phối nội
-        dung Web cho thiết bị di động. Nếu bạn là nhà phát triển và thiết kế Web đang bắt đầu tìm hiểu về Web trên di
-        động thì đây chính là cuốn sách dành cho bạn....</p>
-        <div class="col-md-12" style="text-align: center;">
-          <button type="button" class="btn border-0 btn-primary rounded-pill">...SEE MORE</button>
+                <div class="col-md-12 row mt-2">
+                    <div class="col-md-1 mt-2 mr-5" id="Rate">Rate:</div>
+                    <div class="col-md-10 mt-1 row">
+                        <div class="col-md-5">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="col-md-4 mt-1">10 Ratings</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
 
-  <div class="container same-category row">
-    <div class="col-md-2 ml-5" style="text-align: right; padding-right: 25px;">
-      <label id="label-same-category">Same Category</label>
-    </div>
-    <div class="col-md-2" style="text-align: center;">
-      <img id="same-category-image" src="/image/tohoclt.jpg">
-      <label id="book-name-category">Tự Học Lập Trình</label>
-    </div>
-    <div class="col-md-2" style="text-align: center;">
-      <img id="same-category-image" src="/image/gtc.jpeg">
-      <label id="book-name-category">Giáo trình C++</label>
-    </div>
-    <div class="col-md-2" style="text-align: center;">
-      <img id="same-category-image" src="/image/ktltC.jpg">
-      <label id="book-name-category">Kỹ Thuật Lập Trình C</label>
-        </div>
-        <div class=" col-md-2" style="text-align: center;">
-        <img id="same-category-image" src="/image/ltphp.png">
-        <label id="book-name-category">Lập Trình Cơ Bản PHP & MySQL</label>
-    </div>
-    <div class="col-md-12" style="text-align: center;">
-      <button type="button" class="btn border-0 btn-primary rounded-pill">...SEE MORE</button>
-    </div>
-  </div>
+    <div class="container" id="label-intro" style="padding: 10px auto;">Introduction</div>
 
-  <div class="container same-category row" style="margin: 5px auto;">
-    <div class="col-md-2 ml-5" style="text-align: right; padding: 0 25px;">
-      <label id="label-same-category">Recommend for you</label>
-    </div>
-    <div class="col-md-2" style="text-align: center;">
-      <img id="same-category-image" src="/image/tohoclt.jpg">
-      <label id="book-name-category">Tự Học Lập Trình</label>
-    </div>
-    <div class="col-md-2" style="text-align: center;">
-      <img id="same-category-image" src="/image/gtc.jpeg">
-      <label id="book-name-category">Giáo trình C++</label>
-    </div>
-    <div class="col-md-2" style="text-align: center;">
-      <img id="same-category-image" src="/image/ktltC.jpg">
-      <label id="book-name-category"">Kỹ Thuật Lập Trình C</label>
-        </div>
-        <div class=" col-md-2" style="text-align: center;">
-        <img id="same-category-image" src="/image/ltphp.png">
-        <label id="book-name-category">Lập Trình Cơ Bản PHP & MySQL</label>
-    </div>
-    <div class="col-md-12" style="text-align: center;">
-      <button type="button" class="btn border-0 btn-primary rounded-pill">...SEE MORE</button>
-    </div>
-  </div>
-
-  <label class="container" id="label-comments">Comments 12</label>
-  <div class="container" style="padding: 20px 60px;">
-    <div class="row mt-3 mb-4">
-      <div class="col-md-2" style="padding-right: 0px; border-right: 2px solid #1429D7">
-        <div style="text-align: center;">
-          <svg class="bi bi-person-circle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
-            <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-            <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
-          </svg>
-        </div>
-        <p style="text-align: center; color: #1429D7">hodtien</p>
-      </div>
-      <div class="col-md-9 ml-4 row" style="border: 1px solid #1429D7">
-        <label class="col-md-1 mt-1 row"><b>Rate:</b></label>
-        <div class="col-md-3">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-        </div>
-        <div class="col-md-3 mt-1">
-          (About content)
-        </div>
-        <div class="col-md-3 mt-1">
-          (3 days ago)
-        </div>
-
-        <div class="mb-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, maxime. Veniam magni atque autem, harum
-          beatae ad sint quibusdam? Quod est consequatur atque quis cupiditate ipsum quos fugiat dolore impedit?
-        </div>
-        <div class="col-md-12 row" style="color: #1429D7;">
-          <div class="col-md-2">
-            <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-
-            </svg>
-            <b>10</b>
-          </div>
-          <p class="col-md-3"><b>4 replies</b></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row mt-2 mb-4">
-      <div class="col-md-2" style="padding-right: 0px; border-right: 2px solid #1429D7">
-        <div style="text-align: center;">
-          <svg class="bi bi-person-circle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
-            <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-            <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
-          </svg>
-        </div>
-        <p style="text-align: center; color: #1429D7">ntmtuy</p>
-      </div>
-      <div class="col-md-9 ml-4 row" style="border: 1px solid #1429D7">
-        <label class="col-md-1 mt-1 row"><b>Rate:</b></label>
-        <div class="col-md-3">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-        </div>
-        <div class="col-md-3 mt-1">
-          (About content)
-        </div>
-        <div class="col-md-3 mt-1">
-          (3 days ago)
-        </div>
-
-        <div class="mb-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, maxime. Veniam magni atque autem, harum
-          beatae ad sint quibusdam? Quod est consequatur atque quis cupiditate ipsum quos fugiat dolore impedit?
-        </div>
-        <div class="col-md-12 row" style="color: #1429D7;">
-          <div class="col-md-2">
-            <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-
-            </svg>
-            <b>10</b>
-          </div>
-          <p class="col-md-3"><b>4 replies</b></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row mt-2 mb-4">
-      <div class="col-md-2" style="padding-right: 0px; border-right: 2px solid #1429D7">
-        <div style="text-align: center;">
-          <svg class="bi bi-person-circle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
-            <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-            <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
-          </svg>
-        </div>
-        <p style="text-align: center; color: #1429D7">ngtoan</p>
-      </div>
-      <div class="col-md-9 ml-4 row" style="border: 1px solid #1429D7">
-        <label class="col-md-1 mt-1 row"><b>Rate:</b></label>
-        <div class="col-md-3">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-        </div>
-        <div class="col-md-3 mt-1">
-          (About content)
-        </div>
-        <div class="col-md-3 mt-1">
-          (3 days ago)
-        </div>
-
-        <div class="mb-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, maxime. Veniam magni atque autem, harum
-          beatae ad sint quibusdam? Quod est consequatur atque quis cupiditate ipsum quos fugiat dolore impedit?
-        </div>
-        <div class="col-md-12 row" style="color: #1429D7;">
-          <div class="col-md-2">
-            <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-
-            </svg>
-            <b>10</b>
-          </div>
-          <p class="col-md-3"><b>4 replies</b></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-12" style="text-align: center;">
-      <button type="button" class="btn border-0 btn-primary rounded-pill">...SEE MORE</button>
-    </div>
-  </div>
-
-  <label class="container" id="label-add-comment">Your comment</label>
-  <div class="container" style="padding: 20px 60px;">
-    <div class="row" aria-readonly="true">
-      <div class="col-sm-2" style="text-align: center;">
+    <div class="container group-intro" style="background-color: white;">
         <div>
-          <svg class="bi bi-person-circle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
-            <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-            <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
-          </svg>
+            <p id="book-name"><b>Phát Triển Web Cho Smartphone</b></p>
+            <p id="intro" style="font-size: 16px;">Khi ngày càng nhiều người truy cập Web từ điện thoại và các thiết bị
+                di
+                động khác, các nhà phát triển Web cần biết cách xây dựng trang Web có khả năng đáp ứng tốt cho các thiết
+                bị này.
+                Muốn vây, họ cần học những kỹ thuật, nghiên cứu những vấn đề mang tính đặ thù liên quan tới việc phân
+                phối nội
+                dung Web cho thiết bị di động. Nếu bạn là nhà phát triển và thiết kế Web đang bắt đầu tìm hiểu về Web
+                trên di
+                động thì đây chính là cuốn sách dành cho bạn....</p>
+            <div class="col-md-12" style="text-align: center;">
+                <button type="button" class="btn-submit"><b>... SEE MORE</b></button>
+            </div>
         </div>
-        <p>username</p>
-      </div>
-      <form class="col-sm-5">
-        <label>Title:</label>
-        <div class="mb-3"><input type="text" class="form-control" placeholder="Your title (optional)" readonly></div>
-        <label>Comment:</label>
-        <div class="mb-3">
-          <textarea type="text" class="form-control" placeholder="Your comment about the book" readonly
-            style="height: 200px;"></textarea>
-        </div>
-      </form>
-      <form class="col-sm-5" style="padding-left: 50px;">
-        <label style="padding-right: 30px;">Rate:</label>
-        <svg class="bi bi-star" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
-        </svg>
-        <svg class="bi bi-star" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
-        </svg>
-        <svg class="bi bi-star" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
-        </svg>
-        <svg class="bi bi-star" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
-        </svg>
-        <svg class="bi bi-star" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
-        </svg>
+    </div>
 
-        <div class="mb-3" style="padding-right: 30px; padding-top: 20px;">Add image (optional)</div>
-        <div class="form-group" style="padding-top: 5px;"">
-                    <svg class=" bi bi-plus add-image" width="60px" height="60px" viewBox="0 0 16 16"
-          fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z" />
-          <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z" />
-          </svg>
-          <svg class="bi bi-image-alt add-image" width="60px" height="60px" viewBox="0 0 16 16" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M10.648 6.646a.5.5 0 0 1 .577-.093l4.777 3.947V15a1 1 0 0 1-1 1h-14a1 1 0 0 1-1-1v-2l3.646-4.354a.5.5 0 0 1 .63-.062l2.66 2.773 3.71-4.71z" />
-            <path fill-rule="evenodd" d="M4.5 5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-          </svg>
-          <svg class="bi bi-image-alt add-image" width="60px" height="60px" viewBox="0 0 16 16" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M10.648 6.646a.5.5 0 0 1 .577-.093l4.777 3.947V15a1 1 0 0 1-1 1h-14a1 1 0 0 1-1-1v-2l3.646-4.354a.5.5 0 0 1 .63-.062l2.66 2.773 3.71-4.71z" />
-            <path fill-rule="evenodd" d="M4.5 5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-          </svg>
+    <div class="container same-category row">
+        <div class="d-none d-lg-block col-md-2 ml-5" style="text-align: right;">
+            <label id="label-same-category" style="padding-right: 10px; border-right: 3px solid white;">Same
+                Category</label>
         </div>
-      </form>
-      <button type="submit" class="btn-submit">SUBMIT</button>
-    </div>
-  </div>
 
-  <footer>
-    <div class="container" style="background-color: #000080;">
-      <form class="col-12">
-        <div class="row col-12" style="margin: 0px;"><img class="d-none d-lg-inline-block col-2"
-            src="/image/library-logo-sm.png" style="height: 125px;margin: 30px auto;">
-          <form class="col-12 col-sm-6 col-lg-3" style="margin: 30px auto;">
-            <div class="form-group col-12 col-sm-6 col-lg-3" style="margin: 30px auto;">
-              <h4 style="color: #fff;">Your Library</h4>
-              <ul class="list-group">
-                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
-                  <a href="rules-guest.html" style="color: #fff;">About</a>
-                </li>
-                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
-                  <a href="rules-guest.html" style="color: #fff;">History</a>
-                </li>
-                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
-                  <a href="rules-guest.html" style="color: #fff;">Staff</a>
-                </li>
-                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
-                  <a href="rules-guest.html" style="color: #fff;">Employment Opportunities&nbsp;</a>
-                </li>
-              </ul>
-            </div>
-          </form>
-          <form class="col-12 col-sm-6 col-lg-3" style="margin: 30px auto;">
-            <div class="form-group">
-              <h4 style="color: #fff;">How Do I?</h4>
-              <ul class="list-group">
-                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
-                  <a href="#" style="color: #fff;">Get A Card</a>
-                </li>
-                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
-                  <a href="#" style="color: #fff;">Manage My Account</a>
-                </li>
-                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
-                  <a href="#" style="color: #fff;">Print From Anywhere</a>
-                </li>
-                <li class="list-group-item border-0" style="padding: 0px;background-color: rgba(255,255,255,0);">
-                  <a href="#" style="color: #fff;">Get Help</a>
-                </li>
-              </ul>
-            </div>
-          </form>
-          <form class="col-12 col-lg-4" style="margin: 30px auto;">
-            <div class="form-group">
-              <h4 style="color: #fff;">Visit</h4>
-              <p style="color: #fff;">Monday - Friday: 7a.m - 5p.m<br>Saturday: 7a.m - 11a.m<br>Sunday: closed</p>
-            </div>
-            <div class="form-group">
-              <h4 style="color: #fff;">Phone</h4>
-              <p style="color: #fff;">028 6288 4499</p>
-            </div>
-            <div class="form-group">
-              <h4 style="color: #fff;">Address</h4>
-              <p style="margin: 0px;color: #fff;">227 Nguyen Van Cu Street, Ward 4, District 5, HCMC</p><a href="#"
-                style="color: #fff;">Get Direction</a>
-            </div>
-          </form>
+        <div class="d-lg-none ds-block col-md-12 mb-3"
+            style="margin: 0 60px; text-align: center; border-top: 3px solid white;">
+            <label id="label-same-category">Same Category</label>
         </div>
-        <div class="row col-12" style="padding: 0px;margin: 10px 0px;">
-          <form class="col-12 col-lg-5" style="margin: auto;width: auto;">
-            <h1 class="text-center" style="color: #fff;font-size: 22px;">Connect us</h1>
-            <div class="row col-12" style="margin: 0px;padding: 0px;"><i
-                class="fa fa-facebook-square d-sm-flex d-md-flex d-xl-flex justify-content-sm-center justify-content-md-center justify-content-xl-center"
-                style="width: auto;height: auto;color: #fff;font-size: 35px;margin-left: auto;margin-right: 10px;"></i>
-              <i class="fa fa-google-plus-square d-sm-flex d-md-flex d-xl-flex justify-content-sm-center justify-content-md-center justify-content-xl-center"
-                style="width: auto;height: auto;color: #fff;font-size: 35px;margin: 0px 10px;"></i>
-              <i class="fa fa-twitter-square d-sm-flex d-md-flex d-xl-flex justify-content-sm-center justify-content-md-center justify-content-xl-center"
-                style="width: auto;height: auto;color: #fff;font-size: 35px;margin: 0px 10px;"></i>
-              <i class="fa fa-instagram d-sm-flex d-md-flex d-xl-flex justify-content-sm-center justify-content-md-center justify-content-xl-center"
-                style="color: #fff;font-size: 35px;width: auto;height: auto;margin-left: 10px;margin-right: auto;"></i>
+
+        <div class="col-md-2" style="text-align: center;">
+            <div class="card" style="background-color: #1429D7; border: none">
+                <div><img id="same-category-image" src="/image/tohoclt.jpg"></div>
+                <div><label id="book-name-category">Tớ Học Lập Trình</label></div>
             </div>
-          </form>
-          <form class="d-none d-lg-block col-7" style="margin: auto;width: auto;">
-            <h1 style="font-size: 22px;color: #fff;">Sign up for news</h1>
-            <div class="form-group">
-              <input class="form-control form-control-lg" type="text" placeholder="Enter email here"
-                pattern="*@example.com" style="width: 438px;">
-            </div>
-          </form>
         </div>
-      </form>
+        <div class="col-md-2" style="text-align: center;">
+            <div class="card" style="background-color: #1429D7; border: none">
+                <div><img id="same-category-image" src="/image/gtc.jpeg"></div>
+                <div><label id="book-name-category">Giáo trình C++</label></div>
+            </div>
+        </div>
+        <div class="col-md-2" style="text-align: center;">
+            <div class="card" style="background-color: #1429D7; border: none">
+                <div><img id="same-category-image" src="/image/ktltC.jpg"></div>
+                <div><label id="book-name-category">Kỹ Thuật Lập Trình C</label></div>
+            </div>
+        </div>
+        <div class="col-md-2" style="text-align: center;">
+            <div class="card" style="background-color: #1429D7; border: none">
+                <div><img id="same-category-image" src="/image/ltphp.png"></div>
+                <div><label id="book-name-category">Lập Trình Cơ Bản PHP & MySQL</label></div>
+            </div>
+        </div>
+        <div class="col-md-12" style="text-align: center;">
+            <button type="button" class="btn-submit"><b>... SEE MORE</b></button>
+        </div>
     </div>
-    <div class="row col-12" style="background-color: #f2f2f2;height: 50px;width: auto;margin: 0px;"><i
-        class="fa fa-copyright d-xl-flex justify-content-xl-center align-items-xl-center"
-        style="width: auto;height: auto;font-size: 30px;margin: auto 5px auto auto;"></i>
-      <p class="d-xl-flex justify-content-xl-center align-items-xl-center"
-        style="font-size: 16px;margin: auto auto auto 5px;">Copyright 2020 by PTUDW-Nhom05</p>
+
+    <div class="container same-category row">
+        <div class="d-none d-lg-block col-md-2 ml-5" style="padding-right: 15px; text-align: right;">
+            <label id="label-same-category" style="padding-right: 10px; border-right: 3px solid white;">Recommend For
+                You</label>
+        </div>
+
+        <div class="d-lg-none ds-block col-md-12 mb-3"
+            style="margin: 0 60px; text-align: center; border-top: 3px solid white;">
+            <label id="label-same-category">Recommend For You</label>
+        </div>
+
+        <div class="col-md-2" style="text-align: center;">
+            <div class="card" style="background-color: #1429D7; border: none">
+                <div><img id="same-category-image" src="/image/tohoclt.jpg"></div>
+                <div><label id="book-name-category">Tớ Học Lập Trình</label></div>
+            </div>
+        </div>
+        <div class="col-md-2" style="text-align: center;">
+            <div class="card" style="background-color: #1429D7; border: none">
+                <div><img id="same-category-image" src="/image/gtc.jpeg"></div>
+                <div><label id="book-name-category">Giáo trình C++</label></div>
+            </div>
+        </div>
+        <div class="col-md-2" style="text-align: center;">
+            <div class="card" style="background-color: #1429D7; border: none">
+                <div><img id="same-category-image" src="/image/ktltC.jpg"></div>
+                <div><label id="book-name-category">Kỹ Thuật Lập Trình C</label></div>
+            </div>
+        </div>
+        <div class="col-md-2" style="text-align: center;">
+            <div class="card" style="background-color: #1429D7; border: none">
+                <div><img id="same-category-image" src="/image/ltphp.png"></div>
+                <div><label id="book-name-category">Lập Trình Cơ Bản PHP & MySQL</label></div>
+            </div>
+        </div>
+        <div class="col-md-12" style="text-align: center;">
+            <button type="button" class="btn-submit">... SEE MORE</button>
+        </div>
     </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
-  <script src="/js/app.js"></script>
+
+    <label class="container" id="label-comments">Comments 12</label>
+    <div class="container" style="padding: 20px 60px; background-color: white;">
+        <div class="row mt-3 mb-4">
+            <div class="col-sm-2" style="padding-right: 0px; border-right: 2px solid #1429D7">
+                <div style="text-align: center;">
+                    <svg class="bi bi-person-circle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                    </svg>
+                </div>
+                <p style="text-align: center; color: #1429D7">hodtien</p>
+            </div>
+            
+            <div class="col-sm-9">
+                <div class="col-sm-12 row" style="border: 1px solid #1429D7">
+                    <label class="col-md-1 mt-1 row"><b>Rate:</b></label>
+                    <div class="col-md-3">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="col-md-3 mt-1">
+                        (About content)
+                    </div>
+                    <div class="col-md-3 mt-1">
+                        (3 days ago)
+                    </div>
+
+                    <div class="mb-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, maxime. Veniam magni atque autem,
+                        harum
+                        beatae ad sint quibusdam? Quod est consequatur atque quis cupiditate ipsum quos fugiat dolore
+                        impedit?
+                    </div>
+                    <div class="col-md-12 row" style="color: #1429D7;">
+                        <div class="col-md-2">
+                            <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+
+                            </svg>
+                            <b>10</b>
+                        </div>
+                        <p class="col-md-3"><b>4 replies</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2 mb-4">
+            <div class="col-sm-2" style="padding-right: 0px; border-right: 2px solid #1429D7">
+                <div style="text-align: center;">
+                    <svg class="bi bi-person-circle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        <path fill-rule="evenodd"
+                            d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                    </svg>
+                </div>
+                <p style="text-align: center; color: #1429D7">ntmthuy</p>
+            </div>
+            <div class="col-sm-9 ml-4 row" style="border: 1px solid #1429D7">
+                <label class="col-md-1 mt-1 row"><b>Rate:</b></label>
+                <div class="col-md-3">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <div class="col-md-3 mt-1">
+                    (About content)
+                </div>
+                <div class="col-md-3 mt-1">
+                    (3 days ago)
+                </div>
+
+                <div class="mb-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, maxime. Veniam magni atque autem,
+                    harum
+                    beatae ad sint quibusdam? Quod est consequatur atque quis cupiditate ipsum quos fugiat dolore
+                    impedit?
+                </div>
+                <div class="col-md-12 row" style="color: #1429D7;">
+                    <div class="col-md-2">
+                        <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+
+                        </svg>
+                        <b>10</b>
+                    </div>
+                    <p class="col-md-3"><b>4 replies</b></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2 mb-4">
+            <div class="col-sm-2" style="padding-right: 0px; border-right: 2px solid #1429D7">
+                <div style="text-align: center;">
+                    <svg class="bi bi-person-circle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        <path fill-rule="evenodd"
+                            d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                    </svg>
+                </div>
+                <p style="text-align: center; color: #1429D7">nqtoan</p>
+            </div>
+            <div class="col-sm-9 ml-4 row" style="border: 1px solid #1429D7">
+                <label class="col-md-1 mt-1 row"><b>Rate:</b></label>
+                <div class="col-md-3">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <div class="col-md-3 mt-1">
+                    (About content)
+                </div>
+                <div class="col-md-3 mt-1">
+                    (3 days ago)
+                </div>
+
+                <div class="mb-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, maxime. Veniam magni atque autem,
+                    harum
+                    beatae ad sint quibusdam? Quod est consequatur atque quis cupiditate ipsum quos fugiat dolore
+                    impedit?
+                </div>
+                <div class="col-md-12 row" style="color: #1429D7;">
+                    <div class="col-md-2">
+                        <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+
+                        </svg>
+                        <b>10</b>
+                    </div>
+                    <p class="col-md-3"><b>4 replies</b></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12" style="text-align: center;">
+            <button type="button" class="btn-submit"><b>... SEE MORE</b></button>
+        </div>
+    </div>
+
+    <label class="container" id="label-add-comment">Your comment</label>
+    <div class="container mb-4" style="padding: 20px 60px; background-color: white;">
+        <div class="row" aria-readonly="true">
+            <div class="col-sm-2" style="text-align: center;">
+                <div>
+                    <svg class="bi bi-person-circle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        <path fill-rule="evenodd"
+                            d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                    </svg>
+                </div>
+                <p>username</p>
+            </div>
+            <form class="col-sm-5">
+                <label>Title:</label>
+                <div class="mb-3"><input type="text" class="form-control" placeholder="Your title (optional)" readonly>
+                </div>
+                <label>Comment:</label>
+                <div class="mb-3">
+                    <textarea type="text" class="form-control" placeholder="Your comment about the book" readonly
+                        style="height: 200px;"></textarea>
+                </div>
+            </form>
+            <form class="col-sm-5" style="padding-left: 50px;">
+                <label style="padding-right: 30px;">Rate:</label>
+                <svg class="bi bi-star" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                </svg>
+                <svg class="bi bi-star" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                </svg>
+                <svg class="bi bi-star" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                </svg>
+                <svg class="bi bi-star" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                </svg>
+                <svg class="bi bi-star" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                </svg>
+
+                <div class="mb-3" style="padding-right: 30px; padding-top: 20px;">Add image (optional)</div>
+                <div class="form-group" style="padding-top: 5px;"">
+          <svg class=" bi bi-plus add-image mr-1" width="60px" height="60px" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z" />
+                    <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z" />
+                    </svg>
+                    <svg class="bi bi-image-alt add-image mr-1" width="60px" height="60px" viewBox="0 0 16 16"
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.648 6.646a.5.5 0 0 1 .577-.093l4.777 3.947V15a1 1 0 0 1-1 1h-14a1 1 0 0 1-1-1v-2l3.646-4.354a.5.5 0 0 1 .63-.062l2.66 2.773 3.71-4.71z" />
+                        <path fill-rule="evenodd" d="M4.5 5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                    </svg>
+                    <svg class="bi bi-image-alt add-image" width="60px" height="60px" viewBox="0 0 16 16"
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.648 6.646a.5.5 0 0 1 .577-.093l4.777 3.947V15a1 1 0 0 1-1 1h-14a1 1 0 0 1-1-1v-2l3.646-4.354a.5.5 0 0 1 .63-.062l2.66 2.773 3.71-4.71z" />
+                        <path fill-rule="evenodd" d="M4.5 5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                    </svg>
+                </div>
+            </form>
+            <button type="submit" class="btn-submit"><b>SUBMIT</b></button>
+        </div>
+    </div>
+
+    <footer style="background-color: #000080;">
+        <div class="container">
+            <form class="col-12">
+                <div class="row col-12" style="margin: 0px;"><img class="d-none d-lg-inline-block col-2"
+                        src="/image/library-logo-sm.png" style="height: 125px;margin: 30px auto;">
+                    <form class="col-12 col-sm-6 col-lg-3" style="margin: 30px auto;">
+                        <div class="form-group col-12 col-sm-6 col-lg-3" style="margin: 30px auto;">
+                            <h4 style="color: #fff;">Your Library</h4>
+                            <ul class="list-group">
+                                <li class="list-group-item border-0"
+                                    style="padding: 0px;background-color: rgba(255,255,255,0);">
+                                    <a href="rules-guest.html" style="color: #fff;">About</a>
+                                </li>
+                                <li class="list-group-item border-0"
+                                    style="padding: 0px;background-color: rgba(255,255,255,0);">
+                                    <a href="rules-guest.html" style="color: #fff;">History</a>
+                                </li>
+                                <li class="list-group-item border-0"
+                                    style="padding: 0px;background-color: rgba(255,255,255,0);">
+                                    <a href="rules-guest.html" style="color: #fff;">Staff</a>
+                                </li>
+                                <li class="list-group-item border-0"
+                                    style="padding: 0px;background-color: rgba(255,255,255,0);">
+                                    <a href="rules-guest.html" style="color: #fff;">Employment Opportunities&nbsp;</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                    <form class="col-12 col-sm-6 col-lg-3" style="margin: 30px auto;">
+                        <div class="form-group">
+                            <h4 style="color: #fff;">How Do I?</h4>
+                            <ul class="list-group">
+                                <li class="list-group-item border-0"
+                                    style="padding: 0px;background-color: rgba(255,255,255,0);">
+                                    <a href="#" style="color: #fff;">Get A Card</a>
+                                </li>
+                                <li class="list-group-item border-0"
+                                    style="padding: 0px;background-color: rgba(255,255,255,0);">
+                                    <a href="#" style="color: #fff;">Manage My Account</a>
+                                </li>
+                                <li class="list-group-item border-0"
+                                    style="padding: 0px;background-color: rgba(255,255,255,0);">
+                                    <a href="#" style="color: #fff;">Print From Anywhere</a>
+                                </li>
+                                <li class="list-group-item border-0"
+                                    style="padding: 0px;background-color: rgba(255,255,255,0);">
+                                    <a href="#" style="color: #fff;">Get Help</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                    <form class="col-12 col-lg-4" style="margin: 30px auto;">
+                        <div class="form-group">
+                            <h4 style="color: #fff;">Visit</h4>
+                            <p style="color: #fff;">Monday - Friday: 7a.m - 5p.m<br>Saturday: 7a.m - 11a.m<br>Sunday:
+                                closed</p>
+                        </div>
+                        <div class="form-group">
+                            <h4 style="color: #fff;">Phone</h4>
+                            <p style="color: #fff;">028 6288 4499</p>
+                        </div>
+                        <div class="form-group">
+                            <h4 style="color: #fff;">Address</h4>
+                            <p style="margin: 0px;color: #fff;">227 Nguyen Van Cu Street, Ward 4, District 5, HCMC</p><a
+                                href="#" style="color: #fff;">Get Direction</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="row col-12" style="padding: 0px;margin: 10px 0px;">
+                    <form class="col-12 col-lg-5" style="margin: auto;width: auto;">
+                        <h1 class="text-center" style="color: #fff;font-size: 22px;">Connect us</h1>
+                        <div class="row col-12" style="margin: 0px;padding: 0px;"><i
+                                class="fa fa-facebook-square d-sm-flex d-md-flex d-xl-flex justify-content-sm-center justify-content-md-center justify-content-xl-center"
+                                style="width: auto;height: auto;color: #fff;font-size: 35px;margin-left: auto;margin-right: 10px;"></i>
+                            <i class="fa fa-google-plus-square d-sm-flex d-md-flex d-xl-flex justify-content-sm-center justify-content-md-center justify-content-xl-center"
+                                style="width: auto;height: auto;color: #fff;font-size: 35px;margin: 0px 10px;"></i>
+                            <i class="fa fa-twitter-square d-sm-flex d-md-flex d-xl-flex justify-content-sm-center justify-content-md-center justify-content-xl-center"
+                                style="width: auto;height: auto;color: #fff;font-size: 35px;margin: 0px 10px;"></i>
+                            <i class="fa fa-instagram d-sm-flex d-md-flex d-xl-flex justify-content-sm-center justify-content-md-center justify-content-xl-center"
+                                style="color: #fff;font-size: 35px;width: auto;height: auto;margin-left: 10px;margin-right: auto;"></i>
+                        </div>
+                    </form>
+                    <form class="d-none d-lg-block col-7" style="margin: auto;width: auto;">
+                        <h1 style="font-size: 22px;color: #fff;">Sign up for news</h1>
+                        <div class="form-group">
+                            <input class="form-control form-control-lg" type="text" placeholder="Enter email here"
+                                pattern="*@example.com" style="width: 438px;">
+                        </div>
+                    </form>
+                </div>
+            </form>
+        </div>
+        <div class="row col-12" style="background-color: #f2f2f2;height: 50px;width: auto;margin: 0px;"><i
+                class="fa fa-copyright d-xl-flex justify-content-xl-center align-items-xl-center"
+                style="width: auto;height: auto;font-size: 30px;margin: auto 5px auto auto;"></i>
+            <p class="d-xl-flex justify-content-xl-center align-items-xl-center"
+                style="font-size: 16px;margin: auto auto auto 5px;">Copyright 2020 by PTUDW-Nhom05</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>

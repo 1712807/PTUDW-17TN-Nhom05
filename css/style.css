@@ -39,16 +39,14 @@ body{
 }
 
 .format-img{
-    width: 90%;
-    height: 90%;
-   
-   
+    width: 80%;
 }
 
 .format-text{
     text-align: right;
     color: #1429D7;
     font-weight: bold;
+    font-size: medium;
 }
 
 .format-search{
@@ -81,8 +79,14 @@ body{
 }
 
 .format-text-sm{
-    font-size: 12px;
     text-align: center;
+    font-size: medium;
+}
+
+.fm-text-medium-white{
+    text-align: center;
+    font-size: medium;
+    color: white;
 }
 
 .set-topic{

@@ -8,9 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="/css/book-details-style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
     <title>Book Details</title>
 </head>
 
@@ -130,9 +130,9 @@
             </div>
 
             <div class="col-md-8 row" style="padding: 10px 20px;">
-                <h3 class="col-md-12">Phát Triển Web Cho Smartphone</h3>
-                <label class="col-md-6 sku">SKU: 9552147738847</label>
-                <label class="views col-md-6" style="text-align: right;">(1.352 views)</label>
+                <h3 class="col-sm-12">Phát Triển Web Cho Smartphone</h3>
+                <label class="col-sm-6">SKU: 9552147738847</label>
+                <label class="col-sm-6" style="text-align: right;">(1.352 views)</label>
 
                 <div class="col-md-12"> <label class="instock">In Stock</label></div>
 
@@ -144,28 +144,32 @@
                 <label class="col-md-12 mb-0" style="padding-bottom: 0px;">Language: Vietnamese</label>
                 <label class="col-md-12 mb-0" style="padding-bottom: 0px;">Type: Paperback</label>
 
-                <label class="col-md-3" id="avaibility">Availability: &nbsp;<b> 10</b></label>
-                <div class="col-md-2" id="borrow">Place hold</div>
-                <div class="col-md-2" id="borrow">Borrow</div>
+                <div class="col-sm-12 row">
+                    <div class="col-sm-3" style="color: #1429D7; padding-top: 5px; padding-bottom: 5px;">Availability: &nbsp;<b>10</b></div>
+                    <div class="col-sm-3" id="borrow">Place hold</div>
+                    <div class="col-sm-3" id="borrow">Borrow</div>
+                </div>
 
-                <div class="col-md-12 mb-2 row mt-3">
-                    <div class="col-md-1 mr-5" id="Label-tag">Tag:</div>
-                    <button class="btn-tag col-3">lập trình</button>
-                    <button class="btn-tag col-3">lập trình web</button>
-                    <button class="btn-tag col-3">smartphone</button>
+                <div class="col-md-12 mt-2 row">
+                    <div class="col-sm-1 mt-3">Tag:</div>
+                    <div class="col-sm-10 ml-3 row">
+                        <button class="btn-tag col-sm-3">lập trình</button>
+                        <button class="btn-tag col-sm-3">lập trình web</button>
+                        <button class="btn-tag col-sm-3">smartphone</button>
+                    </div>
                 </div>
 
                 <div class="col-md-12 row mt-2">
-                    <div class="col-md-1 mt-2 mr-5" id="Rate">Rate:</div>
-                    <div class="col-md-10 mt-1 row">
-                        <div class="col-md-5">
+                    <div class="col-sm-1 mt-2 mr-4" id="Rate">Rate:</div>
+                    <div class="col-sm-10 mt-1 row">
+                        <div class="col-sm-5">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
                         </div>
-                        <div class="col-md-4 mt-1">10 Ratings</div>
+                        <div class="col-sm-4 mt-1">10 Ratings</div>
                     </div>
                 </div>
             </div>
@@ -194,12 +198,10 @@
 
     <div class="container same-category row">
         <div class="d-none d-lg-block col-md-2 ml-5" style="text-align: right;">
-            <label id="label-same-category" style="padding-right: 10px; border-right: 3px solid white;">Same
-                Category</label>
+            <label id="label-same-category" style="padding-right: 10px; border-right: 3px solid white;">Same Category</label>
         </div>
 
-        <div class="d-lg-none ds-block col-md-12 mb-3"
-            style="margin: 0 60px; text-align: center; border-top: 3px solid white;">
+        <div class="d-lg-none d-block col-md-12 mb-3" style="margin: 0 60px; text-align: center; border-top: 3px solid white;">
             <label id="label-same-category">Same Category</label>
         </div>
 
@@ -286,21 +288,20 @@
                 <p style="text-align: center; color: #1429D7">hodtien</p>
             </div>
             
-            <div class="col-sm-9">
+            <div class="col-sm-9 ml-4">
                 <div class="col-sm-12 row" style="border: 1px solid #1429D7">
-                    <label class="col-md-1 mt-1 row"><b>Rate:</b></label>
-                    <div class="col-md-3">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                    </div>
-                    <div class="col-md-3 mt-1">
-                        (About content)
-                    </div>
-                    <div class="col-md-3 mt-1">
-                        (3 days ago)
+                    <div class="col-sm-12 row">
+                        <label class="col-sm-1 mt-1" style="padding-left: 0;"><b>Rate:</b></label>
+                        <div class="col-sm-5">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="col-sm-6 mt-1 row">
+                            <b>(About content)</b>
+                        </div>
                     </div>
 
                     <div class="mb-3">
@@ -310,7 +311,7 @@
                         impedit?
                     </div>
                     <div class="col-md-12 row" style="color: #1429D7;">
-                        <div class="col-md-2">
+                        <div class="col-sm-3">
                             <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -319,111 +320,17 @@
                             </svg>
                             <b>10</b>
                         </div>
-                        <p class="col-md-3"><b>4 replies</b></p>
+                        <p class="col-sm-4">
+                            <b>4 replies</b>
+                        </p>
+                        <div class="col-sm-4" style="color: black;">
+                            (3 days ago)
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row mt-2 mb-4">
-            <div class="col-sm-2" style="padding-right: 0px; border-right: 2px solid #1429D7">
-                <div style="text-align: center;">
-                    <svg class="bi bi-person-circle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
-                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        <path fill-rule="evenodd"
-                            d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
-                    </svg>
-                </div>
-                <p style="text-align: center; color: #1429D7">ntmthuy</p>
-            </div>
-            <div class="col-sm-9 ml-4 row" style="border: 1px solid #1429D7">
-                <label class="col-md-1 mt-1 row"><b>Rate:</b></label>
-                <div class="col-md-3">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </div>
-                <div class="col-md-3 mt-1">
-                    (About content)
-                </div>
-                <div class="col-md-3 mt-1">
-                    (3 days ago)
-                </div>
-
-                <div class="mb-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, maxime. Veniam magni atque autem,
-                    harum
-                    beatae ad sint quibusdam? Quod est consequatur atque quis cupiditate ipsum quos fugiat dolore
-                    impedit?
-                </div>
-                <div class="col-md-12 row" style="color: #1429D7;">
-                    <div class="col-md-2">
-                        <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-
-                        </svg>
-                        <b>10</b>
-                    </div>
-                    <p class="col-md-3"><b>4 replies</b></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-2 mb-4">
-            <div class="col-sm-2" style="padding-right: 0px; border-right: 2px solid #1429D7">
-                <div style="text-align: center;">
-                    <svg class="bi bi-person-circle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
-                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        <path fill-rule="evenodd"
-                            d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
-                    </svg>
-                </div>
-                <p style="text-align: center; color: #1429D7">nqtoan</p>
-            </div>
-            <div class="col-sm-9 ml-4 row" style="border: 1px solid #1429D7">
-                <label class="col-md-1 mt-1 row"><b>Rate:</b></label>
-                <div class="col-md-3">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </div>
-                <div class="col-md-3 mt-1">
-                    (About content)
-                </div>
-                <div class="col-md-3 mt-1">
-                    (3 days ago)
-                </div>
-
-                <div class="mb-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, maxime. Veniam magni atque autem,
-                    harum
-                    beatae ad sint quibusdam? Quod est consequatur atque quis cupiditate ipsum quos fugiat dolore
-                    impedit?
-                </div>
-                <div class="col-md-12 row" style="color: #1429D7;">
-                    <div class="col-md-2">
-                        <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-
-                        </svg>
-                        <b>10</b>
-                    </div>
-                    <p class="col-md-3"><b>4 replies</b></p>
-                </div>
-            </div>
-        </div>
 
         <div class="col-md-12" style="text-align: center;">
             <button type="button" class="btn-submit"><b>... SEE MORE</b></button>
@@ -485,20 +392,17 @@
 
                 <div class="mb-3" style="padding-right: 30px; padding-top: 20px;">Add image (optional)</div>
                 <div class="form-group" style="padding-top: 5px;"">
-          <svg class=" bi bi-plus add-image mr-1" width="60px" height="60px" viewBox="0 0 16 16" fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z" />
-                    <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z" />
+                    <svg class=" bi bi-plus add-image" width="60px" height="60px" style="padding-right: 0" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z" />
+                        <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z" />
                     </svg>
-                    <svg class="bi bi-image-alt add-image mr-1" width="60px" height="60px" viewBox="0 0 16 16"
-                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="bi bi-image-alt add-image" width="60px" height="60px" style="padding-right: 0" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M10.648 6.646a.5.5 0 0 1 .577-.093l4.777 3.947V15a1 1 0 0 1-1 1h-14a1 1 0 0 1-1-1v-2l3.646-4.354a.5.5 0 0 1 .63-.062l2.66 2.773 3.71-4.71z" />
                         <path fill-rule="evenodd" d="M4.5 5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
                     </svg>
-                    <svg class="bi bi-image-alt add-image" width="60px" height="60px" viewBox="0 0 16 16"
-                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="bi bi-image-alt add-image" width="60px" height="60px" style="padding-right: 0" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M10.648 6.646a.5.5 0 0 1 .577-.093l4.777 3.947V15a1 1 0 0 1-1 1h-14a1 1 0 0 1-1-1v-2l3.646-4.354a.5.5 0 0 1 .63-.062l2.66 2.773 3.71-4.71z" />
                         <path fill-rule="evenodd" d="M4.5 5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />

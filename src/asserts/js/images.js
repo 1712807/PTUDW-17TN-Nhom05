@@ -1,7 +1,7 @@
-import Book1 from '../img/book-0.jpeg'
+import Book1 from '../img/book-0.jpg'
 import Book2 from '../img/book-1.jpg'
 import Book3 from '../img/book-2.jpg'
-import Book4 from '../img/book-3.png'
+import Book4 from '../img/book-3.jpg'
 
 export default[
     Book1,

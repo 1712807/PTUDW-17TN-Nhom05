@@ -1,0 +1,869 @@
+type Book struct {
+    Title   string  `json:"title"`
+    Sku     string  `json:"sku"`
+    Views   string  `json:"views"`
+    Author  string  `json:"author"`
+    Publisher   string  `json:"publisher"`
+    Page    int     `json:"page"`
+    Type    string  `json:"type"`
+    Languege    string  `json:"language"`
+    Tag     []string  `json:"tag"`
+    Remain  int     `json:"remain"`
+    Rate    string  `json:"rate"` 
+    NumRate int     `json:"numRate"`
+    Intro   string  `json:"intro"`
+    Images  []string    `json:"images"`     
+}
+
+{
+    "Title": "Kỷ Nguyên Trí Tuệ Nhân Tạo",
+    "Sku": "5786537617076",
+    "Views": "10000",
+    "Author": "Nhiều tác giả",
+    "Publisher": "Nhà xuất bản Hồng Đức",
+    "Page": 280,
+    "Type": "Phân tích kinh tế",
+    "Language": "Tiếng Việt",
+    "Tag": ["AI", "Trí Tuệ"],
+    "Remain": 10,
+    "Rate": "5"
+    "NumRate": 100,
+    "Intro": "Trong cuộc sống hàng ngày của mỗi chúng ta, có bao nhiêu thời gian được dùng cho những công việc mưu sinh mang tính lặp đi lặp lại buồn tẻ, có bao nhiêu thời gian dùng cho việc đọc sách, học tập, sáng tạo, tư duy, giải trí và hưởng thụ? Một ngày của nhân viên văn phòng thành phố, ngoài thời gian dành cho ngủ nghỉ, thì có hơn 60% thời gian dành để cho giao tiếp xã giao và xử lý những công việc mưu sinh mang tính quy trình, chỉ có khoảng 10% thời gian dành cho bản thân. Ngày nay, các nhà nghiên cứu trong lĩnh vực khoa học công nghệ đang nỗ lực để cho máy móc có được “trí tuệ” giống như con người, đồng thời để cho hoạt động con người được “thông tin hóa”. Những công việc mà trước đây bạn cho rằng chỉ có con người mới làm được, chẳng hạn như lái xe, phiên dịch, giảng bài, thậm chí là chẩn đoán, điều trị bệnh, thì bây giờ đều có thể giao cho máy móc. Đồng thời, máy móc cũng có thể thu nhận, truyền tải, phân tích hoạt động của con người, sau đó đưa ra những phản hồi, nhằm nâng cao hiệu quả công việc. Tất cả những điều này sẽ làm cho cuộc sống của bạn thay đổi như thế nào? Khi bạn đi trên đường phố, đèn tín hiệu giao thông sẽ thay đổi do sự xuất hiện của bạn. Khi bạn ngồi trong nhà, nhiệt độ và ánh sáng trong nhà sẽ tự động được điều chỉnh đến trạng thái phù hợp với bạn. Ở những nơi bạn nhìn thấy và không nhìn thấy, người máy đều có thể làm việc. Có người máy làm công việc quét dọn, có người máy làm công việc quản lý các thiết bị xung quanh bạn. Ngoài ra, còn có những sự thay đổi mà có thể bạn chưa ý thức được. 200 năm trước, 70% dân số Mỹ sống ở nông thôn. Còn hiện tại, con số này chỉ còn 1%. Trong các lĩnh vực mới, xuất hiện những công việc mới: thợ sửa chữa, thợ nhiếp ảnh, kỹ sư thiết kế trang web, kỹ sư sản phẩm v.v. Khi người máy có thể đảm trách được nhiều công việc hơn nữa, thì con người nên làm gì? Bạn sẽ coi người máy là đối thủ cạnh tranh, hay là trợ thủ đắc lực?",
+    "Images": ["/src/asserts/img/book-0.jpg"]
+},
+{
+    "Title": "Chạy Đua Với Robot",
+    "Sku": "8935278604273",
+    "Views": "1200",
+    "Author": "Joseph E Aoun",
+    "Publisher": "Nhà xuất bản Thế Giới",
+    "Page": 244,
+    "Type": "Khoa học công nghệ",
+    "Language": "Tiếng Việt",
+    "Tag": ["Robot","AI"],
+    "Remain": 50,
+    "Rate": "4.5"
+    "NumRate": 10,
+    "Intro": "Nhân loại đang trải qua một cuộc cách mạng khác trong cách loài người làm việc và kiếm sống – và một lần nữa, cuộc cách mạng này lại đốt bỏ những điều tưởng chừng hiển nhiên của quá khứ trong đống tro tàn lịch sử. Một lần nữa, công nghệ mới đã tạo tiền đề cho cách mạng. Nhưng thay vì là hạt giống, là máy dệt, hay là đầu máy hơi nước; động cơ của cuộc cách mạng này là công nghệ kỹ thuật số và robot. Cuộc cách mạng kỹ thuật số hiện tại rõ ràng khác biệt với các bước nhảy vọt về công nghệ trước đó, bởi giờ đây khả năng xử lý dữ liệu – hay trí thông minh – của máy móc dường như không còn giới hạn. Ở bất cứ công việc đã được lập trình sẵn nào, máy tính cũng có ưu thế về nhận thức hơn con người. Và bởi việc sao chép phần mềm cũng không mấy khó khăn nên bất cứ tiến bộ kỹ thuật số nào cũng có thể được nhân bản ngay lập tức trên khắp toàn cầu. Nếu như đây quả thực là hướng đi của công nghệ trong tương lai gần – và cũng có nhiều lý do để tin vào điều đó – thì sắp tới có khả năng việc trả công cho người lao động sẽ trở thành điều dị thường. Trong một viễn cảnh tương lai ảm đạm, những cỗ máy siêu thông minh sẽ vượt qua khả năng hiểu biết và kiểm soát của con người. Nếu máy tính có thể nắm quyền điều khiển nhiều hệ thống quan trọng, hậu quả sẽ rất tàn khốc. Nhẹ thì loài người sẽ mất đi quyền kiểm soát vận mệnh của mình, còn nặng thì máy sẽ đưa người đến bờ tuyệt chủng."
+    "Images": ["/src/asserts/img/book-1.jpg"]
+},
+{
+    "Title": "Năm 2062 - Thời Đại Của Trí Thông Minh Nhân Tạo",
+    "Sku": "9786045893432",
+    "Views": "2000",
+    "Author": "Toby Walsh",
+    "Publisher": "Nhà xuất bản Tổng hợp TP.HCM",
+    "Page": 263,
+    "Type": "Khoa học công nghệ,
+    "Language": "Tiếng Việt",
+    "Tag": ["Nhân Tạo", "Trí Tuệ Nhân Tạo", "Máy móc"],
+    "Remain": 20,
+    "Rate": "4.9"
+    "NumRate": 150,
+    "Intro": "Theo các chuyên gia hàng đầu về robot và trí thông minh nhân tạo thì đến năm 2062 chúng ta sẽ có thể chế tạo ra được máy móc thông minh như con người. Nhưng tương lai đó sẽ trông ra sao? Trong quyển 2062, Nghiên cứu gia hàng đầu thế giới- Toby Walsh, đã xem xét tác động của Trí thông minh nhân tạo lên công ăn việc làm, chiến tranh, kinh tế, chính trị, cuộc sống hàng ngày và thậm chí cả cái chết. Liệu tự động hóa có lấy đi công việc của người lao động không? Liệu robot sẽ có ý thức và lên nắm quyền trong mọi lĩnh vực? Phải chăng chúng ta cũng sẽ trở thành những cỗ máy bất tử với bộ não được tải lên đám mây điện toán? Thế giới kỹ thuật số với thông tin bị bóp méo và không còn quyền riêng tư sẽ thay đổi nền chính trị ra sao? Cuộc sống trên hành tinh này sẽ trông như thế nào khi con người chế tạo thành công những cỗ máy thông minh?",
+    "Images": ["/src/asserts/img/book-2.jpg"]
+},
+{
+    "Title": "The A.I Age",
+    "Sku": "5786537617076",
+    "Views": "1000",
+    "Author": "Adam Riccoboni",
+    "Publisher": "Critical Future",
+    "Page": 248,
+    "Type": "Artificial Intelligence & Semantics",
+    "Language": "English",
+    "Tag": ["AI"],
+    "Remain": 15,
+    "Rate": "5"
+    "NumRate": 16,
+    "Intro": "You’ll see how AI is unfolding as an essential part of our world, from its history to its business uses—and its fascinating future. This book is an intriguing guide to the most important technological transformation of our time: the AI Age.",
+    "Images": ["/src/asserts/img/book-3.jpg"]
+},
+{
+    "Title": "Nhà Giả Kim",
+    "Sku": "8935235200524",
+    "Views": "1550",
+    "Author": "Paulo Coelho",
+    "Publisher": "Nhà xuất bản Văn Học",
+    "Page": 228,
+    "Type": "Phiêu lưu, thần bí",
+    "Language": "Tiếng Việt",
+    "Tag": ["Bí Hiểm", "Phiêu lưu", "Trải nghiệm"],
+    "Remain": 14,
+    "Rate": "4.6"
+    "NumRate": 50,
+    "Intro": "Tất cả những trải nghiệm trong chuyến phiêu du theo đuổi vận mệnh của mình đã giúp Santiago thấu hiểu được ý nghĩa sâu xa nhất của hạnh phúc, hòa hợp với vũ trụ và con người. Tiểu thuyết Nhà giả kim của Paulo Coelho như một câu chuyện cổ tích giản dị, nhân ái, giàu chất thơ, thấm đẫm những minh triết huyền bí của phương Đông. Trong lần xuất bản đầu tiên tại Brazil vào năm 1988, sách chỉ bán được 900 bản. Nhưng, với số phận đặc biệt của cuốn sách dành cho toàn nhân loại, vượt ra ngoài biên giới quốc gia, Nhà giả kim đã làm rung động hàng triệu tâm hồn, trở thành một trong những cuốn sách bán chạy nhất mọi thời đại, và có thể làm thay đổi cuộc đời người đọc.",
+    "Images": ["/src/asserts/img/book-4.jpg"]
+},
+{
+    "Title": "Đắc Nhân Tâm",
+    "Sku": "8935086838143",
+    "Views": "990",
+    "Author": "Dale Carnegie",
+    "Publisher": "Nhà xuất bản Tổng Hợp TP.HCM",
+    "Page": 320,
+    "Type": "Tư duy và kỹ năng sống",
+    "Language": "Tiếng Việt",
+    "Tag": ["Tư duy","Kỹ năng sống"],
+    "Remain": 70,
+    "Rate": "4.1"
+    "NumRate": 74,
+    "Intro": "Là quyển sách đầu tiên có ảnh hưởng làm thay đổi cuộc đời của hàng triệu người trên thế giới, Đắc Nhân Tâm là cuốn sách đem lại những giá trị tuyệt vời cho người đọc, bao gồm những lời khuyên cực kì bổ ích về cách ứng xử trong cuộc sống hàng ngày. Sức lan toả của quyển sách vô cùng rộng lớn – với nhiều tầng lớp, đối tượng.",
+    "Images": ["/src/asserts/img/book-5.jpg"]
+},
+{
+    "Title": "Đừng Lựa Chọn An Nhàn Khi Còn Trẻ",
+    "Sku": "3013461704247",
+    "Views": "219",
+    "Author": "Cảnh Thiên",
+    "Publisher": "Nhà xuất bản Thế Giới",
+    "Page": 316,
+    "Type": "Tư duy và kỹ năng sống",
+    "Language": "Tiếng Việt",
+    "Tag": ["Tư duy","Kỹ năng sống"],
+    "Remain": 24,
+    "Rate": "4.0"
+    "NumRate": 87,
+    "Intro": "Trong độ xuân xanh phơi phới ngày ấy, bạn không dám mạo hiểm, không dám nỗ lực để kiếm học bổng, không chịu tìm tòi những thử thách trong công việc, không phấn đấu hướng đến ước mơ của mình. Bạn mơ mộng rằng làm việc xong sẽ vào làm ở một công ty nổi tiếng, làm một thời gian sẽ thăng quan tiến chức. Mơ mộng rằng khởi nghiệp xong sẽ lập tức nhận được tiền đầu tư, cầm được tiền đầu tư là sẽ niêm yết trên sàn chứng khoán. Mơ mộng rằng muốn gì sẽ có đó, không thiếu tiền cũng chẳng thiếu tình, an hưởng những năm tháng êm đềm trong cuộc đời mình. Nhưng vì sao bạn lại nghĩ rằng bạn chẳng cần bỏ ra chút công sức nào, cuộc sống sẽ dâng đến tận miệng những thứ bạn muốn? Bạn cần phải hiểu rằng: Hấp tấp muốn mau chóng thành công rất dễ khiến chúng ta đi vào mê lộ. Thanh xuân là khoảng thời gian đẹp đẽ nhất trong đời, cũng là những năm tháng then chốt có thể quyết định tương lai của một người. Nếu bạn lựa chọn an nhàn trong 10 năm, tương lai sẽ buộc bạn phải vất vả trong 50 năm để bù đắp lại. Nếu bạn bươn chải vất vả trong 10 năm, thứ mà bạn chắc chắn có được là 50 năm hạnh phúc. Điều quý giá nhất không phải là tiền mà là tiền bạc. Thế nên, bạn à, đừng lựa chọn an nhàn khi còn trẻ.",
+    "Images": ["/src/asserts/img/book-6.jpg"]
+},
+{
+    "Title": "Ban Đắt Giá Bao Nhiêu",
+    "Sku": "8193357941538",
+    "Views": "845",
+    "Author": "Vãn Tình",
+    "Publisher": "Nhà xuất bản Thế Giới",
+    "Page": 320,
+    "Type": "Tư duy và kỹ năng sống",
+    "Language": "Tiếng Việt",
+    "Tag": ["Tư duy","Kỹ năng sống"],
+    "Remain": 99,
+    "Rate": "4.8"
+    "NumRate": 50,
+    "Intro": "Câu trả lời này do chính bạn quyết định, chính bạn “định giá”. 
+    Hơn bốn mươi câu chuyện trong sách xoay quanh các chủ đề tình yêu, hôn nhân, gia đình, sự nghiệp… đến từ chính cuộc sống của tác giả và những người xung quanh, vừa thực tế lại vừa gợi mở, dễ dàng giúp chúng ta liên hệ với tình huống của chính mình. Với những câu chuyện đó, Vãn Tình hi vọng có thể giúp các cô gái thoát khỏi tình cảnh khó khăn, tìm lại bản ngã, sống cuộc đời theo cách mà mình mong muốn.
+    Đọc cuốn sách này, đôi khi bạn nên dừng lại và thành thực với bản thân, liệu bạn có đang là phiên-bản-mà-bạn-yêu-thích-nhất, phiên-bản-bạn-mong- muốn-trở-thành. Hãy thử trả lời các câu hỏi: Sự thỏa hiệp có làm bạn hạnh phúc hay không? Bạn có đang cố gắng lấy lòng tất cả mọi người? Bạn có dám thay đổi?... Và quan trọng nhất: Bạn đắt giá bao nhiêu?",
+    "Images": ["/src/asserts/img/book-7.jpg"]
+},
+{
+    "Title": "Chuyện Con Mèo Dạy Hải Âu Bay",
+    "Sku": "3274339512467",
+    "Views": "85",
+    "Author": "Vãn Tình",
+    "Publisher": "Nhà Xuất Bản Hội Nhà Văn",
+    "Page": 144,
+    "Type": "Văn học thiếu nhi",
+    "Language": "Tiếng Việt",
+    "Tag": ["Tình người", "kỹ năng sống"],
+    "Remain": 9,
+    "Rate": "4.5"
+    "NumRate": 50,
+    "Intro": "Có tồn tại không tình thương yêu giữa mèo và hải âu?
+     Thế giới này đầy những nghịch lý và khác biệt, nhưng bỏ qua những khác biệt đó để hướng đến tình yêu thương thì cuộc sống sẽ tốt đẹp hơn. Chuyện con mèo dạy hải âu bay của nhà văn Chi Lê nổi tiếng Luis SéPulveda.là một câu chuyện thấm đẫm tình mèo, tình người như thế.
+     Câu chuyện là cuộc hành trình dài đi thực hiện ba lời hứa của chú mèo mập Zorba: sẽ không ăn quả trứng, sẽ chăm lo cho quả trứng đến khi chú chim non ra đời, và điều cuối dường như không tưởng là dạy nó bay. Những rắc rối liên tiếp ập đến, liệu một bà má rất “xịn” như Zorba có thực hiện đúng được ba lời hứa?",
+    "Images": ["/src/asserts/img/book-8.jpg"]
+},
+{
+    "Title": "Chó Sủa Nhầm Cây",
+    "Sku": "7173692850543",
+    "Views": "700",
+    "Author": "Eric Barker",
+    "Publisher": "Nhà xuất bản Kinh Tế Thành Phố Hồ Chí Minh",
+    "Page": 320,
+    "Type": "Tư duy và kỹ năng sống",
+    "Language": "Tiếng Việt",
+    "Tag": ["Thành công", "Tư duy","Phát triển bản thân"],
+    "Remain": 58,
+    "Rate": "4.8"
+    "NumRate": 24,
+    "Intro": "Bạn có biết:
+    - Các thủ khoa hiếm khi trở thành triệu phú, và nhược điểm lớn nhất có khi lại là ưu điểm tuyệt vời nhất mà ai ai cũng khao khát sở hữu.
+    - Ở công ty, sự chăm chỉ đang bị thổi phồng quá mức, còn những trò nịnh bợ lại thường mang đến kết quả tốt, và liệu đề cao chính nghĩa hay sa vào tà đạo mới là con đường dẫn đến thành công?
+    - Những người lính Navy SEAL và những nhân viên bán bảo hiểm có một điểm chung quan trọng, và cách sử dụng nguyên tắc WNGF trong thiết kế trò chơi để biến đống bài tập chán ngắt thành những trò chơi hấp dẫn.",
+     "Images": ["/src/asserts/img/book-9.jpg"]
+},
+{
+    "Title": "Đời Ngắn Đừng Ngủ Dài",
+    "Sku": "2331938564882",
+    "Views": "100",
+    "Author": "Robin Sharma",
+    "Publisher": "Nhà Xuất Bản Trẻ",
+    "Page": 228,
+    "Type": "Tư duy và kỹ năng sống",
+    "Language": "Tiếng Việt",
+    "Tag": ["Giá trị", "phát triển bản thân"],
+    "Remain": 90,
+    "Rate": "4.5"
+    "NumRate": 70,
+    "Intro": "Mọi lựa chọn đều giá trị. Mọi bước đi đều quan trọng. Cuộc sống vẫn diễn ra theo cách của nó, không phải theo cách của ta. Hãy kiên nhẫn. Tin tưởng. Hãy giống như người thợ cắt đá, đều đặn từng nhịp, ngày qua ngày. Cuối cùng, một nhát cắt duy nhất sẽ phá vỡ tảng đá và lộ ra viên kim cương. Người tràn đầy nhiệt huyết và tận tâm với việc mình làm không bao giờ bị chối bỏ. Sự thật là thế.",
+    "Images": ["/src/asserts/img/book-10.jpg"]
+},
+{
+    "Title": "Đọc Vị Bất Kỳ Ai",
+    "Sku": "9965161190001",
+    "Views": "845",
+    "Author": "TS. David J. Lieberman",
+    "Publisher": "Nhà xuất bản Lao Động",
+    "Page": 223,
+    "Type": "Tư duy và kỹ năng sống",
+    "Language": "Tiếng Việt",
+    "Tag": ["Kỹ năng sống"],
+    "Remain": 99,
+    "Rate": "4.8"
+    "NumRate": 50,
+    "Intro": "Hãy chiếm thế thượng phong trong việc chủ động nhận biết điều cần tìm kiếm - ở bất kỳ ai bằng cách “thâm nhập vào suy nghĩ” của người khác. ĐỌC VỊ BẤT KỲ AI là cẩm nang dạy bạn cách thâm nhập vào tâm trí của người khác để biết điều người ta đang nghĩ. Cuốn sách này sẽ không giúp bạn rút ra các kết luận chung về một ai đó dựa vào cảm tính hay sự võ đoán. Những nguyên tắc được chia sẻ trong cuốn sách này không đơn thuần là những lý thuyết hay mẹo vặt chỉ đúng trong một số trường hợp hoặc với những đối tượng nhất định. Các kết quả nghiên cứu trong cuốn sách này được đưa ra dựa trên phương pháp S.N.A.P - cách thức phân tích và tìm hiểu tính cách một cách bài bản trong phạm vi cho phép mà không làm mếch lòng đối tượng được phân tích. Phương pháp này dựa trên những phân tích về tâm lý, chứ không chỉ đơn thuần dựa trên ngôn ngữ cử chỉ, trực giác hay võ đoán.",
+    "Images": ["/src/asserts/img/book-11.jpg"]
+},
+{
+    "Title": "Chiến Thắng Con Quỷ Trong Bạn",
+    "Sku": "8659974846972",
+    "Views": "85",
+    "Author": "Napoleon Hill",
+    "Publisher": "Nhà Xuất Bản Lao Động",
+    "Page": 144,
+    "Type": "Tư duy và kỹ năng sống",
+    "Language": "Tiếng Việt",
+    "Tag": ["Kỹ năng sống"],
+    "Remain": 9,
+    "Rate": "4.5"
+    "NumRate": 50,
+    "Intro": "Cuốn sách là cuộc trò chuyện của Napoleon Hill và Con Quỷ. Sau bao nhiêu năm miệt mài nghiên cứu cuối cùng ông cũng phát hiện ra Con Quỷ, bắt nó phải thú tội và tiết lộ những sự thật kinh hoàng về nơi nó sống, cách nó kiểm soát tâm trí con người và cách để con người chiến thắng được nó. Khi đọc cuốn sách này, có thể bạn sẽ tự hỏi, cuộc trò chuyện này có thật không? Con Quỷ là có thật hay là một sản phẩm của trí tưởng tượng của Napoleon Hill. Nhưng quyền lựa chọn cách hiểu vấn đề là của bạn. Bởi lẽ cuối cùng, thông qua cuộc trò chuyện với Con Quỷ, Napoleon Hill đã cung cấp cho chúng ta chìa khóa để chiến thắng Con Quỷ trong cuộc sống riêng của mỗi người.",
+    "Images": ["/src/asserts/img/book-12.jpg"]
+},
+{
+    "Title": "3 Người Thầy Vĩ Đại",
+    "Sku": "7726113161775",
+    "Views": "845",
+    "Author": "Robin Sharma",
+    "Publisher": "Nhà xuất bản Lao Động",
+    "Page": 330,
+    "Type": "Tư duy và kỹ năng sống",
+    "Language": "Tiếng Việt",
+    "Tag": ["Kỹ năng"],
+    "Remain": 99,
+    "Rate": "4.8"
+    "NumRate": 50,
+    "Intro": "Tôi đã nếm trải nhiều thất bại trong hành trình đi qua những tháng ngày của mình. Thế nhưng, mỗi chướng ngại cuối cùng đều lại chính là một bàn đạp đưa tôi gần hơn nữa tới chân lý trong tâm khảm và cuộc đời tốt đẹp nhất của mình.
+     Cho dù tôi có thu thập được bao nhiêu tài sản vật chất đi chăng nữa thì cái thằng người mà tôi nhìn thấy trong tấm gương phòng tắm mỗi buổi sáng vẫn y nguyên – tôi không hề hạnh phúc hơn và không hề cảm thấy tốt hơn tí nào. Suy ngẫm nhiều hơn về thực trạng cuộc sống của mình, tôi bắt đầu nhận thức được sự trống rỗng ngay trong tim mình. Tôi bắt đầu chú ý đến những tiếng thầm thì lặng lẽ của con tim, những điều chỉ dẫn tôi rời bỏ nghề nghiệp mình đã chọn và bắt đầu quá trình tìm kiếm tâm hồn một cách nghiêm túc. Tôi bắt đầu suy nghĩ về lý do tại sao tôi lại ở đây, trên hành tinh này, và nhiệm vụ cụ thể của tôi là gì. Tôi tự hỏi tại sao cuộc đời mình lại không có tác dụng và cần phải thực hiện những thay đổi sâu sắc nào để giúp mình đi đúng hướng. Tôi xem xét những niềm tin cốt lõi, những giả định, và những lăng kính mà mình nhìn ra thế giới, và tôi tự cam kết làm sạch những lăng kính không lành mạnh.",
+    "Images": ["/src/asserts/img/book-13.jpg"]
+},
+{
+    "Title": "Các Giải Pháp Lập Trình C#",
+    "Sku": "8936002881403",
+    "Views": "85",
+    "Author": "Nguyễn Ngọc Bình Phương , Thái Thanh Phong",
+    "Publisher": "Nhà Xuất Bản Giao thông vận tải",
+    "Page": 544,
+    "Type": "Lập trình",
+    "Language": "Tiếng Việt",
+    "Tag": ["Lập trình"],
+    "Remain": 9,
+    "Rate": "4.5"
+    "NumRate": 50,
+    "Intro": "Các giải pháp lập trình C# khảo sát chiều rộng của thư viện lớp .NET Framework và cung cấp giải pháp cụ thể cho các vấn đề thường gặp. Mỗi giải pháp được trình bày theo dạng “vấn đề/giải pháp” một cách ngắn gọn và kèm theo là các ví dụ mẫu. Các giải pháp lập trình C# không nhằm mục đích hướng dẫn bạn cách lập trình C#. Tuy vậy, ngay cả khi mới làm quen với lập trình ứng dụng được xây dựng trên .NET Framework với C#, bạn cũng sẽ nhận thấy quyển sách này là một tài nguyên vô giá. ",
+    "Images": ["/src/asserts/img/book-14.jpg"]
+},
+{
+    "Title": "Giáo Trình C++ Và Lập Trình Hướng Đối Tượng",
+    "Sku": "1544061975291",
+    "Views": "85",
+    "Author": "Phạm Văn Ất",
+    "Publisher": "Nhà Xuất Bản Bách Khoa Hà Nội",
+    "Page": 488,
+    "Type": "Giáo trình Đại học, Cao đẳng",
+    "Language": "Tiếng Việt",
+    "Tag": ["Tư duy"],
+    "Remain": 9,
+    "Rate": "4.5"
+    "NumRate": 50,
+    "Intro": "Giáo trình C++ & lập trình hướng đối tượng trình bày một cách hệ thống các khái niệm của lập trình hướng đối tượng được cài đặt trong C++ như lớp, đối tượng, sự thừa kế, tính tương ứng bội và các khả năng mới trong xây dựng, sử dụng hàm như đối tham chiếu, đối mặc định, hàm trùng tên, hàm toán tử. “Giáo trình C++ & lập trình hướng đối tượng” gồm 13 chương và 5 phụ lục được trình bày khá khoa học. Ngoài ra, cuốn sách còn đề cập đến một số vấn đề còn ít được biết đến như cách xây dựng hàm với số đối bất định trong C cũng sẽ được giới thiệu .",
+    "Images": ["/src/asserts/img/book-15.jpg"]
+},
+{
+    "Title": "Giáo Trình Lập Trình Java",
+    "Sku": "671756972",
+    "Views": "100",
+    "Author": "Đoàn Văn Ban - Đoàn Văn Trung",
+    "Publisher": "Nhà Xuất Bản Giáo Dục Việt Nam",
+    "Page": 206,
+    "Type": "Lập Trình",
+    "Language": "Tiếng Việt",
+    "Tag": ["Java"],
+    "Remain": 50,
+    "Rate": "4.8"
+    "NumRate": 10,
+    "Intro": "Nội dung giáo trình tập trung vào những kiến thức căn bản nhất của lập trình java giúp người đọc bước đầu tiếp cập dễ dàng với công nghệ mới này, và đây cũng chính là một bước đệm để chúng ta trở thành “java shooter”. Một số vấn đề nâng trong ngôn ngữ lập trình java như: javabean, thiết kết giao diện dùng thư viện JFC (Java Foundation Class), lập trình mạng, lập trình cơ sở dữ liệu bằng java, lập trình ứng dụng web dùng J2EE (Java 2 Enterprise Edition), … sẽ được nói đến trong các chuyên đề nâng cao. Chương 6 của giáo trình giới thiệu tổng quan về lập trình cơ sở dữ liệu dùng jdbc, một nội dung theo chúng tôi cần phải được trình bày trong một chuyên đề riêng.",
+    "Images": ["/src/asserts/img/book-16.jpg"]
+},
+{
+    "Title": "Kỹ Thuật Lập Trình C",
+    "Sku": "6257588608621",
+    "Views": "200",
+    "Author": "GS. Phạm Văn Ất, ThS. Nguyễn Hiếu Cường, ThS. Đỗ Văn Tuấn, Lê Trương Thông",
+    "Publisher": "Nhà Xuất Bản Bách Khoa Hà Nội",
+    "Page": 430,
+    "Type": "Lập Trình",
+    "Language": "Tiếng Việt",
+    "Tag": ["Lập Trình C", "Kỹ thuật lập trình", "C"],
+    "Remain": 300,
+    "Rate": "4.5"
+    "NumRate": 79,
+    "Intro": "Giáo trình kỹ thuật lập trình C căn bản và nâng cao được hình thành qua nhiều năm giảng dạy của các tác giả. Ngôn ngữ lập trình C là một môn học cơ sở trong chương trình đào tạo kỹ sư, cử nhân tin học của nhiều trường đại học. Ở đây sinh viên được trang bị những kiến thức cơ bản nhất về lập trình, các kỹ thuật  tổ chức dữ liệu và lập trình căn bản với ngôn ngữ C.",
+    "Images": ["/src/asserts/img/book-17.jpg"]
+},
+{
+    "Title": "Lập Trình Hướng Đối Tượng",
+    "Sku": "2443430524674",
+    "Views": "85",
+    "Author": "Trần Đan Thư, Đinh Bá Tiến, Nguyễn Tấn Trần Minh Khang",
+    "Publisher": "Nhà Xuất Bản Khoa Học Và Kỹ Thuật",
+    "Page": 240,
+    "Type": "Lập trình",
+    "Language": "Tiếng Việt",
+    "Tag": ["Lập trình","hướng đối tượng"],
+    "Remain": 9,
+    "Rate": "4.5"
+    "NumRate": 50,
+    "Intro": "Lập trình cấu trúc là phương pháp tổ chức, phân chia chương trình thành các hàm, thủ tục. Chúng được dùng để xử lý dữ liệu nhưng lại tách rời các cấu trúc dữ liệu. Lập trình hướng đối tượng dựa trên việc tổ chức chương trình thành các lớp. Khác với hàm và thủ tục, lớp là một đơn vị bao gồm cả dữ liệu và các phương thức xử lý.",
+    "Images": ["/src/asserts/img/book-18.jpg"]
+},
+{
+    "Title": "Lập Trình Cơ Bản PHP Và MySQL",
+    "Sku": "2455086254454",
+    "Views": "85",
+    "Author": "Joel Murach - Ray Harris",
+    "Publisher": "Nhà Xuất Bản Khoa học & kỹ thuật",
+    "Page": 520,
+    "Type": "Lập trình",
+    "Language": "Tiếng Việt",
+    "Tag": ["lập trình", "PHP"],
+    "Remain": 9,
+    "Rate": "4.5"
+    "NumRate": 50,
+    "Intro": "Cuốn sách Lập trình cơ bản PHP và MySQL dành cho những ai muốn học cách xây dựng và bảo trì các website sử dụng PHP và MySQL - “cặp bài trùng” ngôn ngữ lập trình và cơ sở dữ liệu được sử dụng nhiều nhất cho các ứng dụng Web hiện nay. Mục tiêu là giúp bạn trong một thời gian ngắn nhất sẽ trở thành một lập trình viên Web biết PHP và MySQL ở mức chuyên sâu.Bạn sẽ được học các nội dung cốt lõi và hoàn chỉnh cùng các đặc trưng riêng của ngôn ngữ lập trình PHP và cơ sở dữ liệu MySQL. Bên cạnh lý thuyết cô đọng, thông qua hàng trăm ví dụ từ đơn giản đến phức tạp, bạn sẽ thấy các thành phần của ứng dụng PHP và cơ sở dữ liệu MySQL phối hợp với nhau như thế nào và cách thức vận dụng trong các bài toán cụ thể. Nắm được các vấn đề cốt lõi, bạn cũng sẽ dễ dàng mở rộng các kỹ năng PHP và MySQL, bao gồm các kỹ năng chuyên nghiệp rất cần cho công việc thực tế.",
+    "Images": ["/src/asserts/img/book-19.jpg"]
+},
+{
+    "Title": "Tớ Học Lập Trình - Làm Quen Với Lập Trình Scratch",
+    "Sku": "3292368142820",
+    "Views": "85",
+    "Author": "Rosie Dickins, Louie Stowell, Jonathon Melmoth",
+    "Publisher": "Nhà Xuất Bản Thế Giới",
+    "Page": 500,
+    "Type": "Lập trình",
+    "Language": "Tiếng Việt",
+    "Tag": ["lập trình"],
+    "Remain": 9,
+    "Rate": "4.5"
+    "NumRate": 50,
+    "Intro": "Cẩm nang hướng dẫn hoàn chỉnh và đơn giản nhất dành cho bạn trẻ bắt đầu học lập trình. Ngôn ngữ lập trình Scratch đặc biệt phù hợp cho bạn trẻ mới học, vì tính tương tác trực quan, đồ họa sống động, ra sản phẩm liền tay mà vẫn đảm bảo khoa học và liên thông tri thức sau này.",
+    "Images": ["/src/asserts/img/book-20.jpg"]
+},
+{
+    "Title": "Cấu Trúc Dữ Liệu Và Giải Thuật",
+    "Sku": "3227085982466",
+    "Views": "85",
+    "Author": "Nguyễn Trung Trực",
+    "Publisher": "Nhà Xuất Bản Đại học Quốc gia Tp.HCM",
+    "Page": 200,
+    "Type": "Giải thuật",
+    "Language": "Tiếng Việt",
+    "Tag": ["giải thuật", "cấu trúc dữ liệu"],
+    "Remain": 9,
+    "Rate": "4.5"
+    "NumRate": 50,
+    "Intro": "Nội dung cuốn sách bao gồm bảy chương:
+    Chương 1. Các khái niệm cơ bản.
+    Chương 2. Thuật toán đệ quy.
+    Chương 3. Các cấu trúc dữ liệu cơ bản.
+    Chương 4. Cây.
+    Chương 5. Các thuật toán sắp xếp.
+    Chương 6. Tìm kiếm.
+    Chương 7. Đồ thị và các thuật toán đồ thị.",
+    "Images": ["/src/asserts/img/book-21.jpg"]
+},
+{
+    "Title": "Lập Trình Hướng Đối Tượng JavaCore",
+    "Sku": "3417060908400",
+    "Views": "95",
+    "Author": "NEOS.THÀNH (Nguyễn Văn Thành)",
+    "Publisher": "Nhà Xuất Bản Lao động - Xã hội",
+    "Page": 489,
+    "Type": ["Lập trình","Javacore", "hướng đối tượng"],
+    "Language": "Tiếng Việt",
+    "Tag": "Java",
+    "Remain": 78,
+    "Rate": "4.0"
+    "NumRate": 40,
+    "Intro": "JAVA là ngôn ngữ lập trình rất phổ biến nhất hiện nay, học #JAVA_CORE bạn sẽ có rất nhiều hướng đi, từ lập trình Mobile app, Java web, Desktop App, Game, và tất cả đều sử dụng nền tảng của JAVA CORE.",
+    "Images": ["/src/asserts/img/book-22.jpg"]
+},
+{
+    "Title": "Cơ Sở Và Ứng Dụng Internet Of Things (Thiết Kế Hệ Thống Nhúng)",
+    "Sku": "2269001705576",
+    "Views": "850",
+    "Author": "TS. Phan Văn Ca, ThS. Trương Quang Phúc",
+    "Publisher": "Nhà Xuất Bản Đại học Quốc gia Tp.HCM",
+    "Page": 334,
+    "Type": "Giáo trình tham khảo",
+    "Language": "Tiếng Việt",
+    "Tag": ["hệ thống nhúng","internet"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Giáo trình Cơ sở và ứng dụng Internet of Things (Thiết kế hệ thống nhúng) tập trung vào phần thiết kế thiết bị phần cứng hệ thống nhúng cho các mô hình IoTs dựa trên các hệ thống vi điều khiển. Giải pháp Arduino được lựa chọn để thiết kế các hệ thống nhúng demo trong giáo trình. Arduino là giải pháp đơn giản và rẻ tiền dựa trên các họ vi điều khiển Atmel AVR - một nền tảng thiết kế điện tử nguồn mở dựa trên phần cứng và phần mềm linh hoạt, dễ sử dụng.",
+    "Images": ["/src/asserts/img/book-23.jpg"]
+},
+{
+    "Title": "Đại Việt Sử Ký Toàn Thư",
+    "Sku": "8936040589583",
+    "Views": "850",
+    "Author": "Nhiều tác giả",
+    "Publisher": "Nhà Xuất Bản Thời Đại",
+    "Page": 1056,
+    "Type": "Lịch sử",
+    "Language": "Tiếng Việt",
+    "Tag": ["lịch sử", "Việt Nam"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Đại Việt Sử Ký Toàn Thư là bộ quốc sử danh tiếng, một di sản quý báu của dân tộc Việt Nam nghìn năm văn hiến. Đó là bộ sử cái, có giá trị nhiều mặt, gắn liền với tên tuổi các nhà sử học nổi tiếng như Lê Văn Hưu, Phan Phu Tiên, Ngô Sĩ Liên, Phạm Công Trứ, Lê Hy…",
+    "Images": ["/src/asserts/img/book-24.jpg"]
+},
+{
+    "Title": "Việt Nam Sử Lược",
+    "Sku": "8285759516398",
+    "Views": "850",
+    "Author": "Trần Trọng Kim",
+    "Publisher": "Nhà Xuất Bản Kim Đồng",
+    "Page": 490,
+    "Type": "Lịch sử",
+    "Language": "Tiếng Việt",
+    "Tag": ["lịch sử", "Việt Nam"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Việt Nam sử lược của Trần Trọng Kim xuất bản lần đầu năm 1920, dựa trên những nghiên cứu trước đó như Nam sử tiểu học và Sơ học An Nam sử lược từ những năm 1914 -1917, là bộ thông sử viết bằng chữ quốc ngữ đầu tiên của Việt Nam được soạn theo phương pháp hiện đại.",
+    "Images": ["/src/asserts/img/book-25.jpg"]
+},
+{
+    "Title": "Sapiens - Lược Sử Loài Người",
+    "Sku": "5950302085135",
+    "Views": "850",
+    "Author": "Yuval Noah Harari",
+    "Publisher": "Nhà Xuất Bản Tri Thức",
+    "Page":554,
+    "Type": "lịch sử thế giới",
+    "Language": "Tiếng Việt",
+    "Tag": ["lịch sử", "thế giới"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Sapiens, đưa chúng ta vào một chuyến đi kinh ngạc qua toàn bộ lịch sử loài người, từ những gốc rễ tiến hóa của nó đến thời đại của chủ nghĩa tư bản và kỹ thuật di truyền, để khám phá tại sao chúng ta đang trong những điều kiện sinh sống hiện tại.",
+    "Images": ["/src/asserts/img/book-26.jpg"]
+},
+{
+    "Title": "Homo Deus: Lược Sử Tương Lai",
+    "Sku": "6224453586254",
+    "Views": "850",
+    "Author": "Yuval Noah Harari",
+    "Publisher": "Nhà Xuất Bản Thế Giới",
+    "Page": 512,
+    "Type": "Lịch sử thế giới",
+    "Language": "Tiếng Việt",
+    "Tag": ["lịch sử", "thế giới"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Homo sapiens có phải là một dạng sống siêu đẳng, hay chỉ là một tay đầu gấu địa phương? Làm thế nào con người lại tin rằng họ không chỉ đã kiểm soát thế giới, mà còn mang lại ý nghĩa cho nó? Công nghệ sinh học và trí thông minh nhân tạo đe doạ loài người ra sao? Sinh vật nào có thể kế thừa loài người, và tôn giáo mới nào sẽ được sản sinh?",
+    "Images": ["/src/asserts/img/book-27.jpg"]
+},
+{
+    "Title": "Bách Khoa Lịch Sử Thế Giới",
+    "Sku": "5615814493860",
+    "Views": "800",
+    "Author": "The Usborne",
+    "Publisher": "Nhà Xuất Bản Dân Trí",
+    "Page": 416,
+    "Type": "Kiến thức bách khoa",
+    "Language": "Tiếng Việt",
+    "Tag": ["lịch sử", "thế giới"],
+    "Remain": 100,
+    "Rate": "5.0"
+    "NumRate": 100,
+    "Intro": "Bách khoa Lịch sử thế giới là ấn phẩm vừa được phát hành thuộc tủ sách Bách khoa tri thức của Công ty Văn hóa Đông A. Cuốn sách chứa đựng lượng kiến thức khổng lồ về thế giới từ trước đến nay với hơn 200 chủ đề nằm trong 4 phần chính: Thế giới Tiền sử, Thế giới Cổ đại, Thế giới Trung cổ và 500 năm gần đây.",
+    "Images": ["/src/asserts/img/book-28.jpg"]
+},
+{
+    "Title": "Lịch Sử Thượng Đế",
+    "Sku": "4808481653687",
+    "Views": "79",
+    "Author": "Karen Armstrong",
+    "Publisher": "Nhà Xuất Bản Hồng Đức",
+    "Page": 648,
+    "Type": "Lịch sử thế giới",
+    "Language": "Tiếng Việt",
+    "Tag": ["lịch sử", "thế giới"],
+    "Remain": 110,
+    "Rate": "5.0"
+    "NumRate": 15,
+    "Intro": "Vì sao có sự tồn tại của Chúa Trời? Ba tôn giáo độc thần chủ đạo – Do Thái giáo, Cơ Đốc giáo và Hồi giáo – đã định hình và thay đổi khái niệm Chúa Trời như thế nào? Ba tôn giáo này có sự ảnh hưởng lẫn nhau ra sao? 
+    Trong cuốn sách viết lối tư duy thông minh này, Karen Armstrong, một trong những nhà dẫn giải tôn giáo hàng đầu của Anh lần lại lịch sử quá trình nam giới và phụ nữ nhận thức và trải nghiệm liên quan tới Chúa Trời, từ thời Tổ phụ Abraham cho tới hiện tại.",
+    "Images": ["/src/asserts/img/book-29.jpg"]
+},
+{
+    "Title": "Sự Va Chạm Giữa Các Nền Văn Minh Và Sự Tái Lập Trật Tự Thế Giới",
+    "Sku": "6857044350172",
+    "Views": "78",
+    "Author": "Samuel P. Huntington",
+    "Publisher": "Nhà Xuất Bản Hồng Đức",
+    "Page": 560,
+    "Type": "Lịch sử thế giới",
+    "Language": "Tiếng Việt",
+    "Tag": ["lịch sử", "thế giới", "văn minh", "trật tự thế giới"],
+    "Remain": 10,
+    "Rate": "4.9"
+    "NumRate": 20,
+    "Intro": "Trong cuốn sách của mình, S. Hungtington đã vẽ lại bức tranh chung về các nền văn minh khác nhau trên thế giới. Về cơ bản, ông phân chia nhân loại thành 2 bộ phận là văn minh phương Tây và văn minh ngoài phương Tây, trong đó văn minh phương Tây đóng vai trò trung tâm trong các phân tích của ông, là điểm tham chiếu để xem xét các nền văn minh khác ngoài phương Tây.",
+    "Images": ["/src/asserts/img/book-30.jpg"]
+},
+{
+    "Title": "Trật Tự Thế Giới",
+    "Sku": "2594394180885",
+    "Views": "850",
+    "Author": "Henry Kissinger",
+    "Publisher": "Nhà Xuất Bản Thế Giới",
+    "Page": 474,
+    "Type": "Lịch sử thế giới",
+    "Language": "Tiếng Việt",
+    "Tag": ["lịch sử", "thế giới", "trật tự thế giới"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Trong tác phẩm, Kissinger xuất phát từ Hòa ước Westphalia để phân tích về tương quan giữa các nước, chủ yếu là các cường quốc và các khu vực giữ một vai trò đặc biệt đối với bức tranh địa chính trị thế giới, với những khác biệt trong thế giới quan và vị trí địa lý đã ảnh hưởng đến chính sách ngoại giao của mỗi nước như thế nào. Tác giả dành chương cuối (chương 9) để bàn về vấn đề toàn cầu hoá trong thời đại khoa học công nghệ, đặc biệt là tin học và truyền thông đại chúng lan tràn đã tác động mạnh mẽ đến dư luận, các nhà lãnh đạo và các quyết định chính trị hiện nay.",
+    "Images": ["/src/asserts/img/book-31.jpg"]
+},
+{
+    "Title": "Đợt Tuyệt Chủng Thứ Sáu",
+    "Sku": "8191598716687",
+    "Views": "850",
+    "Author": "Elizabeth Kolbert",
+    "Publisher": "Nhà Xuất Bản Tri Thức",
+    "Page": 464,
+    "Type": "Lịch sử thế giới",
+    "Language": "Tiếng Việt",
+    "Tag": ["lịch sử", "tuyệt chủng"],
+    "Remain": 90,
+    "Rate": "4.6",
+    "NumRate": 500,
+    "Intro": "Kể từ hơn nửa tỉ năm trước, năm đợt tuyệt chủng đã diễn ra, khi sự đa dạng sống trên trái đất bất ngờ thu hẹp lại. Và phải chăng chúng ta đang bước vào đợt tuyệt chủng kế tiếp - Đợt Tuyệt Chủng Thứ Sáu - diễn ra trong thế Nhân sinh, một thế địa chất mà con người thống trị trên nhiều khía cạnh.",
+    "Images": ["/src/asserts/img/book-32.jpg"]
+},
+{
+    "Title": "Súng, Vi Trùng Và Thép",
+    "Sku": "6117325017775",
+    "Views": "850",
+    "Author": "Jared Diamond",
+    "Publisher": "Nhà Xuất Bản Thế Giới",
+    "Page": 676,
+    "Type": "Lịch sử thế giới",
+    "Language": "Tiếng Việt",
+    "Tag": ["lịch sử", "súng"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Cuốn sách giải thích vì sao các nền văn minh Á – Âu (bao gồm cả Bắc Phi) lại tồn tại được, cũng như đã chinh phục các nền văn minh khác, cùng lúc ông bác bỏ các lý thuyết về sự thống trị của các nền văn minh Á –Âu dựa trên trí tuệ, đạo đức hay ưu thế di truyền. Jared Diamond lập luận rằng, sự khác biệt về quyền lực và công nghệ giữa các xã hội loài người có nguồn gốc từ sự khác biệt về môi trường, trong đó sự khác biệt này được khuếch đại không ngường. Qua đó, ông giải thích tại sao Tây Âu, chứ không phải các nền văn minh khác trong thế giới Á – Âu như Trung Quốc, lại trở thành các thế lực thống trị",
+    "Images": ["/src/asserts/img/book-33.jpg"]
+},
+{
+    "Title": "Giải Thích Ngữ Pháp Tiếng Anh (Với Bài Tập Và Đáp Án)",
+    "Sku": "2850093965872",
+    "Views": "850",
+    "Author": "Mai Lan Hương",
+    "Publisher": "Nhà Xuất Bản Đà Nẵng",
+    "Page": 536,
+    "Type": "Sách học tiếng anh",
+    "Language": "Tiếng Việt",
+    "Tag": ["ngữ pháp", "tiếng anh"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Giải Thích Ngữ Pháp Tiếng Anh được biên soạn thành 9 chương, đề cập đến những vấn đề ngữ pháp từ cơ bản đến nâng cao, phù hợp với mọi trình độ. Các chủ điểm ngữ pháp trong từng chương được biên soạn chi tiết, giải thích cặn kẽ các cách dùng và quy luật mà người học cần nắm vững. Sau mỗi chủ điểm ngữ pháp là phần bài tập đa dạng nhằm giúp người học củng cố lý thuyết",
+    "Images": ["/src/asserts/img/book-34.jpg"]
+},
+{
+    "Title": "Học Tiếng Anh Giao Tiếp Chỉ Trong 30 Ngày",
+    "Sku": "2062272385849",
+    "Views": "850",
+    "Author": "Raymond Tsai",
+    "Publisher": "Nhà Xuất Bản Tổng hợp TP.HCM",
+    "Page": 324,
+    "Type": "Sách học tiếng anh",
+    "Language": "Anh - Việt",
+    "Tag": ["giao tiếp", "tiếng anh"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Với kinh nghiệm nhiều năm sống và làm việc ở các nước nói tiếng Anh, chúng tôi đã nỗ lực thu thập và chọn lọc một số từ vựng cùng khoảng 2.500 câu thoại cần thiết nhất, thường gặp nhất nhằm giúp bạn nhanh chóng sử dụng được tiếng Anh, diễn đạt chính xác những điều mình muốn nói trong nhiều tình huống. Ngoài ra, để hỗ trợ bạn trong quá trình học, chúng tôi còn cung cấp cho bạn một số kiến thức liên quan đến văn hóa và sinh hoạt hàng ngày của người bản xứ.",
+    "Images": ["/src/asserts/img/book-35.jpg"]
+},
+{
+    "Title": "Luyện Nói Tiếng Anh Như Người Bản Ngữ",
+    "Sku": "8206635675947",
+    "Views": "850",
+    "Author": "A.J.Hoge",
+    "Publisher": "Nhà Xuất Bản Đại Học Quốc Gia Hà Nội",
+    "Page": 303,
+    "Type": "Sách học tiếng anh",
+    "Language": "Anh - Việt",
+    "Tag": ["giao tiếp", "tiếng anh"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Cuốn sách gồm 23 chương trong đó có tới 8 chương cung cấp cho người học những quy tắc và bí quyết giúp các bạn có thể nói tiếng Anh thành thạo. Những quy tắc được trình bày dễ hiểu, dễ ghi nhớ và phù hợp với người Việt chúng ta.",
+    "Images": ["/src/asserts/img/book-36.jpg"]
+},
+{
+    "Title": "Tiếng Anh Trên Năm Đầu Ngón Tay",
+    "Sku": "6406262763730",
+    "Views": "850",
+    "Author": "Nguyễn Anh Đức",
+    "Publisher": "Nhà Xuất Bản Đại Học Quốc Gia Hà Nội",
+    "Page": 359,
+    "Type": "Sách học tiếng anh",
+    "Language": "Anh - Việt",
+    "Tag": ["tiếng anh"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Tiếng Anh Trên 5 Đầu Ngón Tay tuy ở trong hình hài của một cuốn sách, nhưng sự thực đây là một giải pháp học tiếng Anh rất đặc biệt, được tích lũy kinh nghiệm, tổng hợp tri thức và sáng tạo về phương pháp tư duy của một người thầy dạy tiếng Anh nổi tiếng là thầy Nguyễn Anh Đức, người được giới truyền thông mệnh danh là “phù thủy tiếng Anh",
+    "Images": ["/src/asserts/img/book-37.jpg"]
+},
+{
+    "Title": "Ngữ Pháp Tiếng Anh Vui Nhộn",
+    "Sku": "4135940075224",
+    "Views": "85",
+    "Author": "Laura",
+    "Publisher": "Nhà Xuất Bản Hồng Đức",
+    "Page": 416,
+    "Type": "Ngữ pháp tiếng anh",
+    "Language": "Anh - Việt",
+    "Tag": ["ngữ pháp", "tiếng anh"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Chắc chắn bạn biết rằng, sử dụng ngôn ngữ thành thạo là khi bạn có thể phản xạ nhanh trong giao tiếp và tự mình có thể viết một đoạn văn hay một bài viết bằng tiếng Anh mà không cần can thiệp quá nhiều của từ điển. Nền tảng cơ bản để bạn có thể đạt được những điều đó là nắm được rõ những thành phần cấu tạo nên câu tiếng Anh hoàn chỉnh và cách thức sử dụng chúng.",
+    "Images": ["/src/asserts/img/book-38.jpg"]
+},
+{
+    "Title": "Hacking Your English Speaking - Luyện Nói Tiếng Anh Đột Phá",
+    "Sku": "1474660817336",
+    "Views": "800",
+    "Author": "Hoàng Ngọc Quỳnh",
+    "Publisher": "Nhà Xuất Bản Hồng Đức",
+    "Page": 500,
+    "Type": "Sách học tiếng anh",
+    "Language": "Anh - Việt",
+    "Tag": ["giao tiếp", "tiếng anh", "luyện nói tiếng anh"],
+    "Remain": 120,
+    "Rate": "4.9"
+    "NumRate": 500,
+    "Intro": "Cuốn sách Hacking your English Speaking sẽ trang bị cho các bạn nền tảng cần thiết để nói tiếng Anh trôi chảy, tự tin bằng phương pháp mới đơn giản mà vô cùng hiệu quả",
+    "Images": ["/src/asserts/img/book-39.jpg"]
+},
+{
+    "Title": "Vừa Lười Vừa Bận Vẫn Giỏi Tiếng Anh",
+    "Sku": "8353248685938",
+    "Views": "850",
+    "Author": "Nguyễn Văn Hiệp",
+    "Publisher": "Nhà Xuất Bản Đại Học Quốc Gia Hà Nội",
+    "Page": 371,
+    "Type": "Sách học tiếng anh",
+    "Language": "Anh - Việt",
+    "Tag": ["giao tiếp", "tiếng anh"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Nội dung tập trung vào tiếng Anh giao tiếp trong công việc cho người đi làm (Professional English) chứ không phải tiếng Anh học thuật khó áp dụng vào các tình huống thực tế. Với các chủ đề giao tiếp và từ vựng tập trung vào từng mảng công việc khác nhau, cuốn sách cung cấp đầy đủ kiến thức giúp bạn tự tin giao tiếp và đàm phán trong công việc",
+    "Images": ["/src/asserts/img/book-40.jpg"]
+},
+{
+    "Title": "Tự Học Phiên Dịch",
+    "Sku": "1105010260952",
+    "Views": "850",
+    "Author": "Lê Tôn Hiếu",
+    "Publisher": "Nhà Xuất Bản Hồng Đức",
+    "Page": 228,
+    "Type": "Sách tham khảo",
+    "Language": "Anh - Việt",
+    "Tag": ["phiên dịch", "tiếng anh"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Cuốn sách Tự học phiên dịch Việt Anh - Anh Việt hướng dẫn sử dụng từ ngữ, cấu trúc câu, khác biệt văn hóa. Sách này nhằm tạo căn bản vững về câu, đoạn văn, bài văn.",
+    "Images": ["/src/asserts/img/book-41.jpg"]
+},
+
+{
+    "Title": "Inside Gram Gram - Thấu Hiểu Ngữ Pháp Như Người Bản Ngữ (Tập 1)",
+    "Sku": "9744246567798",
+    "Views": "850",
+    "Author": "Vy Ngọc",
+    "Publisher": "Nhà Xuất Bản Đại Học Quốc Gia Hà Nội",
+    "Page": 228,
+    "Type": "Tiếng anh",
+    "Language": "Anh - Việt",
+    "Tag": ["ngữ pháp", "tiếng anh"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Inside Gram Gram là bộ sách đầu tiên và duy nhất tại Việt Nam giúp người học tiếp cận ngữ pháp qua hình ảnh. Bộ sách dành cho những người mới bắt đầu học tiếng Anh hay ngay cả người mất gốc ngữ pháp, bởi những phương pháp học sáng tạo và tiến bộ.",
+    "Images": ["/src/asserts/img/book-42.jpg"]
+},
+{
+    "Title": "Inside Gram Gram - Thấu Hiểu Ngữ Pháp Như Người Bản Ngữ (Tập 2)",
+    "Sku": "4177506020996",
+    "Views": "850",
+    "Author": "Vy Ngọc",
+    "Publisher": "Nhà Xuất Bản Đại Học Quốc Gia Hà Nội",
+    "Page": 207,
+    "Type": "Tiếng anh",
+    "Language": "Anh - Việt",
+    "Tag": ["ngữ pháp", "tiếng anh"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Đây là cuốn sách đầu tiên của Việt Nam giúp người học tiếp cận ngữ pháp tiếng anh thông qua hình ảnh",
+    "Images": ["/src/asserts/img/book-43.jpg"]
+},
+{
+    "Title": "Đánh Thức Tài Năng Toán Học",
+    "Sku": "1601429427813",
+    "Views": "850",
+    "Author": "Terry Chew B. SC",
+    "Publisher": "Nhà Xuất Bản Thế Giới",
+    "Page": 360,
+    "Type": "Toán học",
+    "Language": "Tiếng Việt",
+    "Tag": ["Toán học"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Khám phá tinh thần Toán học của những nhà vô địch - Những bài tập được phân loại theo từng dạng, thách thức bạn tư duy vượt khỏi cách giải truyền thống. Trau dồi khả năng giải quyết các vấn đề Toán học - Học cách rèn luyện tư duy và nhựng phương pháp vượt khỏi kiến thức thông thường.",
+    "Images": ["/src/asserts/img/book-44.jpg"]
+},
+{
+    "Title": "Giải Tích Hàm Một Biến",
+    "Sku": "9288089159319",
+    "Views": "850",
+    "Author": "PGS. TS Ninh Quang Hải",
+    "Publisher": "Nhà Xuất Bản Xây Dựng",
+    "Page": 219,
+    "Type": "Giáo trình Đại học- cao đẳng",
+    "Language": "Tiếng Việt",
+    "Tag": ["Giải tích", "toán Đại học"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Cuốn sách này được viết dựa trên đề cương đã được Trường Đại học Kiến trúc thông qua. Cuốn sách được biên soạn có sự tham khảo rộng rãi các sách về Giải tích toán của Bộ Giáo dục và của các Trường Đại học thuộc khối kỹ thuật trong những năm gần đây. Cuốn sách trình bày theo phương châm mạch lạc, logic, xúc tích, dễ hiểu những vấn đề cơ bản của Giải tích hàm một biến số nên có lược bớt một số vấn đề trừu tượng, phức tạp tuy nhiên vẫn cố gắng đảm bảo mức độ chặt chẽ cần thiết. Các khái niệm, công thức, các định lý đều được diễn giải chi tiết với những ví dụ minh họa kèm theo. Nhằm giúp sinh viên trong việc tự đọc, nên sách cố gắng đưa ra một hệ thống các ví dụ đa dạng, phong phú và sắp xếp từ dễ đến khó minh họa cụ thể cho các vấn đề lý thuyết và thực hành.",
+    "Images": ["/src/asserts/img/book-45.jpg"]
+},
+{
+    "Title": "Toán Cao Cấp - Giải Tích Hàm Một Biến - Lý Thuyết Chuỗi",
+    "Sku": "2040030003112",
+    "Views": "850",
+    "Author": "Đỗ Công Khanh, Nguyễn Minh Hằng, Ngô Thu Lương",
+    "Publisher": "Nhà Xuất Bản Đại học Quốc gia Thành phố Hồ Chí Minh",
+    "Page": 368,
+    "Type": "Giáo trình đại học - cao đẳng",
+    "Language": "Tiếng Việt",
+    "Tag": ["Toán", "giải tích", "toán cao cấp"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Giáo trình dành riêng cho bộ môn toán cao cấp",
+    "Images": ["/src/asserts/img/book-46.jpg"]
+},
+{
+    "Title": "Xử Lý Nước Thải Sinh Hoạt Và Công Nghiệp Theo Công Nghệ O/A",
+    "Sku": "6654600931239",
+    "Views": "20",
+    "Author": "Trịnh Xuân Lai",
+    "Publisher": "Nhà Xuất Bản Xây Dựng",
+    "Page": 156,
+    "Type": "Khoa học kỹ thuật",
+    "Language": "Tiếng Việt",
+    "Tag": ["công nghiệp","công nghệ sinh học"],
+    "Remain": 50,
+    "Rate": "3.9"
+    "NumRate": 10,
+    "Intro": "Xử Lý Nước Thải Sinh Hoạt Và Công Nghiệp Theo Công Nghệ O/A - Tính Toán Thiết Kế giới thiệu một cách đầy đủ nhất có thể về công nghệ O/A trong xử lý nước thải sinh hoạt và công nghiệp.
+    Sách làm tài liệu tham khảo cho các kỹ sư thiết kế và phục vụ việc học tập của sinh viên chuyên ngành.",
+    "Images": ["/src/asserts/img/book-47.jpg"]
+},
+{
+    "Title": "Chìa Khóa Vàng - Hóa Học",
+    "Sku": "9786048855932",
+    "Views": "850",
+    "Author": "Đặng Dinh",
+    "Publisher": "Nhà Xuất Bản Lao Động",
+    "Page": 195,
+    "Type": "Thao khảo",
+    "Language": "Tiếng Việt",
+    "Tag": ["hóa học"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Các kiến thức mang tính cơ bản, được minh họa bằng hình ảnh, qua đó chúng ta có thể hình dung một cách chân thực, nắm rõ và nắm chắc điều kiện cần khi bắt đầu ngồi trên ghế nhà trường. Các bậc phụ huynh từ đó có thể hướng cho các em khám phá khả năng của bản thân để phát huy tốt nhất, lựa chọn đúng đường đi theo sở thích và năng lực của cá nhân.",
+    "Images": ["/src/asserts/img/book-48.jpg"]
+},
+{
+    "Title": "Chìa Khóa Vàng - Công Nghệ Sinh Học",
+    "Sku": "8936065581579",
+    "Views": "850",
+    "Author": "Nguyễn Mười",
+    "Publisher": "Nhà Xuất Bản Lao động - Xã hội",
+    "Page": 304,
+    "Type": "Tham khảo",
+    "Language": "Tiếng Việt",
+    "Tag": ["Công nghệ sinh học"],
+    "Remain": 90,
+    "Rate": "4.6"
+    "NumRate": 500,
+    "Intro": "Suốt quá trình lịch sử phát triển của loài người từ hoang dã đến văn minh hiện đại chỉ chiếm một thời gian vô cùng ngắn ngủi (4 giây) so với toàn bộ lịch sử phát triển của tự nhiên. Nhưng với đôi tay khéo léo và bộ óc thông minh, loài người đã thúc đẩy xã hội tiến triển rất nhanh với tốc độ ngày càng chóng mặt. Một nhà khoa học đã nhận định: “Tri thức của loài người ở thế kỷ  XIX, cứ khoảng 50 năm thì tăng gấp đôi; sang đầu thế kỷ XX, cứ 30 năm tăng gấp đôi; vào giữa thế kỷ  XX cứ 10 năm tăng gấp đôi, đến thập kỷ 70, cứ 5 năm tăng gấp đôi; tới thập kỷ 80 cứ 3 năm tăng gấp đôi.",
+    "Images": ["/src/asserts/img/book-49.jpg"]
+},
+{
+    "Title": "Phương Pháp Giải Vật Lý Trắc Nghiệm",
+    "Sku": "9831568749121",
+    "Views": "80",
+    "Author": "Nguyễn Minh Thảo",
+    "Publisher": "Nhà Xuất Bản Đại học Quốc gia Hà Nội",
+    "Page": 318,
+    "Type": "Sách tham khảo",
+    "Language": "Tiếng Việt",
+    "Tag": ["Vật lý", "trắc nghiệm"],
+    "Remain": 50,
+    "Rate": "4.4"
+    "NumRate": 10,
+    "Intro": "Đây là cuốn sổ tay Vật Lý giúp team THPT đánh bật mất gốc kiến thức lớp 10,11- Học chắc kiến thức lớp 12. Đi sâu 3 Chuyên đề: Dao động cơ; Sóng cơ – Sóng điện từ; Điện xoay chiều. Được kì vọng giúp học sinh Trung bình – Khá vẫn có thể ôn luyện mọi lúc mọi nơi và nắm chắc kiến thức với lời giải chi tiết, công thức, phương pháp làm bài",
+    "Images": ["/src/asserts/img/book-50.jpg"]
+},
+{
+    "Title": "Khoa Học Khám Phá - Mật Mã - Từ Cổ Điển Đến Lượng Tử",
+    "Sku": "2559267451561",
+    "Views": "50",
+    "Author": "Simon Singh",
+    "Publisher": "Nhà Xuất Bản Trẻ",
+    "Page": 550,
+    "Type": "Khoa học",
+    "Language": "Tiếng Việt",
+    "Tag": ["Mật mã", "khám phá thế giới"],
+    "Remain": 90,
+    "Rate": "4.2"
+    "NumRate": 5,
+    "Intro": "Sách phác hoạ sự tiến hoá của mật mã từ khi nó xuất hiện cho tới nay và đồng thời là những chứng minh về sự hợp thời của nó.
+    Trong hàng ngàn năm, vua chúa cũng như các tướng lĩnh đều dựa vào mạng lưới thông tin liên lạc hiểu quả để cai trị đất nước và chỉ huy quân đội của mình. Đồng thời, tất cả họ đều ý thức được những hậu quả của việc để lọt thông tin của mình vào tay đối phương, để lộ những bí mật quý giá cho các nước thù địch cũng như hậu quả của sự phản bội cung cấp thông tin sống còn cho các lực lượng đối kháng. Chính nỗi lo sợ bị kẻ thù xem trộm đã thúc đẩy sự ra đời và phát triển của mật mã: đó là những kỹ thuật nhằm che giấu, ngụy trang thông tin, khiến cho chỉ những người cần được nhận mới có thề đọc được.",
+    "Images": ["/src/asserts/img/book-51.jpg"]
+},
+

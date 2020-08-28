@@ -5,6 +5,7 @@ import logoSmall from '../../asserts/img/library-logo-sm.png';
 import {SearchBar} from '../../components/searchBarComponent/searchBar'
 import App from '../../App'
 
+
 const jumbotronStyles = {
     height:             '75px',
     margin:             'auto',

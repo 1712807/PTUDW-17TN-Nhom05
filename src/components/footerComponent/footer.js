@@ -6,6 +6,15 @@ import {
 } from 'react-router-dom'
 
 export class Footer extends Component {
+    constructor(props)
+    {
+        super(props);
+    }
+
+    onViewDetail(abc)
+    {
+        this.props.onReceiveInfo(abc);
+    }
     render() {
         return (
             <Router>
@@ -19,16 +28,16 @@ export class Footer extends Component {
                                         <h4 style={{color: '#fff'}}><strong>Your Library</strong></h4>
                                         <ul className="list-group">
                                             <li className="list-group-item border-0" style={{padding: '0px',backgroundColor: 'rgba(255,255,255,0)'}}>
-                                                <Link to='/rules' style={{color: '#fff'}}>About</Link>
+                                                <Link to='/rules' style={{color: '#fff'}} onClick ={ () => this.onViewDetail('about')}>About</Link>
                                             </li>
                                             <li className="list-group-item border-0" style={{padding: '0px',backgroundColor: 'rgba(255,255,255,0)'}}>
-                                                <Link to='/rules' style={{color: '#fff'}}>History</Link>
+                                                <Link to='/rules' style={{color: '#fff'}} onClick ={ () => this.onViewDetail('history')}>History</Link>
                                             </li>
                                             <li className="list-group-item border-0" style={{padding: '0px',backgroundColor: 'rgba(255,255,255,0)'}}>
-                                                <Link to='/rules' style={{color: '#fff'}}>Staff</Link>
+                                                <Link to='/rules' style={{color: '#fff'}} onClick ={ () => this.onViewDetail('staff')}>Staff</Link>
                                             </li>
                                             <li className="list-group-item border-0" style={{padding: '0px',backgroundColor: 'rgba(255,255,255,0)'}}>
-                                                <Link to='/rules' style={{color: '#fff'}}>Employment Opportunities</Link>
+                                                <Link to='/rules' style={{color: '#fff'}} onClick ={ () => this.onViewDetail('employment')}>Employment Opportunities</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -40,16 +49,16 @@ export class Footer extends Component {
                                         <h4 style={{color: '#fff'}}><strong>How Do I?</strong></h4>
                                         <ul className="list-group">
                                             <li className="list-group-item border-0" style={{padding: '0px',backgroundColor: 'rgba(255,255,255,0)'}}>
-                                                <Link style={{color: '#fff'}}>Get A Card</Link>
+                                                <Link to='/contactDetail' style={{color: '#fff'}} onClick ={ () => this.onViewDetail('getacard')}>Get A Card</Link>
                                             </li>
                                             <li className="list-group-item border-0" style={{padding: '0px',backgroundColor: 'rgba(255,255,255,0)'}}>
-                                                <Link style={{color: '#fff'}}>Manage My Account</Link>
+                                                <Link to='/contactDetail' style={{color: '#fff'}} onClick ={ () => this.onViewDetail('manageacc')}>Manage My Account</Link>
                                             </li>
                                             <li className="list-group-item border-0" style={{padding: '0px',backgroundColor: 'rgba(255,255,255,0)'}}>
-                                                <Link style={{color: '#fff'}}>Print From Anywhere</Link>
+                                                <Link to='/contactDetail' style={{color: '#fff'}} onClick ={ () => this.onViewDetail('print')}>Print From Anywhere</Link>
                                             </li>
                                             <li className="list-group-item border-0" style={{padding: '0px',backgroundColor: 'rgba(255,255,255,0)'}}>
-                                                <Link style={{color: '#fff'}}>Get Help</Link>
+                                                <Link to='/contactDetail' style={{color: '#fff'}} onClick ={ () => this.onViewDetail('gethelp')}>Get Help</Link>
                                             </li>
                                         </ul>
                                     </div>

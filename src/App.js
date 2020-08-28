@@ -18,6 +18,7 @@ import {SignUp} from './components/signUpComponent/signUp'
 import {SignIn} from './components/signInComponent/signIn'
 import {SearchBar} from './components/searchBarComponent/searchBar'
 import ScrollToTop from './components/scrollToTop/scrollToTop'
+import {ContactDetail} from './components/contactDetailComponent/contactDetail'
 import {
     BrowserRouter as Router,
     Switch,
@@ -38,6 +39,7 @@ export class App extends Component {
         }
         this.onHandleClick = this.onHandleClick.bind(this)
         this.showSearchBar = this.showSearchBar.bind(this)
+        this.onScrollInfo= this.onScrollInfo.bind(this);
     }
 
     onHandleClick() {
@@ -48,6 +50,25 @@ export class App extends Component {
     showSearchBar() {
         const newStatus = this.state.showSearchBar
         this.setState({showSearchBar: !newStatus})
+    }
+    onScrollInfo(params)
+    {
+        
+        let x = document.getElementById(params);
+        console.log(x);
+        if (x == null) {
+            if (params == 'about' || params=='history' ||params=='staff' ||params=='employment')
+            {
+               window.location.href='/rules';
+            }
+            else
+            {
+                window.location.href='/contactDetail';
+            }
+            
+        }
+        x.scrollIntoView();
+       
     }
 
     render() {
@@ -70,11 +91,15 @@ export class App extends Component {
                             </Route>
 
                             <Route exact path="/rules">
-                                <Rules/>
+                                <Rules onReceiveInfo ={ this.onScrollInfo }/>
                             </Route>
 
                             <Route exact path="/contact">
                                 <Contact/>
+                            </Route>
+
+                            <Route exact path="/contactDetail">
+                                <ContactDetail/>
                             </Route>
 
                             <Route exact path="/search">
@@ -110,7 +135,7 @@ export class App extends Component {
                             </Route>
                             
                         </main>
-                        <Footer/>
+                        <Footer onReceiveInfo ={ this.onScrollInfo }/>
                 
                     </div>
                     <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer" style={{display: 'none'}}>

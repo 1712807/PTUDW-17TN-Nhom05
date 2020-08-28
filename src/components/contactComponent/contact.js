@@ -3,6 +3,10 @@ import {Link} from 'react-router-dom'
 import LibraryImage from '../../asserts/img/library.jpg'
 
 export class Contact extends Component {
+    onViewDetail(abc)
+    {
+        this.props.onReceiveInfo(abc);
+    }
     render() {
         return(
             <div>
@@ -54,22 +58,22 @@ export class Contact extends Component {
                                         <li className="list-group-item" style={{backgroundColor: 'rgba(255,255,255,0)',padding: '0px'}}>
                                             <div className="border rounded border-white row col-11" style={{margin: '20px auto'}}>
                                                 <i className="fa fa-id-card-o d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style={{marginRight: '10px',color: '#fff',fontSize: '20px'}}></i>
-                                                <Link style={{color: '#fff',fontSize: '20px'}}>Get A Card</Link>
+                                                <Link to="/contactDetail" style={{color: '#fff',fontSize: '20px'}}>Get A Card</Link>
                                             </div>
 
                                             <div className="border rounded border-white row col-11" style={{margin: '20px auto'}}>
                                                 <i className="fa fa-user-circle-o d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style={{marginRight: '10px',color: '#fff',fontSize: '20px'}}></i>
-                                                <Link style={{color: '#fff',fontSize: '20px'}}>Manage My Account</Link>
+                                                <Link to="/contactDetail" style={{color: '#fff',fontSize: '20px'}}>Manage My Account</Link>
                                             </div>
 
                                             <div className="border rounded border-white row col-11" style={{margin: '20px auto'}}>
                                                 <i className="fa fa-print d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style={{marginRight: '10px',color: '#fff',fontSize: '20px'}}></i>
-                                                <Link style={{color: '#fff',fontSize: '20px'}}>Print From Anywhere</Link>
+                                                <Link to="/contactDetail" style={{color: '#fff',fontSize: '20px'}}>Print From Anywhere</Link>
                                             </div>
 
                                             <div className="border rounded border-white row col-11" style={{margin: '20px auto'}}>
                                                 <i className="fa fa-question-circle-o d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style={{marginRight: '10px',color: '#fff',fontSize: '20px'}}></i>
-                                                <Link style={{color: '#fff',fontSize: '20px'}}>Get Help</Link>
+                                                <Link to="/contactDetail" style={{color: '#fff',fontSize: '20px'}}>Get Help</Link>
                                             </div>
                                         </li>
                                     </ul>

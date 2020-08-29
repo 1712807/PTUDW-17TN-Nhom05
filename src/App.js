@@ -4,6 +4,7 @@ import {Footer} from './components/footerComponent/footer'
 import {NavBar} from './components/navbarComponent/navbar'
 import {BookContainer} from './components/booksContainerComponent/booksContainer'
 import {EventsContainer} from './components/eventsContainerComponent/eventsContainer'
+import {EventDetails} from './components/eventDetailsComponent/eventDetails'
 import {Search} from './components/searchComponent/search'
 import {BookDetail} from './components/bookDetailComponent/bookDetail'
 import {BlogsContainer} from './components/blogsContainerComponent/blogsContainer'
@@ -132,6 +133,9 @@ export class App extends Component {
                                 <BlogsContainer title='Top picks'/>
                                 <BookContainer lineStyle='3' title='New and Noteworthy' tag='none'/>
                                 <UpdatePostsContainer title='Updates'/>
+                            </Route>
+                            <Route exact path="/eventDetails">
+                                <EventDetails/>
                             </Route>
                             
                         </main>

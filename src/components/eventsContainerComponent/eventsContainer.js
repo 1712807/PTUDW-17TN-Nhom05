@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {Event} from '../eventsComponent/event'
-
 export class EventsContainer extends Component {
     constructor(props) {
         super(props)

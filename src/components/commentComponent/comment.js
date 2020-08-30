@@ -17,23 +17,10 @@ export class UserComment extends Component {
                     </div>
 
                     <div className="col-12 col-md-9 rounded" style={{border: '1px solid #1429D7'}}>
-                        <div className="col-sm-12 row mt-3">
-                            <label className="col-2 col-md-2 mt-1 text-right" style={{paddingLeft: '0px'}}><b>Rate:</b></label>
-                            <div className="col-4 col-xl-2 mt-2 ml-4">
-                                <i className="fa fa-star checked float-left" style={{color: '#1429D7'}}></i>
-                                <i className="fa fa-star checked float-left" style={{color: '#1429D7'}}></i>
-                                <i className="fa fa-star checked float-left" style={{color: '#1429D7'}}></i>
-                                <i className="fa fa-star checked float-left" style={{color: '#1429D7'}}></i>
-                                <i className="fa fa-star float-left" style={{color: '#1429D7'}}></i>
-                            </div>
-                            <div className="col-6 col-xl-3 mt-1 row">
-                                (About {this.props.title})
-                            </div>
-                        </div>
 
                         <div className="col-sm-12 row mb-3">
-                            <label className="col-2 col-md-2 mt-1 text-right" style={{paddingLeft: '0px'}}><b>Comment:</b></label>
-                            <div className="col-9 mt-1 ml-4 text-left">
+                            <label className="col-2 col-md-2 mt-4 text-right" style={{paddingLeft: '0px'}}><b>Comment:</b></label>
+                            <div className="col-9 mt-4 ml-4 text-left">
                                 {this.props.commentText}
                             </div>
                         </div>

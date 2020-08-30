@@ -2,11 +2,6 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 
 export class Rules extends Component {
-    onViewDetail(abc)
-    {
-        this.props.onReceiveInfo(abc);
-    }
-
     render() {
         return(
             <div>
@@ -14,34 +9,34 @@ export class Rules extends Component {
                     <div className="container" style={{margin: '50px auto',marginTop: '50px'}}>
                         <div className="row" style={{margin: '0px'}}>
                             <form className="border rounded col-lg-8">
-                                <div className="form-group" id="rules">
-                                    <h2 className="col-11" style={{color: '#1429D7',margin: '45px auto 15px',padding: '0px 15px'}}><b>RULES</b></h2>
-                                    <ul className="text-justify col-11" style={{margin: '15px auto',padding: '0px 15px', lineHeight: '1.8', listStyle: 'inside'}}>
-                                        <li>Carry your student ID card when you enter the library.</li>
-                                        <li>Do not take any book or other library material out of the library without following the borrowing procedures.</li>
-                                        <li>Make sure to return the borrowed books by the due date.</li>
-                                        <li>In case any of the borrowed books being lost, damaged, or destroyed, you are required to replace the lost /damaged/destroyed book with a new one.</li>
-                                        <li>Never write in books or cut pages out of them.</li>
+                                <div className="form-group">
+                                    <h2 className="col-11 mb-4" style={{color: '#1429D7',margin: '45px auto 15px',padding: '0px 15px'}}><b>RULES</b></h2>
+                                    <ul className="text-justify col-11 mb-4" style={{margin: '15px auto',padding: '0px 15px', lineHeight: '1.8', listStyle: 'inside'}}>
+                                        <li className="mb-2">Carry your student ID card when you enter the library.</li>
+                                        <li className="mt-2 mb-2">Do not take any book or other library material out of the library without following the borrowing procedures.</li>
+                                        <li className="mt-2 mb-2">Make sure to return the borrowed books by the due date.</li>
+                                        <li className="mt-2 mb-2">In case any of the borrowed books being lost, damaged, or destroyed, you are required to replace the lost/damaged/destroyed book with a new one.</li>
+                                        <li className="mt-2">Never write in books or cut pages out of them.</li>
                                     </ul>
                                 </div>
 
-                                <div className="form-group" id="about">
+                                <div className="form-group">
                                     <h2 className="col-11" style={{color: '#1429D7',margin: '45px auto 15px',padding: '0px 15px'}}><b>ABOUT</b></h2>
                                     <p className="text-justify col-11" style={{margin: '15px auto',padding: '0px 15px'}}>
-                                    Our library has more than 200,000 books and online resources to serve learning, teaching and researching requirements of students, lecturers.
+                                        Our library has more than 200,000 books and online resources to serve learning, teaching and researching requirements of students, lecturers.
                                     </p>
                                 </div>
 
-                                <div className="form-group" id="history">
+                                <div className="form-group">
                                     <h2 className="col-11" style={{color: '#1429D7',margin: '45px auto 15px',padding: '0px 15px'}}><b>HISTORY</b></h2>
                                     <p className="text-justify col-11" style={{margin: '15px auto',padding: '0px 15px'}}>
-                                    The library was established on May 11, 1995 and based on modern point of view, using new technology to create a convenient space for accessing information easily, as well as satisfy all information requests for all types of readers.
+                                        The library was established on May 11, 1995 and based on modern point of view, using new technology to create a convenient space for accessing information easily, as well as satisfy all information requests for all types of readers.
                                     </p>
                                 </div>
 
-                                <div className="form-group" id="staff">
-                                    <h2 className="col-11" style={{color: '#1429D7',margin: '45px auto 15px',padding: '0px 15px'}}><b>STAFF</b></h2>                                      
-                                    <table className="text-justify table col-11" style={{margin: '15px auto',padding: '0px 15px'}}>
+                                <div className="form-group">
+                                    <h2 className="col-11" style={{color: '#1429D7',margin: '45px auto 15px',padding: '0px 15px'}}><b>STAFF</b></h2>
+                                    <table className="text-center table col-11" style={{margin: '15px auto',padding: '0px 15px'}}>
                                         <thead>
                                             <tr>
                                             <th scope="col">Position</th>
@@ -72,11 +67,11 @@ export class Rules extends Component {
                                     </table>
                                 </div>
 
-                                <div className="form-group" id="employment">
+                                <div className="form-group">
                                     <h2 className="col-11" style={{color: '#1429D7',margin: '45px auto 15px',padding: '0px 15px'}}><b>EMPLOYMENT OPPURTUNITIES</b></h2>
-                                    <p className="text-justify col-11" style={{margin: '15px auto 50px',padding: '0px 15px'}}>
-                                        We are recruiting more positions to expand our library. <br />
-                                        Details of vacancies:<br />
+                                    <p className="text-center col-11" style={{margin: '15px auto 50px',padding: '0px 15px'}}>
+                                        We are recruiting more positions to expand our library. 
+                                        Details of vacancies:
                                         <table className="table" style={{margin: '10px 0'}}>
                                             <thead>
                                                 <tr style={{textAlign: 'center'}}>
@@ -106,44 +101,41 @@ export class Rules extends Component {
                                 </div>
                             </form>
 
-                            <aside className="d-none d-lg-block col-lg-4" style={{backgroundColor: '#000080'}}>
-                                <div  style={{position: 'sticky', top: '0', padding: '10px 0'}}> 
-                                    <form>
-                                        <h3 style={{marginTop: '80px',marginBottom: '30px',color: '#fff',marginLeft: '10px'}}><b>MENU</b></h3>
-                                    </form>
+                            <aside className="d-none d-lg-block col-lg-4" style={{margin: '0px auto',backgroundColor: '#000080',marginLeft: '0px'}}>
+                                <form>
+                                    <h3 style={{marginTop: '80px',marginBottom: '30px',color: '#fff',marginLeft: '10px'}}><b>MENU</b></h3>
+                                </form>
 
-                                    <div className="form-group">
-                                        <ul className="list-group">
-                                            <li className="list-group-item" style={{backgroundColor: 'rgba(255,255,255,0)',padding: '0px'}}>
-                                                <div className="border rounded border-white row col-11" style={{margin: '10px auto'}}>
-                                                    <i className="fa fa-info-circle d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style={{marginRight: '10px',color: '#fff',fontSize: '20px'}}></i>
-                                                    <Link style={{color: '#fff',fontSize: '20px'}} onClick ={ () => this.onViewDetail('about')}>About</Link>
-                                                </div>
-                                            </li>
+                                <div className="form-group">
+                                    <ul className="list-group">
+                                        <li className="list-group-item" style={{backgroundColor: 'rgba(255,255,255,0)',padding: '0px'}}>
+                                            <div className="border rounded border-white row col-11" style={{margin: '10px auto'}}>
+                                                <i className="fa fa-info-circle d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style={{marginRight: '10px',color: '#fff',fontSize: '20px'}}></i>
+                                                <Link to='/rules' style={{color: '#fff',fontSize: '20px'}}>About</Link>
+                                            </div>
+                                        </li>
 
-                                            <li className="list-group-item" style={{backgroundColor: 'rgba(255,255,255,0)',padding: '0px'}}>
-                                                <div className="border rounded border-white row col-11" style={{margin: '10px auto'}}>
-                                                    <i className="fa fa-book d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style={{marginRight: '10px',color: '#fff',fontSize: '20px'}}></i>
-                                                    <Link style={{color: '#fff',fontSize: '20px'}} onClick ={ () => this.onViewDetail('history')}>History</Link>
-                                                </div>
-                                            </li>
+                                        <li className="list-group-item" style={{backgroundColor: 'rgba(255,255,255,0)',padding: '0px'}}>
+                                            <div className="border rounded border-white row col-11" style={{margin: '10px auto'}}>
+                                                <i className="fa fa-book d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style={{marginRight: '10px',color: '#fff',fontSize: '20px'}}></i>
+                                                <Link to='/rules' style={{color: '#fff',fontSize: '20px'}}>History</Link>
+                                            </div>
+                                        </li>
 
-                                            <li className="list-group-item" style={{backgroundColor: 'rgba(255,255,255,0)',padding: '0px'}}>
-                                                <div className="border rounded border-white row col-11" style={{margin: '10px auto'}}>
-                                                    <i className="fa fa-group d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style={{marginRight: '10px',color: '#fff',fontSize: '20px'}}></i>
-                                                    <Link style={{color: '#fff',fontSize: '20px'}} onClick ={ () => this.onViewDetail('staff')}>Staff</Link>
-                                                </div>
-                                            </li>
+                                        <li className="list-group-item" style={{backgroundColor: 'rgba(255,255,255,0)',padding: '0px'}}>
+                                            <div className="border rounded border-white row col-11" style={{margin: '10px auto'}}>
+                                                <i className="fa fa-group d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style={{marginRight: '10px',color: '#fff',fontSize: '20px'}}></i>
+                                                <Link to='/rules' style={{color: '#fff',fontSize: '20px'}}>Staff</Link>
+                                            </div>
+                                        </li>
 
-                                            <li className="list-group-item" style={{backgroundColor: 'rgba(255,255,255,0)',padding: '0px'}}>
-                                                <div className="border rounded border-white row col-11" style={{margin: '10px auto'}}>
-                                                    <i className="fa fa-user-plus d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style={{marginRight: '10px',color: '#fff',fontSize: '20px'}}></i>
-                                                    <Link style={{color: '#fff',fontSize: '20px'}} onClick ={ () => this.onViewDetail('employment')}>Employment<br/>Oppurtunities</Link>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-
+                                        <li className="list-group-item" style={{backgroundColor: 'rgba(255,255,255,0)',padding: '0px'}}>
+                                            <div className="border rounded border-white row col-11" style={{margin: '10px auto'}}>
+                                                <i className="fa fa-user-plus d-lg-flex d-xl-flex align-items-lg-center align-items-xl-center" style={{marginRight: '10px',color: '#fff',fontSize: '20px'}}></i>
+                                                <Link to='/rules' style={{color: '#fff',fontSize: '20px'}}>Employment<br/>Oppurtunities</Link>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </aside>
                         </div>
